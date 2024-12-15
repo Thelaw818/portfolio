@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio: Color and Typography</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
+            <li><a href="typography-overview.html">Typography Overview</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page 1: Color Theory Overview -->
+    <section id="color-theory-overview">
+        <h1>Color Theory Overview</h1>
+        <p>Color theory is the study of how colors interact, evoke emotions, and can be combined effectively. Below is a glossary of key terms:</p>
+        <dl>
+            <dt>Primary Colors</dt>
+            <dd>Red, blue, and yellow; the base colors that cannot be made by mixing others.</dd>
+            <dt>Secondary Colors</dt>
+            <dd>Green, orange, and purple; created by mixing two primary colors.</dd>
+            <dt>Tertiary Colors</dt>
+            <dd>Colors made by mixing a primary and a secondary color.</dd>
+            <!-- Add 17 more terms -->
+        </dl>
+        <nav>
+            <a href="color-themes.html">Color Themes</a> |
+            <a href="color-theory-article.html">Color Theory Article</a>
+        </nav>
+    </section>
+
+    <!-- Page 2: Color Themes -->
+    <section id="color-themes">
+        <h1>Color Themes</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Theme</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monochromatic</td>
+                    <td>Variations of a single color.</td>
+                    <td><img src="monochromatic-example.jpg" alt="Monochromatic theme"></td>
+                </tr>
+                <tr>
+                    <td>Complementary</td>
+                    <td>Colors opposite each other on the color wheel.</td>
+                    <td><img src="complementary-example.jpg" alt="Complementary theme"></td>
+                </tr>
+                <!-- Add 3 more themes -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Page 3: Color Theory Article -->
+    <section id="color-theory-article">
+        <h1>Color Theory Article</h1>
+        <p>Colors play a crucial role in web design. Below, we compare two websites:</p>
+        <article>
+            <h2>Website 1: Example A</h2>
+            <p>Uses vibrant complementary colors for a bold look.</p>
+            <img src="example-a-screenshot.jpg" alt="Website A Screenshot">
+            <a href="https://example-a.com">Visit Example A</a>
+        </article>
+        <article>
+            <h2>Website 2: Example B</h2>
+            <p>Relies on a monochromatic theme for a minimalist feel.</p>
+            <img src="example-b-screenshot.jpg" alt="Website B Screenshot">
+            <a href="https://example-b.com">Visit Example B</a>
+        </article>
+    </section>
+
+    <!-- Page 4: Typography Overview -->
+    <section id="typography-overview">
+        <h1>Typography Overview</h1>
+        <p>Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing. Here are some key terms:</p>
+        <dl>
+            <dt>Serif</dt>
+            <dd>A font with small decorative lines at the ends of characters.</dd>
+            <dt>Sans Serif</dt>
+            <dd>A font without decorative lines at the ends of characters.</dd>
+            <dt>Kerning</dt>
+            <dd>The adjustment of space between two characters.</dd>
+            <!-- Add 7 more terms -->
+        </dl>
+        <nav>
+            <a href="font-types-article.html">Font Types Article</a> |
+            <a href="typography-article.html">Typography Article</a>
+        </nav>
+    </section>
+
+    <!-- Page 5: Font Types Article -->
+    <section id="font-types-article">
+        <h1>Font Types Article</h1>
+        <p>Fonts can be categorized into various types. Below are some examples:</p>
+        <ul>
+            <li><strong>Serif:</strong> Classic and formal (e.g., Times New Roman).</li>
+            <li><strong>Sans Serif:</strong> Modern and clean (e.g., Arial).</li>
+            <li><strong>Script:</strong> Decorative and handwritten (e.g., Brush Script).</li>
+            <!-- Add more categories -->
+        </ul>
+        <p>Download these fonts from resources like <a href="https://fonts.google.com">Google Fonts</a>.</p>
+    </section>
+
+    <!-- Page 6: Typography Article -->
+    <section id="typography-article">
+        <h1>Typography Article</h1>
+        <p>Typography significantly impacts web usability and aesthetics. Below, we compare two websites:</p>
+        <article>
+            <h2>Website 1: Example X</h2>
+            <p>Utilizes serif fonts for a classic and elegant feel.</p>
+            <img src="example-x-screenshot.jpg" alt="Website X Screenshot">
+            <a href="https://example-x.com">Visit Example X</a>
+        </article>
+        <article>
+            <h2>Website 2: Example Y</h2>
+            <p>Uses sans-serif fonts for a modern and sleek design.</p>
+            <img src="example-y-screenshot.jpg" alt="Website Y Screenshot">
+            <a href="https://example-y.com">Visit Example Y</a>
+        </article>
+    </section>
+
+</body>
+</html>
