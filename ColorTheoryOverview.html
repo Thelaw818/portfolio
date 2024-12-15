@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Color Theory Overview</title>
-<link rel="stylesheet" href="styles.css">
-<style>
-  /* ... (other styles) ... */
-  #color-terms dl {
-    margin-bottom: 20px; /* Add some spacing below the dl */
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Themes Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
   <header>
@@ -31,105 +51,70 @@
       </ul>
     </nav>
     <div class="banner">
-      <h1>Color Theory Overview</h1>
+      <h1>Pigeon Racing in Southern California</h1>
     </div>
   </header>
 
-  <main id="content">
-    <h2>What is Color Theory?</h2>
-    <p>Color theory is a set of guidelines that describe the relationships between colors. It's a crucial aspect of art, design, and other visual fields, helping artists and designers create harmonious and impactful color palettes.  Understanding color theory allows for the effective communication of ideas and emotions through visual design.</p>
-
-    <div id="subnav">
-      <ul>
-        <li><a href="#color-terms">Key Terms</a></li>
-        <li><a href="#page2">Page 2</a></li>
-        <li><a href="#page3">Page 3</a></li>
-      </ul>
-    </div>
-
-    <section id="color-terms">
-      <h3>Key Color Theory Terms</h3>
-      <dl>
-        <dt>Color Wheel</dt>
-        <dd>A circular diagram of colors arranged by their chromatic relationship, typically including primary, secondary, and tertiary colors.</dd>
-
-        <dt>Primary Colors</dt>
-        <dd>The three base colors (red, blue, and yellow) that cannot be made by mixing other colors.</dd>
-
-        <dt>Secondary Colors</dt>
-        <dd>Colors formed by mixing two primary colors (e.g., green, orange, purple).</dd>
-
-        <dt>Tertiary Colors</dt>
-        <dd>Colors made by mixing a primary color with a neighboring secondary color (e.g., red-orange, blue-green).</dd>
-
-        <dt>Hue</dt>
-        <dd>The pure color without any tint (addition of white) or shade (addition of black).</dd>
-
-        <dt>Saturation</dt>
-        <dd>The intensity or purity of a color; highly saturated colors are vivid, while low-saturation colors appear dull.</dd>
-
-        <dt>Value</dt>
-        <dd>The lightness or darkness of a color, determined by the amount of white or black added.</dd>
-
-        <dt>Tint</dt>
-        <dd>A lighter version of a color created by adding white.</dd>
-
-        <dt>Shade</dt>
-        <dd>A darker version of a color created by adding black.</dd>
-
-        <dt>Tone</dt>
-        <dd>A version of a color created by adding gray, reducing its intensity.</dd>
-
-        <dt>Warm Colors</dt>
-        <dd>Colors associated with warmth, such as red, orange, and yellow.</dd>
-
-        <dt>Cool Colors</dt>
-        <dd>Colors associated with coolness, such as blue, green, and purple.</dd>
-
-        <dt>Complementary Colors</dt>
-        <dd>Colors opposite each other on the color wheel (e.g., blue and orange), creating high contrast.</dd>
-
-        <dt>Analogous Colors</dt>
-        <dd>Colors next to each other on the color wheel (e.g., blue, blue-green, green) that create harmonious designs.</dd>
-
-        <dt>Triadic Colors</dt>
-        <dd>A group of three colors evenly spaced around the color wheel (e.g., red, blue, yellow).</dd>
-
-        <dt>Monochromatic Colors</dt>
-        <dd>Variations of a single hue using tints, shades, and tones.</dd>
-
-        <dt>Split Complementary Colors</dt>
-        <dd>A color and the two colors adjacent to its complementary color, offering strong contrast with less tension.</dd>
-
-        <dt>Color Temperature</dt>
-        <dd>The perceived warmth or coolness of a color, influencing mood and visual balance.</dd>
-
-        <dt>Neutral Colors</dt>
-        <dd>Colors like white, black, gray, and beige that don't strongly lean towards warm or cool.</dd>
-
-        <dt>Color Harmony</dt>
-        <dd>A pleasing arrangement of colors that creates balance and a sense of order.</dd>
-
-      </dl>
-    </section>
-
-    <section id="page2">
-      <h2>Page 2 Content</h2>
-      <p>Color theory is the study of how colors interact, combine, and contrast with one another, and the psychological and visual effects they produce. It guides the use of colors in design, art, and branding to create harmonious and visually appealing combinations. Color theory is based on the color wheel, which organizes colors into a circular structure to demonstrate their relationships..</p>
-    </section>
-
-    <section id="page3">
-      <h2>Page 3 Content</h2>
-      <p>In design projects, understanding color theory is essential for effective typography. The interaction between text color, background color, and other design elements ensures readability and aesthetic appeal. For example:
-
-    High contrast between text and background improves legibility.
-    Warm colors can evoke energy and urgency in headlines.
-    Cool colors may create a calming effect for body text..</p>
-    </section>
+  <main>
+    <h1>Color Themes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Theme Name</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Warm Sunset</td>
+                <td>A blend of warm hues like red, orange, and yellow for vibrant energy.</td>
+                <td>
+                    <img 
+                        src="https://github.com/Thelaw818/portfolio/blob/main/images/warm%20sunset%20color%20palette.png?raw=true" 
+                        alt="warm sunset color palette">
+                </td>
+            </tr>
+            <tr>
+                <td>Cool Ocean</td>
+                <td>Soothing cool tones like blue, teal, and seafoam green for tranquility.</td>
+                <td>
+                    <img 
+                        alt="ocean coral palette.png" 
+                        src="https://github.com/Thelaw818/portfolio/blob/main/images/ocean%20coral%20palette.png?raw=true">
+                </td>
+            </tr>
+            <tr>
+                <td>Nature's Harmony</td>
+                <td>Earthy colors such as green, brown, and beige for a natural feel.</td>
+                <td>
+                    <img 
+                        alt="Nature Harmony Color Palette.png" 
+                        src="https://github.com/Thelaw818/portfolio/blob/main/images/Nature%20Harmony%20Color%20Palette.png?raw=true">
+                </td>
+            </tr>
+            <tr>
+                <td>Modern Minimalist</td>
+                <td>Neutral shades like gray, black, and white for sleek, clean designs.</td>
+                <td>
+                    <img src="images/modern-minimalist.jpg" alt="Modern Minimalist Theme">
+                </td>
+                <td>
+                    <img src="https://github.com/Thelaw818/portfolio/blob/main/images/modern%20mini%20theme.jpg?raw=true" alt="modern mini theme">
+                </td>
+            </tr>
+            <tr>
+                <td>Playful Pastels</td>
+                <td>Soft pastel tones such as pink, lavender, and baby blue for a cheerful vibe.</td>
+                <td>
+                    <img src="images/playful-pastels.jpg" alt="Playful Pastels Theme">
+                </td>
+                <td>
+                    <img src="https://github.com/Thelaw818/portfolio/blob/main/images/playful%20pastel%20Color%20Palette.png?raw=true" alt="playful pastel Color Palette">
+                </td>
+            </tr>
+        </tbody>
+    </table>
   </main>
-
-  <footer>
-    <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
-  </footer>
 </body>
 </html>
