@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>  <!-- Replace with the page title -->
+<title>Pigeon Racing in Southern California</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,7 +30,12 @@
 </header>
 
 <main id="content">
-  <!-- Main content for the specific page goes here -->
+  <section id="home">
+    <h2>Welcome to the World of Pigeon Racing!</h2>
+    <p>This website is dedicated to all things related to pigeon racing, focusing on the vibrant Southern California community. Click on the navigation links above to explore more.</p>
+    <p>Pigeon racing is a fascinating and lesser-known competitive sport in the United States, with a rich history and dedicated community of enthusiasts. It combines elements of animal husbandry, athletic competition, and strategic planning. In Southern California, the sport thrives with passionate racers and dedicated clubs.</p>
+    <!-- Add your main content here -->
+  </section>
 </main>
 
 <footer>
@@ -39,12 +44,10 @@
 
 <script>
   const navLinks = document.querySelectorAll('nav ul li a');
-
   function activateLink(link) {
     navLinks.forEach(l => l.classList.remove('active'));
     link.classList.add('active');
   }
-
   const currentPath = window.location.pathname;
   navLinks.forEach(link => {
     if (link.href.includes(currentPath)) {
