@@ -3,14 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pigeon Racing in Southern California</title>
+<title></title>  <!-- Replace with the page title -->
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
   <nav>
     <ul>
-      <!-- Navigation links (place your links here) -->
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="showcase1.html">Showcase 1</a></li>
+      <li><a href="showcase2.html">Showcase 2</a></li>
+      <li><a href="showcase3.html">Showcase 3</a></li>
+      <li><a href="showcase4.html">Showcase 4</a></li>
+      <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
+      <li><a href="ColorThemes.html">Color Themes</a></li>
+      <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
+      <li><a href="TypographyOverview.html">Typography Overview</a></li>
+      <li><a href="FontTypesArticle.html">Font Types Article</a></li>
+      <li><a href="TypographyArticle.html">Typography Article</a></li>
     </ul>
   </nav>
   <div class="banner">
@@ -19,12 +30,7 @@
 </header>
 
 <main id="content">
-  <section id="home">
-    <h2>Welcome to the World of Pigeon Racing!</h2>
-    <p>This website is dedicated to all things related to pigeon racing, focusing on the vibrant Southern California community. Click on the navigation links above to explore more.</p>
-    <p>Pigeon racing is a fascinating and lesser-known competitive sport in the United States, with a rich history and dedicated community of enthusiasts. It combines elements of animal husbandry, athletic competition, and strategic planning. In Southern California, the sport thrives with passionate racers and dedicated clubs.</p>
-  </section>
-  <!-- Add your main content here -->
+  <!-- Main content for the specific page goes here -->
 </main>
 
 <footer>
@@ -32,16 +38,13 @@
 </footer>
 
 <script>
-  // Get all navigation links
   const navLinks = document.querySelectorAll('nav ul li a');
 
-  // Function to add/remove the active class
   function activateLink(link) {
     navLinks.forEach(l => l.classList.remove('active'));
     link.classList.add('active');
   }
 
-  // Check the current page and activate the corresponding link
   const currentPath = window.location.pathname;
   navLinks.forEach(link => {
     if (link.href.includes(currentPath)) {
