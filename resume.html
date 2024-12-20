@@ -1,265 +1,37 @@
-/* Site-wide styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pigeon Racing - Resume</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="showcase1.html">Showcase 1</a></li>
+        <li><a href="showcase2.html">Showcase 2</a></li>
+        <li><a href="showcase3.html">Showcase 3</a></li>
+        <li><a href="showcase4.html">Showcase 4</a></li>
+      </ul>
+    </nav>
+    <div class="banner" onclick="window.location.href='index.html'">
+      <h1>Pigeon Racing Resume</h1>
+    </div>
+  </header>
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+  <main>
+    <h2>My Pigeon Racing Experience</h2>
+    <p>Here’s a summary of my experience in pigeon racing...</p>
+  </main>
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
+  <footer>
+    <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
+  </footer>
 
-header nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.banner {
-  cursor: pointer;
-}
-
-h1 {
-  margin: 0;
-}
-
-main {
-  padding: 20px;
-}
-
-footer {
-  text-align: center;
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
-
-/* Showcase page styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fafafa;
-}
-
-header {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-main {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-main .project-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-main .project-gallery .project-item {
-  width: 300px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-main .project-gallery .project-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-main .project-gallery .project-item .project-info {
-  padding: 15px;
-  background-color: #f9f9f9;
-}
-
-main .project-gallery .project-item .project-info h3 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-main .project-gallery .project-item .project-info p {
-  font-size: 1rem;
-  color: #555;
-}
-
-footer {
-  text-align: center;
-  background-color: #222;
-  color: #fff;
-  padding: 10px;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-/* Color and typography page styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-}
-
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #333;
-}
-
-.color-theme {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.color-theme .theme {
-  width: 150px;
-  height: 150px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.color-theme .theme p {
-  color: white;
-  font-weight: bold;
-}
-
-.theme1 { background-color: #ff6347; }  /* Example color */
-.theme2 { background-color: #4682b4; }  /* Example color */
-.theme3 { background-color: #32cd32; }  /* Example color */
-
-.font-example {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.font-example h2 {
-  font-size: 1.8rem;
-  color: #333;
-}
-
-.font-example p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Resume page styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-main {
-  padding: 40px 20px;
-}
-
-main .resume-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-main .resume-container .resume-column {
-  width: 45%;
-}
-
-.resume-column h2 {
-  font-size: 1.8rem;
-  color: #333;
-}
-
-.resume-column ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.resume-column ul li {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-footer {
-  text-align: center;
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
-
-/* Color Themes page structure */
-.color-theme {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.color-theme .theme {
-  width: 150px;
-  height: 150px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.color-theme .theme p {
-  color: white;
-  font-weight: bold;
-}
-
-.theme1 { background-color: #ff6347; }  /* Example color */
-.theme2 { background-color: #4682b4; }  /* Example color */
-.theme3 { background-color: #32cd32; }  /* Example color */
+  <script src="scripts.js"></script>
+</body>
+</html>
