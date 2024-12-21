@@ -1,73 +1,157 @@
-/* Showcase page styles */
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fafafa;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
 }
 
+/* Header Styling */
 header {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem 0;
+    font-size: 12px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    font-size: 12px;
+    color: #ffffff;
 }
 
-main {
-  padding: 40px 20px;
-  text-align: center;
+header a {
+    color: #ffffff;
 }
 
-main .project-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+p { margin-bottom: 1rem; }
+
+/* Links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-main .project-gallery .project-item {
-  width: 300px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: white;
+a:hover {
+    color: #003366;
+    text-decoration: underline;
 }
 
-main .project-gallery .project-item img {
-  width: 100%;
-  height: auto;
-  display: block;
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-main .project-gallery .project-item .project-info {
-  padding: 15px;
-  background-color: #f9f9f9;
+/* Navigation */
+nav {
+    background-color: #000000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-main .project-gallery .project-item .project-info h3 {
-  margin: 0;
-  font-size: 1.5rem;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
-main .project-gallery .project-item .project-info p {
-  font-size: 1rem;
-  color: #555;
+nav li a {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 12px;
 }
 
+/* Footer */
 footer {
-  text-align: center;
-  background-color: #222;
-  color: #fff;
-  padding: 10px;
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 2rem;
 }
 
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.button:hover {
+    background-color: #003366;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Forms */
+input, textarea, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+.my-1 { margin: 1rem 0; }
+.mx-1 { margin: 0 1rem; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Accessibility */
+:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
