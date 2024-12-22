@@ -1,7 +1,4 @@
-/* color-and-type.css */
-
-/* General Reset */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+ {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -100,4 +97,64 @@ article {
   padding: 1em;
   background: #e9ecef;
   border-radius: 5px;
+}
+
+/* Color Blocks - Gradient Backgrounds */
+.color-block {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+/* Color Themes */
+.warm-sunset {
+  background: linear-gradient(to right, #ff7e5f, #feb47b, #ff9e00);
+}
+
+.cool-ocean {
+  background: linear-gradient(to right, #00c6ff, #0072ff, #0a9d9d);
+}
+
+.nature-harmony {
+  background: linear-gradient(to right, #4caf50, #8b4513, #f4a261);
+}
+
+.modern-minimalist {
+  background: linear-gradient(to right, #808080, #ffffff, #000000);
+}
+
+.playful-pastels {
+  background: linear-gradient(to right, #ffb6c1, #d0f0c0, #add8e6);
+}
+
+/* Header Styles */
+header {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.banner {
+  text-align: center;
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 36px;
 }
