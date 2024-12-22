@@ -9,7 +9,7 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             padding: 0;
             background-color: #f0f0f0;
         }
@@ -24,7 +24,7 @@
         }
         dt {
             font-weight: bold;
-            color: #007BFF;
+            color: #000; /* Changed from blue to black */
             margin-top: 10px;
         }
         dd {
@@ -35,11 +35,41 @@
             margin-top: 20px;
         }
         .sub-nav a {
-            color: #007BFF;
+            color: #000; /* Changed from blue to black */
             text-decoration: none;
             margin-right: 15px;
         }
         .sub-nav a:hover {
+            text-decoration: underline;
+        }
+        /* Header and navigation styling */
+        header {
+            background-color: #000; /* Black background */
+            color: white; /* White text */
+            padding: 20px 0;
+        }
+        .banner h1 {
+            text-align: center;
+            margin: 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white; /* White text in navigation */
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .active {
+            font-weight: bold;
             text-decoration: underline;
         }
     </style>
@@ -62,6 +92,9 @@
                 <li><a href="TypographyArticle.html">Typography Article</a></li>
             </ul>
         </nav>
+        <div class="banner">
+            <h1>Color Theory Overview</h1>
+        </div>
     </header>
 
     <main>
@@ -140,5 +173,19 @@
     <footer>
         <p>&copy; 2024 Frankie Color Theory Resources</p>
     </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('nav ul li a');
+        function activateLink(link) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        }
+        const currentPath = window.location.pathname;
+        navLinks.forEach(link => {
+            if (link.href.includes(currentPath)) {
+                activateLink(link);
+            }
+        });
+    </script>
 </body>
 </html>
