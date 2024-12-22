@@ -111,6 +111,28 @@
             position: relative;
             bottom: 0;
         }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        /* Font size styles */
+        body.small-font {
+            font-size: 14px;
+        }
+        body.medium-font {
+            font-size: 16px;
+        }
+        body.large-font {
+            font-size: 18px;
+        }
+
+        /* Hover effect for dropdown items */
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
     </style>
 </head>
 <body>
@@ -138,6 +160,16 @@
                     </div>
                 </li>
                 <li><a href="resume.html">Resume</a></li>
+                <!-- New dropdown for Mode and Font Size -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Settings</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="toggleMode()">Mode: Dark | Light</a>
+                        <a href="#" onclick="changeFontSize('small')">Font Size: Small</a>
+                        <a href="#" onclick="changeFontSize('medium')">Font Size: Medium</a>
+                        <a href="#" onclick="changeFontSize('large')">Font Size: Large</a>
+                    </div>
+                </li>
             </ul>
         </nav>
         <div class="banner">
@@ -159,5 +191,18 @@
     <footer>
         <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Toggle Dark Mode and Light Mode
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Change font size
+        function changeFontSize(size) {
+            document.body.classList.remove('small-font', 'medium-font', 'large-font');
+            document.body.classList.add(`${size}-font`);
+        }
+    </script>
 </body>
 </html>
