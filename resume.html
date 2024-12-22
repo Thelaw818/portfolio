@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pigeon Racing - Resume</title>
+  <title>Jane Smith's Resume</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,16 +12,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="showcase1.html">Showcase 1</a></li>
-        <li><a href="showcase2.html">Showcase 2</a></li>
-        <li><a href="showcase3.html">Showcase 3</a></li>
-        <li><a href="showcase4.html">Showcase 4</a></li>
-        <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
-        <li><a href="ColorThemes.html">Color Themes</a></li>
-        <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
-        <li><a href="TypographyOverview.html">Typography Overview</a></li>
-        <li><a href="FontTypesArticle.html">Font Types Article</a></li>
-        <li><a href="TypographyArticle.html">Typography Article</a></li>
+        <!-- Add other navigation links here -->
       </ul>
     </nav>
     <div class="banner" onclick="window.location.href='index.html'">
@@ -34,6 +25,7 @@
       <h2>Jane Smith's Resume</h2>
       <p>San Francisco, CA | (555) 123-4567 | jane.smith@email.com | <a href="https://linkedin.com/in/janesmith">linkedin.com/in/janesmith</a></p>
 
+      <!-- Professional Summary Section -->
       <div class="section-header" onclick="toggleSection('professional-summary')">
         <h3>Professional Summary</h3>
         <span class="toggle-icon">+</span>
@@ -42,62 +34,62 @@
         <p>Results-driven Software Engineer with 5+ years of experience developing scalable web applications and microservices. Proven track record of delivering high-quality solutions while mentoring junior developers and collaborating with cross-functional teams.</p>
       </div>
 
-      <!-- Collapsible resume sections -->
-      <section id="resume">
-        <div class="section-header" onclick="toggleSection('work-experience')">
-          <h2>Work Experience</h2>
-          <span class="toggle-icon">+</span>
-        </div>
-        <div id="work-experience" class="section-content">
-          <p><strong>Senior Software Engineer | Tech Solutions Inc. | Jan 2021 - Present</strong></p>
-          <ul>
-            <li>Led development of a cloud-native payment processing system that reduced transaction times by 40% and scaled to handle 1M+ daily transactions.</li>
-            <li>Mentored a team of 4 junior developers, implementing code review practices that improved code quality metrics by 30%.</li>
-            <li>Architected and implemented RESTful APIs supporting mobile and web applications used by 500K+ monthly active users.</li>
-          </ul>
+      <!-- Work Experience Section -->
+      <div class="section-header" onclick="toggleSection('work-experience')">
+        <h3>Work Experience</h3>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div id="work-experience" class="section-content">
+        <p><strong>Senior Software Engineer | Tech Solutions Inc. | Jan 2021 - Present</strong></p>
+        <ul>
+          <li>Led development of a cloud-native payment processing system that reduced transaction times by 40% and scaled to handle 1M+ daily transactions.</li>
+          <li>Mentored a team of 4 junior developers, implementing code review practices that improved code quality metrics by 30%.</li>
+          <li>Architected and implemented RESTful APIs supporting mobile and web applications used by 500K+ monthly active users.</li>
+        </ul>
+        <p><strong>Software Engineer | Digital Innovations Co. | June 2018 - Dec 2020</strong></p>
+        <ul>
+          <li>Developed and maintained microservices handling user authentication and authorization for enterprise clients.</li>
+          <li>Collaborated with product managers to define technical requirements and deliver features on schedule.</li>
+          <li>Reduced application load time by 60% through optimization of database queries and implementation of caching.</li>
+        </ul>
+      </div>
 
-          <p><strong>Software Engineer | Digital Innovations Co. | June 2018 - Dec 2020</strong></p>
-          <ul>
-            <li>Developed and maintained microservices handling user authentication and authorization for enterprise clients.</li>
-            <li>Collaborated with product managers to define technical requirements and deliver features on schedule.</li>
-            <li>Reduced application load time by 60% through optimization of database queries and implementation of caching.</li>
-          </ul>
-        </div>
+      <!-- Education Section -->
+      <div class="section-header" onclick="toggleSection('education')">
+        <h3>Education</h3>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div id="education" class="section-content">
+        <p><strong>Bachelor of Science in Computer Science</strong></p>
+        <p>University of California, Berkeley | Graduated 2018</p>
+        <p><strong>GPA:</strong> 3.8/4.0</p>
+        <p><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Software Engineering, Database Systems</p>
+      </div>
 
-        <div class="section-header" onclick="toggleSection('education')">
-          <h2>Education</h2>
-          <span class="toggle-icon">+</span>
-        </div>
-        <div id="education" class="section-content">
-          <p><strong>Bachelor of Science in Computer Science</strong></p>
-          <p>University of California, Berkeley | Graduated 2018</p>
-          <p><strong>GPA:</strong> 3.8/4.0</p>
-          <p><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Software Engineering, Database Systems</p>
-        </div>
+      <!-- Certifications Section -->
+      <div class="section-header" onclick="toggleSection('certifications')">
+        <h3>Certifications</h3>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div id="certifications" class="section-content">
+        <ul>
+          <li>AWS Certified Solutions Architect</li>
+          <li>Google Cloud Professional Developer</li>
+        </ul>
+      </div>
 
-        <div class="section-header" onclick="toggleSection('certifications')">
-          <h2>Certifications</h2>
-          <span class="toggle-icon">+</span>
-        </div>
-        <div id="certifications" class="section-content">
-          <ul>
-            <li>AWS Certified Solutions Architect</li>
-            <li>Google Cloud Professional Developer</li>
-          </ul>
-        </div>
-
-        <div class="section-header" onclick="toggleSection('projects')">
-          <h2>Projects</h2>
-          <span class="toggle-icon">+</span>
-        </div>
-        <div id="projects" class="section-content">
-          <p><strong>E-commerce Platform | <a href="https://github.com/janesmith/ecommerce" target="_blank">github.com/janesmith/ecommerce</a></strong></p>
-          <ul>
-            <li>Built full-stack e-commerce application using React, Node.js, and MongoDB.</li>
-            <li>Implemented secure payment processing and inventory management systems.</li>
-          </ul>
-        </div>
-      </section>
+      <!-- Projects Section -->
+      <div class="section-header" onclick="toggleSection('projects')">
+        <h3>Projects</h3>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div id="projects" class="section-content">
+        <p><strong>E-commerce Platform | <a href="https://github.com/janesmith/ecommerce" target="_blank">github.com/janesmith/ecommerce</a></strong></p>
+        <ul>
+          <li>Built full-stack e-commerce application using React, Node.js, and MongoDB.</li>
+          <li>Implemented secure payment processing and inventory management systems.</li>
+        </ul>
+      </div>
     </div>
   </main>
 
