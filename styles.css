@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* Reset default styles */
 * {
     margin: 0;
@@ -155,3 +157,23 @@ input, textarea, select {
     border: 0;
 }
 
+
+/* Resume Specific Styles */
+.resume-container {
+    background-color: white;
+    border: 5px solid #0000FF; /* Blue border */
+    width: 7in;
+    height: 7in;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Important for scrolling if content exceeds 7in */
+}
+
+.resume-container img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #FF0000;
+}
