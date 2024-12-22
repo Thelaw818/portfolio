@@ -103,65 +103,11 @@ article {
 }
 
 /* Styles for Resume */
-.resume {
-  font-size: 1rem;
-  color: #333;
-}
-
-.resume-header {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1em;
-}
-
-.resume-section {
-  margin-bottom: 2em;
-}
-
-.resume-section h2 {
-  font-size: 1.25rem;
-  color: #007BFF;
-  margin-bottom: 0.5em;
-}
-
-.resume-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.resume-section ul li {
-  margin-bottom: 0.5em;
-}
+/* ... (Resume styles) ... */
 
 /* Utility Classes */
-.text-center {
-  text-align: center;
-}
+/* ... (Utility classes) ... */
 
-.text-right {
-  text-align: right;
-}
-
-.text-bold {
-  font-weight: bold;
-}
-
-.mt-1 {
-  margin-top: 1em;
-}
-
-.mb-1 {
-  margin-bottom: 1em;
-}
-
-.pt-1 {
-  padding-top: 1em;
-}
-
-.pb-1 {
-  padding-bottom: 1em;
-}
 /* Styling for the sub-nav links */
 .sub-nav a {
   color: #0056b3; /* Darker blue for prominence */
@@ -170,12 +116,11 @@ article {
   padding: 8px 16px; /* Add padding for clickable area */
   background-color: #f0f8ff; /* Light background color */
   border-radius: 5px; /* Round the corners */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .sub-nav a:hover {
   background-color: #007bff; /* Dark blue background on hover */
   color: white; /* Change text to white on hover */
-  text-decoration: none; /* No underline on hover */
 }
 
