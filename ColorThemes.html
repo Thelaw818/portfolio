@@ -45,6 +45,31 @@
         .playful-pastels {
             background: linear-gradient(to right, #ffb6c1, #d0f0c0, #add8e6);
         }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .banner {
+            text-align: center;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 36px;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +97,18 @@
 
   <main>
     <h1>Color Themes</h1>
+
+    <!-- Key Changes Explanation Section -->
+    <section>
+        <h2>Key Changes:</h2>
+        <ul>
+            <li><strong>Color Blocks:</strong> Each theme now utilizes a <code>div</code> element with a class name that corresponds to the color scheme (e.g., <code>.warm-sunset</code>, <code>.cool-ocean</code>). These <code>div</code> elements are styled with gradient backgrounds to match the respective color palettes, creating a visual representation of each theme directly in the table.</li>
+            <li><strong>CSS for Color Themes:</strong> Each color theme is defined through CSS classes (e.g., <code>.warm-sunset</code>, <code>.cool-ocean</code>), where the background is set as a gradient to reflect the specific colors of the theme. This ensures a consistent look and feel for each color scheme.</li>
+            <li>This method allows the color themes to be displayed directly within the table, eliminating the need for external image files. It results in a cleaner, more consistent design and provides greater flexibility for customization.</li>
+        </ul>
+    </section>
+
+    <!-- Color Themes Table -->
     <table>
         <thead>
             <tr>
