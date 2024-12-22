@@ -7,82 +7,86 @@
     <link rel="stylesheet" href="sitewide.css">
     <link rel="stylesheet" href="showcase.css">
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
         header {
             background-color: black;
             color: white;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        nav ul {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        nav {
+            width: 100%;
+            display: flex;
             justify-content: center;
-            list-style: none;
-            padding: 10px;
+            background-color: black;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
             margin: 0;
+            display: flex;
+            flex-wrap: wrap; /* Added for better responsive behavior */
+            justify-content: center;
         }
-
         nav ul li {
-            margin: 0 10px;
+            margin: 0 15px;
         }
-
         nav ul li a {
             color: white;
             text-decoration: none;
-        }
-
-        body {
-            margin-top: 100px;
-        }
-
-        .banner {
-            text-align: center;
             padding: 10px;
+            font-size: 1.5em;
         }
-
-        .banner h1 {
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .banner {
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        h1 {
             margin: 0;
+            padding: 10px;
+            font-size: 1.5em;
         }
-
-        .content-frame {
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 200px);
+            padding: 20px;
+        }
+        .showcase-item {
             max-width: 800px;
-            margin: 50px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
             padding: 20px;
-            border: 5px solid red;
-            border-style: solid;
-            position: relative;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
-        .content-frame:before {
-            content: '';
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            right: 5px;
-            bottom: 5px;
-            border: 5px solid white;
+        h2 {
+            font-size: 3em;
+            margin: 0 0 20px;
+            text-align: center;
         }
-
-        .content-frame:after {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            right: 15px;
-            bottom: 15px;
-            border: 5px solid blue;
-        }
-
-        .content-text {
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-            text-align: justify;
+        .project-description {
             line-height: 1.6;
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            width: 100%;
+            position: relative;
+            bottom: 0;
         }
     </style>
 </head>
@@ -108,13 +112,18 @@
             <h1>Showcase Gallery</h1>
         </div>
     </header>
+    <main class="showcase-container">
+        <section class="showcase-item">
+            <h2>Frankie's Project</h2>
+            <div class="project-description">
+                <p>The Fernandol Valley Pigeon Club is a dedicated organization that brings together enthusiasts of pigeon racing and breeding. Nestled in the picturesque Fernandol Valley, the club has established itself as a vibrant hub for hobbyists and professionals who share a passion for these remarkable birds.</p>
 
-    <div class="content-frame">
-        <div class="content-text">
-            The Fernandol Valley Pigeon Club is a dedicated organization that brings together enthusiasts of pigeon racing and breeding. Nestled in the picturesque Fernandol Valley, the club has established itself as a vibrant hub for hobbyists and professionals who share a passion for these remarkable birds. The club focuses on fostering camaraderie among its members, promoting ethical breeding practices, and advancing the sport of pigeon racing through organized competitions and events. With a rich history and a commitment to excellence, the Fernandol Valley Pigeon Club serves as a beacon of community spirit, celebrating the skill, strategy, and dedication involved in racing pigeons. Through educational workshops, mentorship programs, and collaborative initiatives, the club aims to inspire the next generation of pigeon enthusiasts while preserving the timeless tradition of the sport. Its scenic location and welcoming atmosphere make it a cherished institution for bird lovers in the region....
-        </div>
-    </div>
+                <p>The club focuses on fostering camaraderie among its members, promoting ethical breeding practices, and advancing the sport of pigeon racing through organized competitions and events. With a rich history and a commitment to excellence, the Fernandol Valley Pigeon Club serves as a beacon of community spirit, celebrating the skill, strategy, and dedication involved in racing pigeons.</p>
 
+                <p>Through educational workshops, mentorship programs, and collaborative initiatives, the club aims to inspire the next generation of pigeon enthusiasts while preserving the timeless tradition of the sport. Its scenic location and welcoming atmosphere make it a cherished institution for bird lovers in the region.</p>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
     </footer>
