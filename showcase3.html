@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pigeon Racing - Showcase 3</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Styles for image border and centering */
+    .centered-image {
+      display: block;
+      margin: 20px auto;
+      border: 10px solid red;
+      border-width: 10px 10px 30px 10px; /* Adjusted for tricolor effect */
+      border-image: linear-gradient(to bottom, red, white, blue) 1 1;
+      width: 960px;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -29,14 +41,20 @@
     </div>
   </header>
 
-  <main>
-    <h2>Pigeon Racing in Southern California</h2>
-    <p>Showcase 3: Frankies Racing. Pigeon Racing.</p>
-    <img alt="pigeonproject 2_atlas_1.png" 
-         src="https://github.com/Thelaw818/portfolio/blob/main/images/pigeonproject%202_atlas_1.png?raw=true" 
-         data-hpc="true" 
-         class="Box-sc-g0xbh4-0 fzFXnm" 
-         width="960" height="960">
+  <main class="showcase-container showcase3">
+    <section class="showcase-item">
+      <h2>Training Pigeons</h2>
+      <p>Discover how to effectively train your pigeons for successful racing and better performance.</p>
+    </section>
+    
+    <section>
+      <h2>Pigeon Racing in Southern California</h2>
+      <p>Showcase 3: Frankies Racing. Pigeon Racing.</p>
+      <img 
+        alt="pigeonproject 2_atlas_1.png" 
+        src="https://github.com/Thelaw818/portfolio/blob/main/images/pigeonproject%202_atlas_1.png?raw=true" 
+        class="centered-image">
+    </section>
   </main>
 
   <footer>
@@ -44,4 +62,3 @@
   </footer>
 </body>
 </html>
-
