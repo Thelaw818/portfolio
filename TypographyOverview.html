@@ -9,37 +9,105 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             padding: 0;
             background-color: #f8f9fa;
         }
-        h1, h2 {
-            color: #333;
+
+        /* Header Styling */
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 1rem 0;
+            font-size: 12px;
         }
+
+        h1, h2 {
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75em;
+        }
+
         p {
             color: #555;
             font-size: 1.1rem;
             margin: 10px 0;
         }
-        dt {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        dd {
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
+
         a {
             color: #007BFF;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #000000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        nav li a {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+
+        nav li a:hover {
+            color: #0066cc;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
     </style>
 </head>
 <body>
   <header>
+    <div class="banner">
+      <h1>Pigeon Racing in Southern California</h1>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -56,12 +124,9 @@
         <li><a href="TypographyArticle.html">Typography Article</a></li>
       </ul>
     </nav>
-    <div class="banner">
-      <h1>Pigeon Racing in Southern California</h1>
-    </div>
   </header>
 
-  <main>
+  <main class="container">
     <h1>Typography Overview</h1>
 
     <section>
