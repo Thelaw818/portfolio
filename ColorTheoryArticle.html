@@ -7,26 +7,82 @@
     <link rel="stylesheet" href="css/color-and-type.css">
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 0;
-            background-color: #f0f0f0;
         }
-        h1, h2 {
-            color: #333;
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+        }
+        nav {
+            width: 100%;
+            background-color: black;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1em;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .banner {
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        h1 {
+            margin: 0;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .content-section {
+            max-width: 900px;
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 3em;
+            margin: 0 0 20px;
+            text-align: center;
         }
         p {
-            color: #555;
             font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+            color: #555;
+        }
+        ul {
             margin: 10px 0;
         }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            width: 100%;
         }
         .image {
             text-align: center;
@@ -58,21 +114,15 @@
       </ul>
     </nav>
     <div class="banner">
-      <h1>Pigeon Racing in Southern California</h1>
+      <h1>Understanding Color Theory</h1>
     </div>
   </header>
 
   <main>
-    <header>
-        <h1>Understanding Color Theory in Design</h1>
-    </header>
-
-    <section>
+    <section class="content-section">
         <h2>Introduction to Color Theory</h2>
         <p>Color theory is a fundamental concept in design, art, and visual communication. It explores the relationship between colors, the psychological impact of color choices, and how colors can be combined to create harmonious designs. Understanding color theory helps designers and artists make informed decisions about color combinations to evoke specific moods, attract attention, and enhance the aesthetics of a composition.</p>
-    </section>
 
-    <section>
         <h2>The Color Wheel</h2>
         <p>The color wheel is a circular diagram used to show the relationships between colors. It is divided into primary, secondary, and tertiary colors:</p>
         <ul>
@@ -86,9 +136,7 @@
             <img src="https://github.com/Thelaw818/portfolio/blob/main/images/color%20wheel.jpg?raw=true" alt="Color Wheel Image">
             <p>Another view of the Color Wheel showing the relationship between different color hues.</p>
         </div>
-    </section>
 
-    <section>
         <h2>Complementary Colors</h2>
         <p>Complementary colors are located opposite each other on the color wheel. When placed together, they create high contrast and can make each color appear more vibrant. Some examples of complementary color pairs include:</p>
         <ul>
@@ -100,27 +148,21 @@
             <img src="https://github.com/Thelaw818/portfolio/blob/main/images/Complementary%20Colors.jpg?raw=true" alt="Complementary Colors">
             <p>Complementary colors create high contrast and make each color stand out.</p>
         </div>
-    </section>
 
-    <section>
         <h2>Analogous Colors</h2>
         <p>Analogous colors are next to each other on the color wheel. They usually match well and create serene and comfortable designs. For example, the combination of blue, blue-green, and green is an analogous color scheme.</p>
         <div class="image">
             <img src="https://github.com/Thelaw818/portfolio/blob/main/images/Analogous%20Colors.jpg?raw=true" alt="Analogous Colors">
             <p>Analogous colors create harmony and cohesion in a design.</p>
         </div>
-    </section>
 
-    <section>
         <h2>RGB Color Wheel</h2>
         <p>The RGB color model is based on the primary colors Red, Green, and Blue. It is widely used in digital design, as it aligns with how colors are displayed on screens.</p>
         <div class="image">
             <img src="https://github.com/Thelaw818/portfolio/blob/main/images/RGB_color_wheel.png?raw=true" alt="RGB Color Wheel">
             <p>The RGB Color Wheel is used in digital screens and lighting systems.</p>
         </div>
-    </section>
 
-    <section>
         <h2>Color Psychology</h2>
         <p>Colors have a psychological impact on the viewer. Different colors can evoke different emotions and reactions. Here's how some colors are perceived:</p>
         <ul>
@@ -132,16 +174,14 @@
             <li><strong>Black:</strong> Sophistication, elegance, authority</li>
         </ul>
         <p>Designers use these psychological associations to influence how people perceive a brand or message. For more on color psychology, check out this <a href="https://www.colorpsychology.org/" target="_blank">comprehensive guide on color psychology</a>.</p>
-    </section>
 
-    <section>
         <h2>Conclusion</h2>
         <p>Color theory is an essential aspect of design that can greatly affect the mood and effectiveness of a design. By understanding how colors interact with each other and how they influence emotions, designers can create more engaging and meaningful visual experiences. Whether you're designing for a brand, website, or artwork, knowing how to use color effectively is crucial for making impactful and harmonious designs.</p>
     </section>
-
-    <footer>
-        <p>&copy; 2024 Frankie Color Theory Resources</p>
-    </footer>
   </main>
+
+  <footer>
+    <p>&copy; 2024 Frankie Color Theory Resources</p>
+  </footer>
 </body>
 </html>
