@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pigeon Racing in Southern California</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigeon Racing - Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="showcase.css">
 </head>
 <body>
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="showcase1.html">Showcase 1</a></li>
-      <li><a href="showcase2.html">Showcase 2</a></li>
-      <li><a href="showcase3.html">Showcase 3</a></li>
-      <li><a href="showcase4.html">Showcase 4</a></li>
-      <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
-      <li><a href="ColorThemes.html">Color Themes</a></li>
-      <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
-      <li><a href="TypographyOverview.html">Typography Overview</a></li>
-      <li><a href="FontTypesArticle.html">Font Types Article</a></li>
-      <li><a href="TypographyArticle.html">Typography Article</a></li>
-    </ul>
-  </nav>
-  <div class="banner">
-    <h1>Pigeon Racing in Southern California</h1>
-  </div>
-</header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="showcase1.html">Showcase 1</a></li>
+                <li><a href="showcase2.html">Showcase 2</a></li>
+                <li><a href="showcase3.html">Showcase 3</a></li>
+                <li><a href="showcase4.html">Showcase 4</a></li>
+                <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
+                <li><a href="ColorThemes.html">Color Themes</a></li>
+                <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
+                <li><a href="TypographyOverview.html">Typography Overview</a></li>
+                <li><a href="FontTypesArticle.html">Font Types Article</a></li>
+                <li><a href="TypographyArticle.html">Typography Article</a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <h1>Showcase Gallery</h1>
+        </div>
+    </header>
 
-<main id="content">
-  <section id="home">
-    <h2>Welcome to the World of Pigeon Racing!</h2>
-    <p>This website is dedicated to all things related to pigeon racing, focusing on the vibrant Southern California community. Click on the navigation links above to explore more.</p>
-    <p>Pigeon racing is a fascinating and lesser-known competitive sport in the United States, with a rich history and dedicated community of enthusiasts. It combines elements of animal husbandry, athletic competition, and strategic planning. In Southern California, the sport thrives with passionate racers and dedicated clubs.</p>
-    <!-- Add your main content here -->
-  </section>
-</main>
+    <main class="showcase-container">
+        <section class="showcase-item">
+            <h2>Project Title</h2>
+            <div class="project-description">
+                <p>Your project description goes here...</p>
+            </div>
+            <img src="your-image-path.jpg" alt="Project description" class="showcase-image">
+        </section>
+    </main>
 
-<footer>
-  <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
+    </footer>
 
-<script>
-  const navLinks = document.querySelectorAll('nav ul li a');
-  function activateLink(link) {
-    navLinks.forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-  }
-  const currentPath = window.location.pathname;
-  navLinks.forEach(link => {
-    if (link.href.includes(currentPath)) {
-      activateLink(link);
-    }
-  });
-</script>
+    <script>
+        const navLinks = document.querySelectorAll('nav ul li a');
+        function activateLink(link) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        }
+        const currentPath = window.location.pathname;
+        navLinks.forEach(link => {
+            if (link.href.includes(currentPath)) {
+                activateLink(link);
+            }
+        });
+    </script>
 </body>
 </html>
