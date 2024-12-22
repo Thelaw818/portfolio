@@ -1,7 +1,4 @@
-/* styles.css */
-
-/* Reset default styles */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -156,7 +153,6 @@ input, textarea, select {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-
 
 /* Resume Specific Styles */
 .resume-container {
