@@ -1,1 +1,165 @@
+/* color-and-type.css */
+
+/* General Reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Typography Specific Styles */
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: #222;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75em;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1.5em;
+}
+
+/* Links */
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout for Articles */
+article {
+  margin: 2em auto;
+  padding: 1.5em;
+  max-width: 800px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Styles for FontTypesArticle.html */
+.font-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.font-types div {
+  flex: 1 1 calc(33.333% - 1em);
+  padding: 1em;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Specific Styles for TypographyArticle.html */
+.typography-article {
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+
+.blockquote {
+  font-style: italic;
+  border-left: 4px solid #ccc;
+  padding-left: 1em;
+  margin: 1em 0;
+}
+
+/* Specific Styles for TypographyOverview.html */
+.overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+}
+
+.overview section {
+  padding: 1em;
+  background: #e9ecef;
+  border-radius: 5px;
+}
+
+/* Styles for Resume */
+.resume {
+  font-size: 1rem;
+  color: #333;
+}
+
+.resume-header {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.resume-section {
+  margin-bottom: 2em;
+}
+
+.resume-section h2 {
+  font-size: 1.25rem;
+  color: #007BFF;
+  margin-bottom: 0.5em;
+}
+
+.resume-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resume-section ul li {
+  margin-bottom: 0.5em;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.mt-1 {
+  margin-top: 1em;
+}
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+.pt-1 {
+  padding-top: 1em;
+}
+
+.pb-1 {
+  padding-bottom: 1em;
+}
 
