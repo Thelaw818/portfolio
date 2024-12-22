@@ -6,6 +6,85 @@
     <title>Pigeon Racing - Showcase</title>
     <link rel="stylesheet" href="sitewide.css">
     <link rel="stylesheet" href="showcase.css">
+    <style>
+        header {
+            background-color: black;
+            color: white;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            margin-top: 100px;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .banner h1 {
+            margin: 0;
+        }
+
+        .content-frame {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 5px solid red;
+            border-style: solid;
+            position: relative;
+        }
+
+        .content-frame:before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 5px solid white;
+        }
+
+        .content-frame:after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 5px solid blue;
+        }
+
+        .content-text {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,36 +109,14 @@
         </div>
     </header>
 
-    <main class="showcase-container">
-        <section class="showcase-item">
-            <h2>Project Title</h2>
-            <div class="project-description">
-                <p>The Fernandol Valley Pigeon Club is a dedicated organization that brings together enthusiasts of pigeon racing and breeding. Nestled in the picturesque Fernandol Valley, the club has established itself as a vibrant hub for hobbyists and professionals who share a passion for these remarkable birds.
-
-The club focuses on fostering camaraderie among its members, promoting ethical breeding practices, and advancing the sport of pigeon racing through organized competitions and events. With a rich history and a commitment to excellence, the Fernandol Valley Pigeon Club serves as a beacon of community spirit, celebrating the skill, strategy, and dedication involved in racing pigeons.
-
-Through educational workshops, mentorship programs, and collaborative initiatives, the club aims to inspire the next generation of pigeon enthusiasts while preserving the timeless tradition of the sport. Its scenic location and welcoming atmosphere make it a cherished institution for bird lovers in the region....</p>
-            </div>
-            <img src="your-image-path.jpg" alt="Frankie Rosario's Online Work" class="showcase-image">
-        </section>
-    </main>
+    <div class="content-frame">
+        <div class="content-text">
+            The Fernandol Valley Pigeon Club is a dedicated organization that brings together enthusiasts of pigeon racing and breeding. Nestled in the picturesque Fernandol Valley, the club has established itself as a vibrant hub for hobbyists and professionals who share a passion for these remarkable birds. The club focuses on fostering camaraderie among its members, promoting ethical breeding practices, and advancing the sport of pigeon racing through organized competitions and events. With a rich history and a commitment to excellence, the Fernandol Valley Pigeon Club serves as a beacon of community spirit, celebrating the skill, strategy, and dedication involved in racing pigeons. Through educational workshops, mentorship programs, and collaborative initiatives, the club aims to inspire the next generation of pigeon enthusiasts while preserving the timeless tradition of the sport. Its scenic location and welcoming atmosphere make it a cherished institution for bird lovers in the region....
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
     </footer>
-
-    <script>
-        const navLinks = document.querySelectorAll('nav ul li a');
-        function activateLink(link) {
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        }
-        const currentPath = window.location.pathname;
-        navLinks.forEach(link => {
-            if (link.href.includes(currentPath)) {
-                activateLink(link);
-            }
-        });
-    </script>
 </body>
 </html>
