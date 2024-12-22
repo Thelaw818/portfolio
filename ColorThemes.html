@@ -25,10 +25,25 @@
         th {
             background-color: #f2f2f2;
         }
-        img {
-            width: 200px;
-            height: 200px;
+        .color-block {
+            width: 100px;
+            height: 100px;
             border-radius: 5px;
+        }
+        .warm-sunset {
+            background: linear-gradient(to right, #ff7e5f, #feb47b, #ff9e00);
+        }
+        .cool-ocean {
+            background: linear-gradient(to right, #00c6ff, #0072ff, #0a9d9d);
+        }
+        .nature-harmony {
+            background: linear-gradient(to right, #4caf50, #8b4513, #f4a261);
+        }
+        .modern-minimalist {
+            background: linear-gradient(to right, #808080, #ffffff, #000000);
+        }
+        .playful-pastels {
+            background: linear-gradient(to right, #ffb6c1, #d0f0c0, #add8e6);
         }
     </style>
 </head>
@@ -62,7 +77,7 @@
             <tr>
                 <th>Theme Name</th>
                 <th>Description</th>
-                <th>Image</th>
+                <th>Color Swatch</th>
             </tr>
         </thead>
         <tbody>
@@ -70,47 +85,35 @@
                 <td>Warm Sunset</td>
                 <td>A blend of warm hues like red, orange, and yellow for vibrant energy.</td>
                 <td>
-                    <img 
-                        src="https://github.com/Thelaw818/portfolio/blob/main/images/warm%20sunset%20color%20palette.png?raw=true" 
-                        alt="warm sunset color palette">
+                    <div class="color-block warm-sunset"></div>
                 </td>
             </tr>
             <tr>
                 <td>Cool Ocean</td>
                 <td>Soothing cool tones like blue, teal, and seafoam green for tranquility.</td>
                 <td>
-                    <img 
-                        alt="ocean coral palette.png" 
-                        src="https://github.com/Thelaw818/portfolio/blob/main/images/ocean%20coral%20palette.png?raw=true">
+                    <div class="color-block cool-ocean"></div>
                 </td>
             </tr>
             <tr>
                 <td>Nature's Harmony</td>
                 <td>Earthy colors such as green, brown, and beige for a natural feel.</td>
                 <td>
-                    <img 
-                        alt="Nature Harmony Color Palette.png" 
-                        src="https://github.com/Thelaw818/portfolio/blob/main/images/Nature%20Harmony%20Color%20Palette.png?raw=true">
+                    <div class="color-block nature-harmony"></div>
                 </td>
             </tr>
             <tr>
                 <td>Modern Minimalist</td>
                 <td>Neutral shades like gray, black, and white for sleek, clean designs.</td>
                 <td>
-                    <img src="images/modern-minimalist.jpg" alt="Modern Minimalist Theme">
-                </td>
-                <td>
-                    <img src="https://github.com/Thelaw818/portfolio/blob/main/images/modern%20mini%20theme.jpg?raw=true" alt="modern mini theme">
+                    <div class="color-block modern-minimalist"></div>
                 </td>
             </tr>
             <tr>
                 <td>Playful Pastels</td>
                 <td>Soft pastel tones such as pink, lavender, and baby blue for a cheerful vibe.</td>
                 <td>
-                    <img src="images/playful-pastels.jpg" alt="Playful Pastels Theme">
-                </td>
-                <td>
-                    <img src="https://github.com/Thelaw818/portfolio/blob/main/images/playful%20pastel%20Color%20Palette.png?raw=true" alt="playful pastel Color Palette">
+                    <div class="color-block playful-pastels"></div>
                 </td>
             </tr>
         </tbody>
