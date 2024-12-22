@@ -1,45 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pigeon Racing - Showcase 1</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="showcase.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigeon Racing - Showcase 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="showcase.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="showcase1.html">Showcase 1</a></li>
-        <li><a href="showcase2.html">Showcase 2</a></li>
-        <li><a href="showcase3.html">Showcase 3</a></li>
-        <li><a href="showcase4.html">Showcase 4</a></li>
-        <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
-        <li><a href="ColorThemes.html">Color Themes</a></li>
-        <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
-        <li><a href="TypographyOverview.html">Typography Overview</a></li>
-        <li><a href="FontTypesArticle.html">Font Types Article</a></li>
-        <li><a href="TypographyArticle.html">Typography Article</a></li>
-      </ul>
-    </nav>
-    <div class="banner" onclick="window.location.href='index.html'">
-      <h1>Pigeon Racing Showcase 1</h1>
-    </div>
-  </header>
-  <main>
-    <h2>Training Pigeons</h2>
-    <p>Learn the best practices for training pigeons for races...</p>
-    <img alt="Magazine Cover Marty Ladin 1" 
-         src="https://github.com/Thelaw818/portfolio/blob/main/images/Magazine%20Cover%20Marty%20Ladin%201.jpg?raw=true" 
-         class="showcase-image" 
-         style="width: 672px; height: 672px; object-fit: cover;">
-  </main>
-  <footer>
-    <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
-  </footer>
-  <script src="scripts.js"></script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="showcase1.html">Showcase 1</a></li>
+                <li><a href="showcase2.html">Showcase 2</a></li>
+                <li><a href="showcase3.html">Showcase 3</a></li>
+                <li><a href="showcase4.html">Showcase 4</a></li>
+                <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
+                <li><a href="ColorThemes.html">Color Themes</a></li>
+                <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
+                <li><a href="TypographyOverview.html">Typography Overview</a></li>
+                <li><a href="FontTypesArticle.html">Font Types Article</a></li>
+                <li><a href="TypographyArticle.html">Typography Article</a></li>
+            </ul>
+        </nav>
+        <div class="banner" onclick="window.location.href='index.html'">
+            <h1>Pigeon Racing Showcase 1</h1>
+        </div>
+    </header>
+
+    <main class="showcase-container showcase1">
+        <section class="showcase-item">
+            <h2>Training Pigeons</h2>
+            
+            <div class="project-description">
+                <p>Learn the best practices for training pigeons for races. This comprehensive guide covers essential techniques and strategies for preparing your racing pigeons for competition.</p>
+                
+                <p>Key aspects of pigeon training include:</p>
+                <ul>
+                    <li>Physical conditioning</li>
+                    <li>Navigation training</li>
+                    <li>Diet and nutrition</li>
+                    <li>Race preparation</li>
+                </ul>
+            </div>
+
+            <div class="gallery-item">
+                <img 
+                    alt="Magazine Cover Marty Ladin 1" 
+                    src="https://github.com/Thelaw818/portfolio/blob/main/images/Magazine%20Cover%20Marty%20Ladin%201.jpg?raw=true" 
+                    class="showcase-image">
+                <div class="gallery-caption">
+                    Magazine Cover: Modern Pigeon Racing Techniques
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('nav ul li a');
+        function activateLink(link) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        }
+        const currentPath = window.location.pathname;
+        navLinks.forEach(link => {
+            if (link.href.includes(currentPath)) {
+                activateLink(link);
+            }
+        });
+    </script>
 </body>
 </html>
