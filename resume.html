@@ -30,16 +30,17 @@
   </header>
 
   <main>
-    <h2>My Pigeon Racing Experience</h2>
-    <p>The Fernando Valley Pigeon Club is a dedicated group of pigeon enthusiasts in the Fernando Valley area. We are passionate about the sport of pigeon racing, fostering camaraderie among members, and promoting the health and well-being of our racing birds. We organize races, provide support for our members, and participate in local and regional competitions. Our club is committed to upholding the highest standards of ethical racing practices and responsible pigeon ownership....
-    
-    RESUME Frankie Rosario </p>
-    <img alt="resume-1.png" 
-         src="https://github.com/Thelaw818/portfolio/blob/main/images/resume-1.png?raw=true" 
-         data-hpc="true" 
-         class="Box-sc-g0xbh4-0 fzFXnm" 
-         width="960" height="960">
-    
+    <h2>Jane Smith's Resume</h2>
+    <p>San Francisco, CA | (555) 123-4567 | jane.smith@email.com | <a href="https://linkedin.com/in/janesmith">linkedin.com/in/janesmith</a></p>
+
+    <div class="section-header" onclick="toggleSection('professional-summary')">
+      <h3>Professional Summary</h3>
+      <span class="toggle-icon">+</span>
+    </div>
+    <div id="professional-summary" class="section-content">
+      <p>Results-driven Software Engineer with 5+ years of experience developing scalable web applications and microservices. Proven track record of delivering high-quality solutions while mentoring junior developers and collaborating with cross-functional teams.</p>
+    </div>
+
     <!-- Collapsible resume sections -->
     <section id="resume">
       <div class="section-header" onclick="toggleSection('work-experience')">
@@ -47,7 +48,19 @@
         <span class="toggle-icon">+</span>
       </div>
       <div id="work-experience" class="section-content">
-        <p>Provide details about your work experience here.</p>
+        <p><strong>Senior Software Engineer | Tech Solutions Inc. | Jan 2021 - Present</strong></p>
+        <ul>
+          <li>Led development of a cloud-native payment processing system that reduced transaction times by 40% and scaled to handle 1M+ daily transactions.</li>
+          <li>Mentored a team of 4 junior developers, implementing code review practices that improved code quality metrics by 30%.</li>
+          <li>Architected and implemented RESTful APIs supporting mobile and web applications used by 500K+ monthly active users.</li>
+        </ul>
+
+        <p><strong>Software Engineer | Digital Innovations Co. | June 2018 - Dec 2020</strong></p>
+        <ul>
+          <li>Developed and maintained microservices handling user authentication and authorization for enterprise clients.</li>
+          <li>Collaborated with product managers to define technical requirements and deliver features on schedule.</li>
+          <li>Reduced application load time by 60% through optimization of database queries and implementation of caching.</li>
+        </ul>
       </div>
 
       <div class="section-header" onclick="toggleSection('education')">
@@ -55,10 +68,34 @@
         <span class="toggle-icon">+</span>
       </div>
       <div id="education" class="section-content">
-        <p>Provide your education details here.</p>
+        <p><strong>Bachelor of Science in Computer Science</strong></p>
+        <p>University of California, Berkeley | Graduated 2018</p>
+        <p><strong>GPA:</strong> 3.8/4.0</p>
+        <p><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Software Engineering, Database Systems</p>
       </div>
 
-      <!-- Add more sections as needed -->
+      <div class="section-header" onclick="toggleSection('certifications')">
+        <h2>Certifications</h2>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div id="certifications" class="section-content">
+        <ul>
+          <li>AWS Certified Solutions Architect</li>
+          <li>Google Cloud Professional Developer</li>
+        </ul>
+      </div>
+
+      <div class="section-header" onclick="toggleSection('projects')">
+        <h2>Projects</h2>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div id="projects" class="section-content">
+        <p><strong>E-commerce Platform | <a href="https://github.com/janesmith/ecommerce" target="_blank">github.com/janesmith/ecommerce</a></strong></p>
+        <ul>
+          <li>Built full-stack e-commerce application using React, Node.js, and MongoDB.</li>
+          <li>Implemented secure payment processing and inventory management systems.</li>
+        </ul>
+      </div>
     </section>
   </main>
 
@@ -69,3 +106,4 @@
   <script src="scripts.js"></script>
 </body>
 </html>
+
