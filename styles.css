@@ -1,8 +1,7 @@
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Global Reset */
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 
 /* Typography */
 body {
@@ -202,4 +201,31 @@ input, textarea, select {
     display: block;
     margin: 0 auto;
     border: 2px solid #FF0000;
+}
+
+/* Collapsible Sections */
+.section-content {
+    display: none; /* Start with sections collapsed */
+    margin-left: 20px;
+}
+
+.section-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.section-header h3 {
+    margin: 0;
+}
+
+.toggle-icon {
+    font-weight: bold;
+    font-size: 18px;
 }
