@@ -1,11 +1,12 @@
 {
-  const sectionContent = document.getElementById(sectionId);
-  const toggleIcon = sectionContent.previousElementSibling.querySelector('.toggle-icon');
-  if (sectionContent.style.display === 'block') {
-    sectionContent.style.display = 'none';
-    toggleIcon.textContent = '+';
+  const section = document.getElementById(sectionId);
+  const icon = section.previousElementSibling.querySelector('.toggle-icon');
+
+  if (section.style.display === 'none' || !section.style.display) {
+    section.style.display = 'block'; // Show section
+    icon.textContent = '-'; // Change to minus icon
   } else {
-    sectionContent.style.display = 'block';
-    toggleIcon.textContent = '-';
+    section.style.display = 'none'; // Hide section
+    icon.textContent = '+'; // Change to plus icon
   }
 }
