@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jane Smith's Resume</title>
   <link rel="stylesheet" href="resume.css">
+  <style>
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f0f0f0;
+      padding: 10px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+
+    .section-content {
+      display: none; /* Hidden by default */
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-top: none;
+    }
+
+    .toggle-icon {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .toggle-icon.active {
+      transform: rotate(45deg); /* Rotate icon when active */
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,11 +39,10 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <!-- Add other navigation links here -->
       </ul>
     </nav>
-    <div class="banner" onclick="window.location.href='index.html'">
-      <h1>Pigeon Racing in Southern California</h1>
+    <div class="banner">
+      <h1>Jane Smith's Resume</h1>
     </div>
   </header>
 
@@ -25,16 +51,16 @@
       <h2>Jane Smith's Resume</h2>
       <p>San Francisco, CA | (555) 123-4567 | jane.smith@email.com | <a href="https://linkedin.com/in/janesmith">linkedin.com/in/janesmith</a></p>
 
-      <!-- Professional Summary Section -->
+      <!-- Professional Summary -->
       <div class="section-header" onclick="toggleSection('professional-summary')">
         <h3>Professional Summary</h3>
         <span class="toggle-icon">+</span>
       </div>
       <div id="professional-summary" class="section-content">
-        <p>Results-driven Software Engineer with 5+ years of experience developing scalable web applications and microservices. Proven track record of delivering high-quality solutions while mentoring junior developers and collaborating with cross-functional teams.</p>
+        <p>Results-driven Software Engineer with 5+ years of experience developing scalable web applications and microservices...</p>
       </div>
 
-      <!-- Work Experience Section -->
+      <!-- Work Experience -->
       <div class="section-header" onclick="toggleSection('work-experience')">
         <h3>Work Experience</h3>
         <span class="toggle-icon">+</span>
@@ -42,19 +68,15 @@
       <div id="work-experience" class="section-content">
         <p><strong>Senior Software Engineer | Tech Solutions Inc. | Jan 2021 - Present</strong></p>
         <ul>
-          <li>Led development of a cloud-native payment processing system that reduced transaction times by 40% and scaled to handle 1M+ daily transactions.</li>
-          <li>Mentored a team of 4 junior developers, implementing code review practices that improved code quality metrics by 30%.</li>
-          <li>Architected and implemented RESTful APIs supporting mobile and web applications used by 500K+ monthly active users.</li>
+          <li>Led development of a cloud-native payment processing system...</li>
         </ul>
         <p><strong>Software Engineer | Digital Innovations Co. | June 2018 - Dec 2020</strong></p>
         <ul>
-          <li>Developed and maintained microservices handling user authentication and authorization for enterprise clients.</li>
-          <li>Collaborated with product managers to define technical requirements and deliver features on schedule.</li>
-          <li>Reduced application load time by 60% through optimization of database queries and implementation of caching.</li>
+          <li>Developed and maintained microservices...</li>
         </ul>
       </div>
 
-      <!-- Education Section -->
+      <!-- Education -->
       <div class="section-header" onclick="toggleSection('education')">
         <h3>Education</h3>
         <span class="toggle-icon">+</span>
@@ -62,11 +84,9 @@
       <div id="education" class="section-content">
         <p><strong>Bachelor of Science in Computer Science</strong></p>
         <p>University of California, Berkeley | Graduated 2018</p>
-        <p><strong>GPA:</strong> 3.8/4.0</p>
-        <p><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Software Engineering, Database Systems</p>
       </div>
 
-      <!-- Certifications Section -->
+      <!-- Certifications -->
       <div class="section-header" onclick="toggleSection('certifications')">
         <h3>Certifications</h3>
         <span class="toggle-icon">+</span>
@@ -74,11 +94,10 @@
       <div id="certifications" class="section-content">
         <ul>
           <li>AWS Certified Solutions Architect</li>
-          <li>Google Cloud Professional Developer</li>
         </ul>
       </div>
 
-      <!-- Projects Section -->
+      <!-- Projects -->
       <div class="section-header" onclick="toggleSection('projects')">
         <h3>Projects</h3>
         <span class="toggle-icon">+</span>
@@ -86,8 +105,7 @@
       <div id="projects" class="section-content">
         <p><strong>E-commerce Platform | <a href="https://github.com/janesmith/ecommerce" target="_blank">github.com/janesmith/ecommerce</a></strong></p>
         <ul>
-          <li>Built full-stack e-commerce application using React, Node.js, and MongoDB.</li>
-          <li>Implemented secure payment processing and inventory management systems.</li>
+          <li>Built full-stack e-commerce application...</li>
         </ul>
       </div>
     </div>
@@ -97,6 +115,20 @@
     <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script>
+    function toggleSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      const icon = section.previousElementSibling.querySelector('.toggle-icon');
+
+      // Toggle display of the section content
+      if (section.style.display === 'none' || section.style.display === '') {
+        section.style.display = 'block';
+        icon.textContent = '-';
+      } else {
+        section.style.display = 'none';
+        icon.textContent = '+';
+      }
+    }
+  </script>
 </body>
 </html>
