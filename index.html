@@ -41,6 +41,34 @@
         nav ul li a:hover {
             text-decoration: underline;
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
         .banner {
             margin-top: 10px;
             text-align: center;
@@ -90,18 +118,23 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Showcase</a>
+                    <div class="dropdown-content">
+                        <a href="showcase1.html">Showcase 1</a>
+                        <a href="showcase2.html">Showcase 2</a>
+                        <a href="showcase3.html">Showcase 3</a>
+                        <a href="showcase4.html">Showcase 4</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Design Theory</a>
+                    <div class="dropdown-content">
+                        <a href="color-theory.html">Color Theory</a>
+                        <a href="typography.html">Typography</a>
+                    </div>
+                </li>
                 <li><a href="resume.html">Resume</a></li>
-                <li><a href="showcase1.html">Showcase 1</a></li>
-                <li><a href="showcase2.html">Showcase 2</a></li>
-                <li><a href="showcase3.html">Showcase 3</a></li>
-                <li><a href="showcase4.html">Showcase 4</a></li>
-                <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
-                <li><a href="ColorThemes.html">Color Themes</a></li>
-                <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
-                <li><a href="TypographyOverview.html">Typography Overview</a></li>
-                <li><a href="FontTypesArticle.html">Font Types Article</a></li>
-                <li><a href="TypographyArticle.html">Typography Article</a></li>
-                <li><a href="#">Showcase Gallery</a></li>
             </ul>
         </nav>
         <div class="banner">
@@ -125,3 +158,4 @@
     </footer>
 </body>
 </html>
+
