@@ -1,14 +1,79 @@
+/* Showcase specific styles */
+
+/* Main content layout */
+.showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Image styling */
 .showcase-image {
+    border-style: solid;
+    border-width: 5px;
+    border-color: red white blue;
+    margin: 20px auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.showcase-image:hover {
+    transform: scale(1.02);
+}
+
+/* Alternative styling for all images in showcase sections */
+.showcase img {
     border-style: solid;
     border-width: 5px;
     border-color: red white blue;
     margin: 10px;
 }
 
-/* If you want the border on all images in your showcase pages */
-.showcase img {
-    border-style: solid;
-    border-width: 5px;
-    border-color: red white blue;
-    margin: 10px;
+/* Project description styling */
+.project-description {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Showcase headings */
+.showcase h2 {
+    color: #333;
+    border-bottom: 3px solid #0066cc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Grid layout for multiple showcase items */
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Individual showcase item styling */
+.showcase-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .showcase-container {
+        padding: 10px;
+    }
+    
+    .showcase-image {
+        margin: 10px auto;
+    }
+    
+    .showcase-grid {
+        grid-template-columns: 1fr;
+    }
 }
