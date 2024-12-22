@@ -3,118 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Themes Table</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Color Theory Overview</title>
+    <link rel="stylesheet" href="color-and-type.css">
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 20px;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f0f0f0;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
+        h1, h2 {
+            color: #333;
         }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        img {
-            width: 200px;
-            height: 200px;
+        dl {
+            background-color: #ffffff;
+            padding: 15px;
             border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        dt {
+            font-weight: bold;
+            color: #007BFF;
+            margin-top: 10px;
+        }
+        dd {
+            margin: 0 0 10px 20px;
+            color: #555;
+        }
+        .sub-nav {
+            margin-top: 20px;
+        }
+        .sub-nav a {
+            color: #007BFF;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sub-nav a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="showcase1.html">Showcase 1</a></li>
-        <li><a href="showcase2.html">Showcase 2</a></li>
-        <li><a href="showcase3.html">Showcase 3</a></li>
-        <li><a href="showcase4.html">Showcase 4</a></li>
-        <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
-        <li><a href="ColorThemes.html">Color Themes</a></li>
-        <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
-        <li><a href="TypographyOverview.html">Typography Overview</a></li>
-        <li><a href="FontTypesArticle.html">Font Types Article</a></li>
-        <li><a href="TypographyArticle.html">Typography Article</a></li>
-      </ul>
-    </nav>
-    <div class="banner">
-      <h1>Pigeon Racing in Southern California</h1>
-    </div>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="showcase1.html">Showcase 1</a></li>
+                <li><a href="showcase2.html">Showcase 2</a></li>
+                <li><a href="showcase3.html">Showcase 3</a></li>
+                <li><a href="showcase4.html">Showcase 4</a></li>
+                <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
+                <li><a href="ColorThemes.html">Color Themes</a></li>
+                <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
+                <li><a href="TypographyOverview.html">Typography Overview</a></li>
+                <li><a href="FontTypesArticle.html">Font Types Article</a></li>
+                <li><a href="TypographyArticle.html">Typography Article</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <h1>Color Themes</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Theme Name</th>
-                <th>Description</th>
-                <th>Image</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Warm Sunset</td>
-                <td>A blend of warm hues like red, orange, and yellow for vibrant energy.</td>
-                <td>
-                    <img 
-                        src="https://github.com/Thelaw818/portfolio/blob/main/images/warm%20sunset%20color%20palette.png?raw=true" 
-                        alt="warm sunset color palette">
-                </td>
-            </tr>
-            <tr>
-                <td>Cool Ocean</td>
-                <td>Soothing cool tones like blue, teal, and seafoam green for tranquility.</td>
-                <td>
-                    <img 
-                        alt="ocean coral palette.png" 
-                        src="https://github.com/Thelaw818/portfolio/blob/main/images/ocean%20coral%20palette.png?raw=true">
-                </td>
-            </tr>
-            <tr>
-                <td>Nature's Harmony</td>
-                <td>Earthy colors such as green, brown, and beige for a natural feel.</td>
-                <td>
-                    <img 
-                        alt="Nature Harmony Color Palette.png" 
-                        src="https://github.com/Thelaw818/portfolio/blob/main/images/Nature%20Harmony%20Color%20Palette.png?raw=true">
-                </td>
-            </tr>
-            <tr>
-                <td>Modern Minimalist</td>
-                <td>Neutral shades like gray, black, and white for sleek, clean designs.</td>
-                <td>
-                    <img src="images/modern-minimalist.jpg" alt="Modern Minimalist Theme">
-                </td>
-                <td>
-                    <img src="https://github.com/Thelaw818/portfolio/blob/main/images/modern%20mini%20theme.jpg?raw=true" alt="modern mini theme">
-                </td>
-            </tr>
-            <tr>
-                <td>Playful Pastels</td>
-                <td>Soft pastel tones such as pink, lavender, and baby blue for a cheerful vibe.</td>
-                <td>
-                    <img src="images/playful-pastels.jpg" alt="Playful Pastels Theme">
-                </td>
-                <td>
-                    <img src="https://github.com/Thelaw818/portfolio/blob/main/images/playful%20pastel%20Color%20Palette.png?raw=true" alt="playful pastel Color Palette">
-                </td>
-            </tr>
-        </tbody>
-    </table>
-  </main>
+    <main>
+        <h1>Color Theory Overview</h1>
+        <p>Color theory is the study of how colors interact and how they affect human perception and emotion. It is a framework that helps designers, artists, and creators make deliberate and informed choices about colors to achieve desired effects in their work. Understanding the relationships between colors, the psychology of colors, and how colors can be combined is essential for creating visually compelling designs.</p>
+        
+        <h2>Key Color Theory Terms</h2>
+        <dl>
+            <dt>Color Wheel</dt>
+            <dd>A circular diagram that shows the relationships between colors.</dd>
+            
+            <dt>Primary Colors</dt>
+            <dd>Red, blue, and yellow; the base colors from which other colors are mixed.</dd>
+            
+            <dt>Secondary Colors</dt>
+            <dd>Colors formed by mixing two primary colors (e.g., green, orange, and purple).</dd>
+            
+            <dt>Tertiary Colors</dt>
+            <dd>Colors formed by mixing a primary color with a secondary color (e.g., red-orange, yellow-green).</dd>
+            
+            <dt>Complementary Colors</dt>
+            <dd>Colors opposite each other on the color wheel, creating high contrast.</dd>
+            
+            <dt>Analogous Colors</dt>
+            <dd>Colors next to each other on the color wheel that create harmony.</dd>
+            
+            <dt>Hue</dt>
+            <dd>The pure color without tint, shade, or tone.</dd>
+            
+            <dt>Tint</dt>
+            <dd>A color mixed with white, making it lighter.</dd>
+            
+            <dt>Shade</dt>
+            <dd>A color mixed with black, making it darker.</dd>
+            
+            <dt>Tone</dt>
+            <dd>A color mixed with gray, making it less intense.</dd>
+            
+            <dt>Saturation</dt>
+            <dd>The intensity or purity of a color.</dd>
+            
+            <dt>Brightness</dt>
+            <dd>The perceived lightness or darkness of a color.</dd>
+            
+            <dt>Warm Colors</dt>
+            <dd>Colors such as red, orange, and yellow that evoke warmth.</dd>
+            
+            <dt>Cool Colors</dt>
+            <dd>Colors such as blue, green, and purple that evoke calmness.</dd>
+            
+            <dt>Monochromatic</dt>
+            <dd>A color scheme using variations of a single hue.</dd>
+            
+            <dt>Triadic Colors</dt>
+            <dd>Three colors evenly spaced around the color wheel.</dd>
+            
+            <dt>Split-Complementary</dt>
+            <dd>A color scheme using a base color and two colors adjacent to its complement.</dd>
+            
+            <dt>RGB</dt>
+            <dd>A color model using red, green, and blue, commonly used in digital displays.</dd>
+            
+            <dt>CMYK</dt>
+            <dd>A color model using cyan, magenta, yellow, and black, used in printing.</dd>
+            
+            <dt>Color Psychology</dt>
+            <dd>The study of how colors affect human emotions and behavior.</dd>
+        </dl>
+
+        <div class="sub-nav">
+            <a href="ColorThemes.html">Color Themes</a>
+            <a href="ColorTheoryArticle.html">Color Theory Article</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Frankie Color Theory Resources</p>
+    </footer>
 </body>
 </html>
