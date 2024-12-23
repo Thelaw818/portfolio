@@ -6,44 +6,15 @@
   <title>Pigeon Racing - Showcase 3</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Styles for image border and centering */
+    /* Image styling for Showcase 3 */
     .centered-image {
       display: block;
       margin: 20px auto;
       border: 10px solid red;
-      border-width: 10px 10px 30px 10px; /* Adjusted for tricolor effect */
+      border-width: 10px 10px 30px 10px;
       border-image: linear-gradient(to bottom, red, white, blue) 1 1;
       width: 960px;
       height: auto;
-    }
-
-    /* Dropdown Styles */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #333;
-      min-width: 160px;
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      color: white;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #444;
     }
   </style>
 </head>
@@ -52,18 +23,24 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="showcase1.html">Showcase 1</a></li>
-        <li><a href="showcase2.html">Showcase 2</a></li>
-        <li><a href="showcase3.html">Showcase 3</a></li>
-        <li><a href="showcase4.html">Showcase 4</a></li>
-        <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
-        <li><a href="ColorThemes.html">Color Themes</a></li>
-        <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
-        <li><a href="TypographyOverview.html">Typography Overview</a></li>
-        <li><a href="FontTypesArticle.html">Font Types Article</a></li>
-        <li><a href="TypographyArticle.html">Typography Article</a></li>
-        <!-- Added dropdown for Font Types -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Showcase</a>
+          <div class="dropdown-content">
+            <a href="showcase1.html">Showcase 1</a>
+            <a href="showcase2.html">Showcase 2</a>
+            <a href="showcase3.html">Showcase 3</a>
+            <a href="showcase4.html">Showcase 4</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Design Theory</a>
+          <div class="dropdown-content">
+            <a href="ColorThemes.html">Color Themes</a>
+            <a href="ColorTheoryArticle.html">Color Theory Article</a>
+            <a href="TypographyOverview.html">Typography Overview</a>
+            <a href="TypographyArticle.html">Typography Article</a>
+          </div>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropbtn">Font Types</a>
           <div class="dropdown-content">
@@ -71,6 +48,7 @@
             <a href="FontTypesOverview.html">Font Types Overview</a>
           </div>
         </li>
+        <li><a href="resume.html">Resume</a></li>
       </ul>
     </nav>
     <div class="banner">
