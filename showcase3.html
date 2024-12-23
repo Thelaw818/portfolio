@@ -6,7 +6,90 @@
   <title>Pigeon Racing - Showcase 3</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Image styling for Showcase 3 */
+    /* General body styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header and navigation styles */
+    header {
+      background-color: black;
+      color: white;
+      padding: 10px 0;
+    }
+
+    nav {
+      background-color: black;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      font-size: 1.4em; /* Increased font size to match Showcase 1 */
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 1.2em; /* Increased font size to match Showcase 1 */
+    }
+
+    .dropdown-content a:hover {
+      background-color: #575757;
+    }
+
+    /* Banner styles */
+    .banner {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 25px 0;
+    }
+
+    .banner h1 {
+      margin: 0;
+      font-size: 2.6em; /* Increased font size to match Showcase 1 */
+    }
+
+    /* Main content styles */
     .centered-image {
       display: block;
       margin: 20px auto;
