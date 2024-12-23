@@ -6,188 +6,6 @@
     <title>Pigeon Racing - Showcase 2</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="showcase.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            background-color: black;
-            color: white;
-            width: 100%;
-            padding: 10px 0;
-        }
-
-        nav {
-            width: 100%;
-            background-color: black;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin: 0;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            font-size: 1em;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            min-width: 160px;
-            z-index: 1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-size: 1em;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #444;
-        }
-
-        .banner {
-            text-align: center;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            cursor: pointer;
-        }
-
-        .banner h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 200px);
-            padding: 20px;
-        }
-
-        .showcase-item {
-            max-width: 800px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            font-size: 3em;
-            margin: 0 0 20px;
-            text-align: center;
-        }
-
-        .project-description {
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-        .gallery-item {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 8px;
-        }
-
-        .gallery-caption {
-            margin-top: 10px;
-            font-size: 1em;
-            color: #333;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f1f1f1;
-            width: 100%;
-            position: relative;
-            bottom: 0;
-        }
-
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-
-        /* Font size styles */
-        body.small-font {
-            font-size: 14px;
-        }
-        body.medium-font {
-            font-size: 16px;
-        }
-        body.large-font {
-            font-size: 18px;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .showcase-item {
-                max-width: 100%;
-                padding: 10px;
-            }
-
-            h2 {
-                font-size: 2em;
-            }
-
-            .gallery-item img {
-                max-width: 100%;
-            }
-        }
-
-        /* Hover effect for dropdown items */
-        .dropdown-content a:hover {
-            background-color: #444;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -199,13 +17,15 @@
                 <li><a href="showcase2.html">Showcase 2</a></li>
                 <li><a href="showcase3.html">Showcase 3</a></li>
                 <li><a href="showcase4.html">Showcase 4</a></li>
-                <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
-                <li><a href="ColorThemes.html">Color Themes</a></li>
-                <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
-                <li><a href="TypographyOverview.html">Typography Overview</a></li>
-                <li><a href="FontTypesArticle.html">Font Types Article</a></li>
-                <li><a href="TypographyArticle.html">Typography Article</a></li>
-                <!-- Added dropdown for Font Types -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Design Theory</a>
+                    <div class="dropdown-content">
+                        <a href="ColorThemes.html">Color Themes</a>
+                        <a href="ColorTheoryArticle.html">Color Theory Article</a>
+                        <a href="TypographyOverview.html">Typography Overview</a>
+                        <a href="TypographyArticle.html">Typography Article</a>
+                    </div>
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Font Types</a>
                     <div class="dropdown-content">
@@ -213,6 +33,7 @@
                         <a href="FontTypesOverview.html">Font Types Overview</a>
                     </div>
                 </li>
+                <li><a href="#" onclick="toggleMode()">Dark Mode</a></li>
             </ul>
         </nav>
         <div class="banner" onclick="window.location.href='index.html'">
@@ -220,13 +41,11 @@
         </div>
     </header>
 
-    <main class="showcase-container showcase2">
+    <main class="showcase-container">
         <section class="showcase-item">
             <h2>Training Pigeons</h2>
-            
             <div class="project-description">
                 <p>Learn the best practices for training pigeons for races. Our comprehensive guide explores advanced techniques and strategies for competitive racing pigeons.</p>
-                
                 <p>This showcase features:</p>
                 <ul>
                     <li>Advanced training methods</li>
@@ -235,7 +54,6 @@
                     <li>Equipment selection</li>
                 </ul>
             </div>
-
             <div class="gallery-item">
                 <img 
                     alt="Pigeon Racing Project Illustration" 
@@ -253,17 +71,9 @@
     </footer>
 
     <script>
-        const navLinks = document.querySelectorAll('nav ul li a');
-        function activateLink(link) {
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
         }
-        const currentPath = window.location.pathname;
-        navLinks.forEach(link => {
-            if (link.href.includes(currentPath)) {
-                activateLink(link);
-            }
-        });
     </script>
 </body>
 </html>
