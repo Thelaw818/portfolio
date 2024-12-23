@@ -6,7 +6,89 @@
   <title>Pigeon Racing - Showcase 4</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Styles for image border and centering */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    nav {
+      width: 100%;
+      background-color: black;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 15px;
+      font-size: 1.1em; /* Matches Showcase 1 */
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 1em; /* Matches Showcase 1 */
+    }
+
+    .dropdown-content a:hover {
+      background-color: #575757;
+    }
+
+    .banner {
+      text-align: center;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .banner h1 {
+      margin: 0;
+      font-size: 2.2em; /* Matches Showcase 1 */
+    }
+
     .centered-image {
       display: block;
       margin: 20px auto;
@@ -51,7 +133,7 @@
         <li><a href="resume.html">Resume</a></li>
       </ul>
     </nav>
-    <div class="banner" onclick="window.location.href='index.html'">
+    <div class="banner">
       <h1>Pigeon Racing Showcase 4</h1>
     </div>
   </header>
