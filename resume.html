@@ -180,11 +180,11 @@
         <li class="dropdown">
           <a href="#" class="dropbtn">Resume Sections</a>
           <div class="dropdown-content">
-            <a href="#professional-summary">Professional Summary</a> <!-- This now links to the correct section -->
-            <a href="#work-experience">Work Experience</a>
-            <a href="#education">Education</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#projects">Projects</a>
+            <a href="#professional-summary" onclick="openSection('professional-summary')">Professional Summary</a> <!-- Link to the section and open it -->
+            <a href="#work-experience" onclick="openSection('work-experience')">Work Experience</a>
+            <a href="#education" onclick="openSection('education')">Education</a>
+            <a href="#certifications" onclick="openSection('certifications')">Certifications</a>
+            <a href="#projects" onclick="openSection('projects')">Projects</a>
           </div>
         </li>
       </ul>
@@ -290,6 +290,18 @@
       } else {
         sectionContent.style.display = 'none';
         icon.textContent = '+';
+      }
+    }
+
+    // Function to automatically open the section when navigation link is clicked
+    function openSection(sectionId) {
+      const sectionContent = document.getElementById(sectionId + '-content');
+      const icon = sectionContent.previousElementSibling.querySelector('.toggle-icon');
+
+      // Open the section if it is not already open
+      if (sectionContent.style.display === 'none' || sectionContent.style.display === '') {
+        sectionContent.style.display = 'block';
+        icon.textContent = '-';
       }
     }
   </script>
