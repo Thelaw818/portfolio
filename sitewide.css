@@ -1,60 +1,54 @@
-{
-    --primary-color: #007bff;
-    --primary-color-dark: #0056b3;
-    --text-color: #333;
-    --background-color: #f4f4f4;
-    --white: #fff;
-    --black: #000000;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* [Previous CSS remains the same until header/nav styles] */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fafafa;
+}
 
-/* Header Styles - Updated */
+/* Header Styles */
 header {
-    background-color: var(--black);
-    color: var(--white);
-    padding: 2rem 0;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    color: white;
+    padding: 20px;
 }
 
-/* Navigation - Updated */
+header h1 {
+    font-size: 2em;
+}
+
+/* Navigation */
 nav {
-    background-color: var(--black);
-    padding: 1rem 0;
-    width: 100%;
-    z-index: 1000;
+    background-color: #222;
+    padding: 10px 0;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0;
+    justify-content: space-evenly;
     padding: 0;
 }
 
-nav a {
-    color: var(--white);
+nav ul li a {
+    color: white;
     text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: opacity 0.3s ease;
+    padding: 10px 15px;
 }
 
-nav a:hover {
-    color: var(--white);
-    opacity: 0.8;
+nav ul li a:hover {
+    background-color: #444;
 }
 
-.banner {
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 1rem 0;
-}
-
-.banner h1 {
-    color: var(--white);
-    margin: 0;
-    font-size: 2.5rem;
+    padding: 10px 0;
 }
