@@ -131,6 +131,11 @@
     .toggle-icon.active {
       transform: rotate(45deg);
     }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
@@ -138,6 +143,8 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
+
+        <!-- Showcase Dropdown -->
         <li class="dropdown">
           <a href="#" class="dropbtn">Showcase</a>
           <div class="dropdown-content">
@@ -147,6 +154,8 @@
             <a href="showcase4.html">Showcase 4</a>
           </div>
         </li>
+
+        <!-- Design Theory Dropdown -->
         <li class="dropdown">
           <a href="#" class="dropbtn">Design Theory</a>
           <div class="dropdown-content">
@@ -157,6 +166,8 @@
             <a href="TypographyArticle.html">Typography Article</a>
           </div>
         </li>
+
+        <!-- Font Types Dropdown -->
         <li class="dropdown">
           <a href="#" class="dropbtn">Font Types</a>
           <div class="dropdown-content">
@@ -164,7 +175,18 @@
             <a href="FontTypesOverview.html">Font Types Overview</a>
           </div>
         </li>
-        <li><a href="resume.html">Resume</a></li>
+
+        <!-- Resume Sections Dropdown -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Resume Sections</a>
+          <div class="dropdown-content">
+            <a href="#professional-summary">Professional Summary</a>
+            <a href="#work-experience">Work Experience</a>
+            <a href="#education">Education</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#projects">Projects</a>
+          </div>
+        </li>
       </ul>
     </nav>
     <div class="banner">
@@ -178,20 +200,20 @@
       <p>San Francisco, CA | (555) 123-4567 | jane.smith@email.com | <a href="https://linkedin.com/in/janesmith">linkedin.com/in/janesmith</a></p>
 
       <!-- Professional Summary -->
-      <div class="section-header" onclick="toggleSection('professional-summary')">
+      <div id="professional-summary" class="section-header">
         <h3>Professional Summary</h3>
         <span class="toggle-icon">+</span>
       </div>
-      <div id="professional-summary" class="section-content">
+      <div class="section-content">
         <p>Results-driven Software Engineer with 5+ years of experience developing scalable web applications and microservices...</p>
       </div>
 
       <!-- Work Experience -->
-      <div class="section-header" onclick="toggleSection('work-experience')">
+      <div id="work-experience" class="section-header">
         <h3>Work Experience</h3>
         <span class="toggle-icon">+</span>
       </div>
-      <div id="work-experience" class="section-content">
+      <div class="section-content">
         <p><strong>Senior Software Engineer | Tech Solutions Inc. | Jan 2021 - Present</strong></p>
         <ul>
           <li>Led development of a cloud-native payment processing system...</li>
@@ -203,32 +225,32 @@
       </div>
 
       <!-- Education -->
-      <div class="section-header" onclick="toggleSection('education')">
+      <div id="education" class="section-header">
         <h3>Education</h3>
         <span class="toggle-icon">+</span>
       </div>
-      <div id="education" class="section-content">
+      <div class="section-content">
         <p><strong>Bachelor of Science in Computer Science</strong></p>
         <p>University of California, Berkeley | Graduated 2018</p>
       </div>
 
       <!-- Certifications -->
-      <div class="section-header" onclick="toggleSection('certifications')">
+      <div id="certifications" class="section-header">
         <h3>Certifications</h3>
         <span class="toggle-icon">+</span>
       </div>
-      <div id="certifications" class="section-content">
+      <div class="section-content">
         <ul>
           <li>AWS Certified Solutions Architect</li>
         </ul>
       </div>
 
       <!-- Projects -->
-      <div class="section-header" onclick="toggleSection('projects')">
+      <div id="projects" class="section-header">
         <h3>Projects</h3>
         <span class="toggle-icon">+</span>
       </div>
-      <div id="projects" class="section-content">
+      <div class="section-content">
         <p><strong>E-commerce Platform | <a href="https://github.com/janesmith/ecommerce" target="_blank">github.com/janesmith/ecommerce</a></strong></p>
         <ul>
           <li>Built full-stack e-commerce application...</li>
