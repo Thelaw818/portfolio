@@ -6,67 +6,132 @@
   <title>Font Types Article</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .article-container {
+      flex: 1;
+      width: 80%;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 5px solid red;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .article-container:before,
+    .article-container:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      border-radius: 10px;
+      border: 5px solid blue;
+    }
+
+    .article-container:before {
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-color: white;
+    }
+
+    .article-container:after {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border-color: red;
+    }
+
     .image-size {
       width: 5in;
       height: 5in;
     }
+
+    h2, h3 {
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .banner h1 {
+      text-align: center;
+      font-size: 2em;
+      color: #333;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 1em;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="showcase1.html">Showcase 1</a></li>
-        <li><a href="showcase2.html">Showcase 2</a></li>
-        <li><a href="showcase3.html">Showcase 3</a></li>
-        <li><a href="showcase4.html">Showcase 4</a></li>
-        <li><a href="ColorTheoryOverview.html">Color Theory Overview</a></li>
-        <li><a href="ColorThemes.html">Color Themes</a></li>
-        <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
-        <li><a href="TypographyOverview.html">Typography Overview</a></li>
-        <li><a href="FontTypesArticle.html">Font Types Article</a></li>
-        <li><a href="TypographyArticle.html">Typography Article</a></li>
-      </ul>
-    </nav>
     <div class="banner">
       <h1>Font Types Article</h1>
     </div>
   </header>
 
   <main>
-    <h2>Understanding Different Font Types</h2>
-    <p>Fonts are an essential part of design and communication. They convey personality, tone, and clarity in the text. In this article, we explore the most common font types used in design: Serif, Sans-Serif, Script, and Display fonts.</p>
+    <div class="article-container">
+      <h2>Understanding Different Font Types</h2>
+      <p>Fonts are an essential part of design and communication. They convey personality, tone, and clarity in the text. In this article, we explore the most common font types used in design: Serif, Sans-Serif, Script, and Display fonts.</p>
 
-    <h3>1. Serif Fonts</h3>
-    <p>Serif fonts are characterized by small lines or strokes attached to the end of a larger stroke in a letter. These fonts are traditionally used in printed materials and are considered more formal and readable in large bodies of text.</p>
-    <p>Examples of Serif fonts: <em>Times New Roman, Georgia, Garamond</em>.</p>
-    <img alt="Serif Fonts Example" src="https://github.com/Thelaw818/portfolio/blob/main/images/fonts1.png?raw=true" class="image-size">
-    <p>Learn more about Serif fonts: <a href="https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/serif" target="_blank">Serif Fonts Overview</a>.</p>
+      <h3>1. Serif Fonts</h3>
+      <p>Serif fonts are characterized by small lines or strokes attached to the end of a larger stroke in a letter. These fonts are traditionally used in printed materials and are considered more formal and readable in large bodies of text.</p>
+      <p>Examples of Serif fonts: <em>Times New Roman, Georgia, Garamond</em>.</p>
+      <img alt="Serif Fonts Example" src="https://github.com/Thelaw818/portfolio/blob/main/images/fonts1.png?raw=true" class="image-size">
+      <p>Learn more about Serif fonts: <a href="https://www.myfonts.com/pages/serif-fonts" target="_blank">Serif Fonts Overview</a>.</p>
 
-    <h3>2. Sans-Serif Fonts</h3>
-    <p>Sans-serif fonts do not have the small lines or strokes attached to their letters. These fonts are often used in modern, digital settings because they appear clean and simple. They are considered easier to read on screens.</p>
-    <p>Examples of Sans-Serif fonts: <em>Arial, Helvetica, Open Sans</em>.</p>
-    <img alt="Sans-Serif Fonts Example" src="https://github.com/Thelaw818/portfolio/blob/main/images/fonts.png?raw=true" class="image-size">
-    <p>Learn more about Sans-Serif fonts: <a href="https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/sans-serif" target="_blank">Sans-Serif Fonts Overview</a>.</p>
+      <h3>2. Sans-Serif Fonts</h3>
+      <p>Sans-serif fonts do not have the small lines or strokes attached to their letters. These fonts are often used in modern, digital settings because they appear clean and simple. They are considered easier to read on screens.</p>
+      <p>Examples of Sans-Serif fonts: <em>Arial, Helvetica, Open Sans</em>.</p>
+      <img alt="Sans-Serif Fonts Example" src="https://github.com/Thelaw818/portfolio/blob/main/images/fonts.png?raw=true" class="image-size">
+      <p>Learn more about Sans-Serif fonts: <a href="https://en.wikipedia.org/wiki/Sans-serif" target="_blank">Sans-Serif Fonts Overview</a>.</p>
 
-    <h3>3. Script Fonts</h3>
-    <p>Script fonts mimic the appearance of handwritten text. They are often used for decorative purposes, invitations, and creative projects. While they can be elegant, they are generally harder to read in large blocks of text.</p>
-    <p>Examples of Script fonts: <em>Brush Script, Pacifico, Lobster</em>.</p>
-    <img alt="Script Fonts Example" src="https://github.com/Thelaw818/portfolio/blob/main/images/fonts%203.jpg?raw=true" class="image-size">
-    <p>Learn more about Script fonts: <a href="https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/script" target="_blank">Script Fonts Overview</a>.</p>
+      <h3>3. Script Fonts</h3>
+      <p>Script fonts mimic the appearance of handwritten text. They are often used for decorative purposes, invitations, and creative projects. While they can be elegant, they are generally harder to read in large blocks of text.</p>
+      <p>Examples of Script fonts: <em>Brush Script, Pacifico, Lobster</em>.</p>
+      <img alt="Script Fonts Example" src="https://github.com/Thelaw818/portfolio/blob/main/images/fonts%203.jpg?raw=true" class="image-size">
+      <p>Learn more about Script fonts: <a href="https://www.kimp.io/script-fonts/" target="_blank">Script Fonts Overview</a>.</p>
 
-    <h3>4. Display Fonts</h3>
-    <p>Display fonts are designed to attract attention. They are often used for titles, logos, and large headlines. They can be bold, quirky, or artistic, but should not be used in body text due to readability issues.</p>
-    <p>Examples of Display fonts: <em>Impact, Bebas Neue, Playbill</em>.</p>
-    <img alt="Display Fonts Example" src="https://example.com/display-fonts.jpg" class="Box-sc-g0xbh4-0 fzFXnm">
-    <p>Learn more about Display fonts: <a href="https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/display" target="_blank">Display Fonts Overview</a>.</p>
+      <h3>4. Display Fonts</h3>
+      <p>Display fonts are designed to attract attention. They are often used for titles, logos, and large headlines. They can be bold, quirky, or artistic, but should not be used in body text due to readability issues.</p>
+      <p>Examples of Display fonts: <em>Impact, Bebas Neue, Playbill</em>.</p>
+      <img alt="Display Fonts Example" src="https://din-studio.com/best-fonts/display-fonts/" class="image-size">
+      <p>Learn more about Display fonts: <a href="https://din-studio.com/best-fonts/display-fonts/" target="_blank">Display Fonts Overview</a>.</p>
 
-    <h2>Choosing the Right Font</h2>
-    <p>When selecting a font, it’s important to consider the purpose and audience of your project. Serif fonts work well in traditional print designs, while sans-serif fonts are ideal for digital screens. Script fonts can add personality, but should be used sparingly. Display fonts are best suited for bold statements or headings.</p>
+      <h2>Choosing the Right Font</h2>
+      <p>When selecting a font, it’s important to consider the purpose and audience of your project. Serif fonts work well in traditional print designs, while sans-serif fonts are ideal for digital screens. Script fonts can add personality, but should be used sparingly. Display fonts are best suited for bold statements or headings.</p>
 
-    <p>For more information about font selection and typography, visit the <a href="https://www.typography.com/" target="_blank">Typography.com</a> website.</p>
+      <p>For more information about font selection and typography, visit the <a href="https://typography.com/" target="_blank">Typography.com</a> website.</p>
+    </div>
   </main>
 
   <footer>
@@ -76,5 +141,3 @@
   <script src="scripts.js"></script>
 </body>
 </html>
-
-
