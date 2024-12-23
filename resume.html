@@ -200,20 +200,20 @@
       <p>San Francisco, CA | (555) 123-4567 | jane.smith@email.com | <a href="https://linkedin.com/in/janesmith">linkedin.com/in/janesmith</a></p>
 
       <!-- Professional Summary -->
-      <div id="professional-summary" class="section-header">
+      <div id="professional-summary" class="section-header" onclick="toggleSection('professional-summary')">
         <h3>Professional Summary</h3>
         <span class="toggle-icon">+</span>
       </div>
-      <div class="section-content">
+      <div id="professional-summary-content" class="section-content">
         <p>Results-driven Software Engineer with over 5 years of experience in developing scalable, high-performance web applications. Specializing in backend development, cloud computing, and microservices architecture. Known for quick problem-solving, ability to lead teams, and consistently delivering projects on time.</p>
       </div>
 
       <!-- Work Experience -->
-      <div id="work-experience" class="section-header">
+      <div id="work-experience" class="section-header" onclick="toggleSection('work-experience')">
         <h3>Work Experience</h3>
         <span class="toggle-icon">+</span>
       </div>
-      <div class="section-content">
+      <div id="work-experience-content" class="section-content">
         <p><strong>Senior Software Engineer | Tech Solutions Inc. | Jan 2021 - Present</strong></p>
         <ul>
           <li>Led the development of a cloud-native payment processing system used by over 2 million customers globally.</li>
@@ -229,11 +229,11 @@
       </div>
 
       <!-- Education -->
-      <div id="education" class="section-header">
+      <div id="education" class="section-header" onclick="toggleSection('education')">
         <h3>Education</h3>
         <span class="toggle-icon">+</span>
       </div>
-      <div class="section-content">
+      <div id="education-content" class="section-content">
         <p><strong>Bachelor of Science in Computer Science</strong></p>
         <p>University of California, Berkeley | Graduated 2018</p>
         <ul>
@@ -243,11 +243,11 @@
       </div>
 
       <!-- Certifications -->
-      <div id="certifications" class="section-header">
+      <div id="certifications" class="section-header" onclick="toggleSection('certifications')">
         <h3>Certifications</h3>
         <span class="toggle-icon">+</span>
       </div>
-      <div class="section-content">
+      <div id="certifications-content" class="section-content">
         <ul>
           <li>AWS Certified Solutions Architect – Associate</li>
           <li>Certified Kubernetes Administrator (CKA)</li>
@@ -256,11 +256,11 @@
       </div>
 
       <!-- Projects -->
-      <div id="projects" class="section-header">
+      <div id="projects" class="section-header" onclick="toggleSection('projects')">
         <h3>Projects</h3>
         <span class="toggle-icon">+</span>
       </div>
-      <div class="section-content">
+      <div id="projects-content" class="section-content">
         <p><strong>E-commerce Platform | <a href="https://github.com/janesmith/ecommerce" target="_blank">github.com/janesmith/ecommerce</a></strong></p>
         <ul>
           <li>Developed a full-stack e-commerce platform with integrated payment processing and inventory management.</li>
@@ -280,15 +280,15 @@
 
   <script>
     function toggleSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      const icon = section.previousElementSibling.querySelector('.toggle-icon');
+      const sectionContent = document.getElementById(sectionId + '-content');
+      const icon = sectionContent.previousElementSibling.querySelector('.toggle-icon');
 
       // Toggle display of the section content
-      if (section.style.display === 'none' || section.style.display === '') {
-        section.style.display = 'block';
+      if (sectionContent.style.display === 'none' || sectionContent.style.display === '') {
+        sectionContent.style.display = 'block';
         icon.textContent = '-';
       } else {
-        section.style.display = 'none';
+        sectionContent.style.display = 'none';
         icon.textContent = '+';
       }
     }
