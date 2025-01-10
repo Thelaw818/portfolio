@@ -36,3 +36,38 @@ const mobileNav = document.querySelector('nav ul');
 mobileMenuButton.addEventListener('click', () => {
     mobileNav.classList.toggle('active');
 });
+
+// Theme Menu Functionality: Dark Mode and Font Size Persistence
+document.addEventListener('DOMContentLoaded', () => {
+    // Apply dark mode if saved in localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.querySelector('nav').classList.add('dark-mode');
+        document.querySelectorAll('.showcase-item').forEach((item) => {
+            item.classList.add('dark-mode');
+        });
+    }
+
+    // Apply font size if saved in localStorage
+    const fontSize = localStorage.getItem('fontSize');
+    if (fontSize) {
+        document.body.classList.add(`${fontSize}-font`);
+    }
+});
+
+function toggleMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('nav').classList.toggle('dark-mode');
+    document.querySelectorAll('.showcase-item').forEach((item) => {
+        item.classList.toggle('dark-mode');
+    });
+
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+function changeFontSize(size) {
+    document.body.classList.remove('small-font', 'medium-font', 'large-font');
+    document.body.classList.add(`${size}-font`);
+    localStorage.setItem('fontSize', size);
+}
