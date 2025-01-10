@@ -1,22 +1,59 @@
-/* Showcase Styles */
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e5e5e5; /* High contrast text */
+}
+
+nav ul li a {
+    color: white; /* Ensure links are visible in both modes */
+}
+
+nav ul li a:hover {
+    background-color: #333; /* Slightly lighter hover */
+}
+
+/* Font Size Options */
+body.small-font {
+    font-size: 14px;
+}
+
+body.medium-font {
+    font-size: 16px;
+}
+
+body.large-font {
+    font-size: 18px;
+}
+
+/* Showcase and Main Content */
+.showcase-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Leaves space for header and footer */
+    padding: 20px;
+}
+
 .showcase-item {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #fff; /* Light background for showcase */
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .showcase-item h2 {
     font-size: 2.5em;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .showcase-item p {
     font-size: 1em;
     color: #333;
+    line-height: 1.8; /* Improved readability for paragraphs */
 }
 
 /* Additional Showcase Styles */
@@ -26,6 +63,30 @@
 }
 
 .showcase-banner img {
-    max-width: 100%;
+    max-width: 100%; /* Ensure responsive images */
     height: auto;
+}
+
+/* Footer and Banner */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-description {
+    text-align: justify;
+    line-height: 1.8; /* Improved readability */
 }
