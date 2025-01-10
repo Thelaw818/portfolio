@@ -5,133 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pigeon Racing - Showcase</title>
     <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="showcase.css">
+    <link rel="stylesheet" href="theme.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: black;
-            color: white;
-            padding: 10px 0;
-            width: 100%;
-        }
+        /* Keep existing styles and fix navigation issues */
         nav {
             width: 100%;
-            background-color: black;
+            background-color: black; /* Consistent background for all pages */
         }
+
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            display: flex; /* Use flexbox for single-row navigation */
-            justify-content: space-evenly; /* Evenly space out items across the row */
+            display: flex;
+            justify-content: space-evenly; /* Ensure even spacing */
             align-items: center;
         }
+
         nav ul li {
-            margin: 0;
+            position: relative; /* For dropdown positioning */
         }
+
         nav ul li a {
-            color: white;
+            color: white; /* Uniform text color */
             text-decoration: none;
             padding: 10px 15px;
             font-size: 1em;
+            display: block; /* Block display for easy hover */
         }
+
         nav ul li a:hover {
-            text-decoration: underline;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
+            background-color: #333; /* Highlight background on hover */
         }
 
         .dropdown-content {
-            display: none;
+            display: none; /* Initially hidden */
             position: absolute;
-            background-color: #333;
+            background-color: #333; /* Dark dropdown background */
             min-width: 160px;
             z-index: 1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
         }
 
         .dropdown-content a {
             color: white;
             padding: 12px 16px;
             text-decoration: none;
+            display: block; /* Ensure clickable area */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444; /* Slightly lighter hover background */
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
             display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #575757;
-        }
-
-        .banner {
-            margin-top: 10px;
-            text-align: center;
-            width: 100%;
-        }
-        h1 {
-            margin: 0;
-            padding: 10px;
-            font-size: 1.2em; /* Reduced font size */
-        }
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 200px);
-            padding: 20px;
-        }
-        .showcase-item {
-            max-width: 800px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            font-size: 3em;
-            margin: 0 0 20px;
-            text-align: center;
-        }
-        .project-description {
-            line-height: 1.6;
-            text-align: justify;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f1f1f1;
-            width: 100%;
-            position: relative;
-            bottom: 0;
-        }
-
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-
-        /* Font size styles */
-        body.small-font {
-            font-size: 14px;
-        }
-        body.medium-font {
-            font-size: 16px;
-        }
-        body.large-font {
-            font-size: 18px;
-        }
-
-        /* Hover effect for dropdown items */
-        .dropdown-content a:hover {
-            background-color: #444;
         }
     </style>
 </head>
@@ -159,7 +87,6 @@
                         <a href="TypographyOverview.html">Typography Overview</a>
                     </div>
                 </li>
-                <!-- New Font Types Dropdown -->
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Font Types</a>
                     <div class="dropdown-content">
@@ -167,7 +94,6 @@
                     </div>
                 </li>
                 <li><a href="resume.html">Resume</a></li>
-             
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Theme Menu</a>
                     <div class="dropdown-content">
@@ -200,15 +126,26 @@
     </footer>
 
     <script>
-        // Toggle Dark Mode and Light Mode
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+            const fontSize = localStorage.getItem('fontSize');
+            if (fontSize) {
+                document.body.classList.add(`${fontSize}-font`);
+            }
+        });
+
         function toggleMode() {
             document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         }
 
-        // Change font size
         function changeFontSize(size) {
             document.body.classList.remove('small-font', 'medium-font', 'large-font');
             document.body.classList.add(`${size}-font`);
+            localStorage.setItem('fontSize', size);
         }
     </script>
 </body>
