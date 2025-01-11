@@ -30,3 +30,51 @@ body.medium-font {
 body.large-font {
     font-size: 18px;
 }
+
+/* Consistent navigation and dropdown font size */
+nav ul li a,
+nav ul li .dropdown-content a,
+nav ul li .dropbtn {
+    font-size: 16px; /* Consistent font size for all navigation links */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block; /* Ensure block layout */
+}
+
+nav ul li a:hover,
+nav ul li .dropdown-content a:hover,
+nav ul li .dropbtn:hover {
+    background-color: #333; /* Hover effect */
+}
+
+/* Dropdown menu styles */
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #333; /* Dark background */
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px; /* Match navigation font size */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dark Mode for Navigation and Dropdowns */
+body.dark-mode nav ul li a,
+body.dark-mode nav ul li .dropdown-content a {
+    color: #e5e5e5; /* High contrast for dark mode */
+}
+
+body.dark-mode nav ul li a:hover,
+body.dark-mode nav ul li .dropdown-content a:hover {
+    background-color: #555; /* Hover effect in dark mode */
+}
