@@ -4,33 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typography Overview</title>
-    <link rel="stylesheet" href="color-and-type.css">
     <style>
+        /* Navigation Bar Styles */
+        nav {
+            width: 100%;
+            background-color: black; /* Consistent background for all pages */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly; /* Ensure even spacing */
+            align-items: center;
+        }
+
+        nav ul li {
+            position: relative; /* For dropdown positioning */
+        }
+
+        nav ul li a {
+            color: white; /* Uniform text color */
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            display: block; /* Block display for easy hover */
+        }
+
+        nav ul li a:hover {
+            background-color: #333; /* Highlight background on hover */
+        }
+
+        .dropdown-content {
+            display: none; /* Initially hidden */
+            position: absolute;
+            background-color: #333; /* Dark dropdown background */
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block; /* Ensure clickable area */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444; /* Slightly lighter hover background */
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            color: black;  /* Set font color to black */
-        }
-
-        /* Container for all content with border */
-        .page-container {
-            border: 2px solid black;
-            padding: 20px;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: black;
-            color: white;
-            padding: 1rem 0;
-            font-size: 12px;
+            color: black; /* Set font color to black */
         }
 
         h1, h2 {
-            color: black;  /* Set header font color to black */
+            color: black; /* Set header font color to black */
         }
 
         h1 {
@@ -44,72 +84,21 @@
         }
 
         p {
-            color: black;  /* Set paragraph font color to black */
+            color: black; /* Set paragraph font color to black */
             font-size: 1.1rem;
             margin: 10px 0;
         }
 
-        a {
-            color: black;  /* Set link font color to black */
-            text-decoration: none;
+        dl {
+            margin-top: 20px;
         }
 
-        a:hover {
-            text-decoration: underline;
+        dl dt {
+            font-weight: bold;
         }
 
-        /* Navigation Styling */
-        nav {
-            background-color: black;
-            padding: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-        }
-
-        nav li a {
-            color: white;
-            font-weight: 500;
-            font-size: 12px;
-            transition: color 0.3s ease;
-        }
-
-        nav li a:hover {
-            color: #0066cc;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            min-width: 160px;
-            z-index: 1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-size: 1em;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #575757;
+        dl dd {
+            margin-left: 20px;
         }
 
         footer {
@@ -120,112 +109,142 @@
             text-align: center;
         }
 
-        /* Layout */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Center content and add border */
         .content-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
         }
-
     </style>
 </head>
 <body>
-    <div class="page-container">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">Showcase</a>
-                        <div class="dropdown-content">
-                            <a href="showcase1.html">Showcase 1</a>
-                            <a href="showcase2.html">Showcase 2</a>
-                            <a href="showcase3.html">Showcase 3</a>
-                            <a href="showcase4.html">Showcase 4</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">Design Theory</a>
-                        <div class="dropdown-content">
-                            <a href="ColorThemes.html">Color Themes</a>
-                            <a href="ColorTheoryArticle.html">Color Theory Article</a>
-                            <a href="ColorTheoryOverview.html">Color Theory Overview</a>
-                            <a href="TypographyArticle.html">Typography Article</a>
-                            <a href="TypographyOverview.html">Typography Overview</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">Font Types</a>
-                        <div class="dropdown-content">
-                            <a href="FontTypesArticle.html">Font Types Article</a>
-                            <a href="FontTypesOverview.html">Font Types Overview</a>
-                        </div>
-                    </li>
-                    <li><a href="resume.html">Resume</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Showcase</a>
+                    <div class="dropdown-content">
+                        <a href="showcase1.html">Showcase 1</a>
+                        <a href="showcase2.html">Showcase 2</a>
+                        <a href="showcase3.html">Showcase 3</a>
+                        <a href="showcase4.html">Showcase 4</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Design Theory</a>
+                    <div class="dropdown-content">
+                        <a href="ColorThemes.html">Color Themes</a>
+                        <a href="ColorTheoryArticle.html">Color Theory Article</a>
+                        <a href="ColorTheoryOverview.html">Color Theory Overview</a>
+                        <a href="TypographyArticle.html">Typography Article</a>
+                        <a href="TypographyOverview.html">Typography Overview</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Font Types</a>
+                    <div class="dropdown-content">
+                        <a href="FontTypesArticle.html">Font Types Article</a>
+                        <a href="FontTypesOverview.html">Font Types Overview</a>
+                    </div>
+                </li>
+                <li><a href="resume.html">Resume</a></li>
+                <li class="dropdown">
+                    <a href="#">Theme Menu</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="toggleMode()">Toggle Dark/Light Mode</a>
+                        <a href="#" onclick="changeFontSize('small')">Font Size: Small</a>
+                        <a href="#" onclick="changeFontSize('medium')">Font Size: Medium</a>
+                        <a href="#" onclick="changeFontSize('large')">Font Size: Large</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-        <main class="container">
-            <div class="content-wrapper">
+    <main class="container">
+        <div class="content-wrapper">
+            <section>
+                <h1>Typography Overview</h1>
+
                 <section>
-                    <h1>Typography Overview</h1>
-
-                    <section>
-                        <h2>Introduction to Typography</h2>
-                        <p>Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing. Typography is central to design because it helps convey a message through both form and function. Good typography ensures that the content is easy to read and visually engaging.</p>
-                    </section>
-
-                    <section>
-                        <h2>Key Typography Terms</h2>
-                        <p>The following is a list of essential typography terms and their definitions:</p>
-                        <dl>
-                            <dt>Typeface</dt>
-                            <dd>A set of characters that share a common design, such as Arial, Times New Roman, or Helvetica.</dd>
-
-                            <dt>Font</dt>
-                            <dd>A specific style and size of a typeface. For example, Arial Bold 12pt.</dd>
-
-                            <dt>Serif</dt>
-                            <dd>The small lines or strokes regularly attached to the end of a larger stroke in a letter or symbol.</dd>
-
-                            <dt>Sans-Serif</dt>
-                            <dd>A typeface that does not have the small projecting features (serifs) at the ends of strokes. Examples include Arial and Helvetica.</dd>
-
-                            <dt>Leading</dt>
-                            <dd>The vertical space between lines of text, typically measured from baseline to baseline.</dd>
-
-                            <dt>Kerning</dt>
-                            <dd>The adjustment of space between two specific characters to improve visual appearance and readability.</dd>
-
-                            <dt>Tracking</dt>
-                            <dd>The uniform adjustment of spacing across a range of characters in a block of text.</dd>
-
-                            <dt>Baseline</dt>
-                            <dd>The invisible line upon which characters in a typeface sit. The descenders (such as the tail of a "y") fall below the baseline.</dd>
-
-                            <dt>Ascender</dt>
-                            <dd>The part of a letter that extends above the height of lowercase letters such as "h" or "b".</dd>
-
-                            <dt>Descender</dt>
-                            <dd>The part of a letter that extends below the baseline, as in "y" or "g".</dd>
-                        </dl>
-                    </section>
+                    <h2>Introduction to Typography</h2>
+                    <p>Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing. Typography is central to design because it helps convey a message through both form and function. Good typography ensures that the content is easy to read and visually engaging.</p>
                 </section>
-            </div>
-        </main>
 
-        <footer>
-            <p>&copy; 2024 Frankie Rosario Typography Resources</p>
-        </footer>
-    </div>
+                <section>
+                    <h2>Key Typography Terms</h2>
+                    <p>The following is a list of essential typography terms and their definitions:</p>
+                    <dl>
+                        <dt>Typeface</dt>
+                        <dd>A set of characters that share a common design, such as Arial, Times New Roman, or Helvetica.</dd>
+
+                        <dt>Font</dt>
+                        <dd>A specific style and size of a typeface. For example, Arial Bold 12pt.</dd>
+
+                        <dt>Serif</dt>
+                        <dd>The small lines or strokes regularly attached to the end of a larger stroke in a letter or symbol.</dd>
+
+                        <dt>Sans-Serif</dt>
+                        <dd>A typeface that does not have the small projecting features (serifs) at the ends of strokes. Examples include Arial and Helvetica.</dd>
+
+                        <dt>Leading</dt>
+                        <dd>The vertical space between lines of text, typically measured from baseline to baseline.</dd>
+
+                        <dt>Kerning</dt>
+                        <dd>The adjustment of space between two specific characters to improve visual appearance and readability.</dd>
+
+                        <dt>Tracking</dt>
+                        <dd>The uniform adjustment of spacing across a range of characters in a block of text.</dd>
+
+                        <dt>Baseline</dt>
+                        <dd>The invisible line upon which characters in a typeface sit. The descenders (such as the tail of a "y") fall below the baseline.</dd>
+
+                        <dt>Ascender</dt>
+                        <dd>The part of a letter that extends above the height of lowercase letters such as "h" or "b".</dd>
+
+                        <dt>Descender</dt>
+                        <dd>The part of a letter that extends below the baseline, as in "y" or "g".</dd>
+                    </dl>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Frankie Rosario Typography Resources</p>
+    </footer>
+
+    <script>
+        // Dark/Light Mode Toggle
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        }
+
+        // Font Size Change
+        function changeFontSize(size) {
+            document.body.style.fontSize = size === 'small' ? '14px' : size === 'medium' ? '16px' : '18px';
+            localStorage.setItem('fontSize', size);
+        }
+
+        // Load Preferences on Page Load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                document.body.style.fontSize = savedFontSize === 'small' ? '14px' : savedFontSize === 'medium' ? '16px' : '18px';
+            }
+        });
+    </script>
 </body>
 </html>
