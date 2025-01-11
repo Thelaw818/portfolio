@@ -4,45 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Understanding Color Theory</title>
-    <link rel="stylesheet" href="css/color-and-type.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graphs -->
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            font-size: 16px;
         }
         header {
             background-color: black;
             color: white;
             padding: 10px 0;
-            width: 100%;
-        }
-        nav {
-            width: 100%;
-            background-color: black;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
             justify-content: space-evenly;
-            align-items: center;
         }
         nav ul li {
-            margin: 0;
+            position: relative;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 12px 15px; /* Same padding as in the showcase page */
-            font-size: 1.1em;  /* Same font size as in the showcase page */
+            padding: 10px 15px;
         }
         nav ul li a:hover {
             text-decoration: underline;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
         }
         .dropdown-content {
             display: none;
@@ -56,173 +49,195 @@
         }
         .dropdown-content a {
             color: white;
-            padding: 12px 16px;
-            text-decoration: none;
+            padding: 10px 15px;
             display: block;
-            font-size: 1.1em;  /* Same size as normal nav links */
         }
         .dropdown-content a:hover {
             background-color: #575757;
         }
         .banner {
             text-align: center;
-            width: 100%;
+            padding: 20px 0;
             background-color: #333;
             color: white;
-            padding: 20px 0;
-        }
-        .banner h1 {
-            margin: 0;
-            font-size: 2.2em; /* Same font size as the showcase header */
         }
         main {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
             padding: 20px;
-        }
-        .content-section {
             max-width: 900px;
-            width: 100%;
-            background-color: #f9f9f9;
-            padding: 20px;
+            margin: auto;
+            background: #f9f9f9;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            font-size: 3em;
-            margin: 0 0 20px;
+            margin-top: 40px;
+        }
+        p, ul {
+            line-height: 1.6;
+        }
+        .chart-container {
+            margin: 30px 0;
             text-align: center;
         }
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin: 10px 0;
-            color: #555;
-        }
-        ul {
-            margin: 10px 0;
+        canvas {
+            max-width: 800px;
+            margin: auto;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #f1f1f1;
-            width: 100%;
-        }
-        .image {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .image img {
-            width: 400px;
-            height: 400px;
-            border-radius: 8px;
+            background: #f1f1f1;
         }
     </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Showcase</a>
-            <div class="dropdown-content">
-                <a href="showcase1.html">Showcase 1</a>
-                <a href="showcase2.html">Showcase 2</a>
-                <a href="showcase3.html">Showcase 3</a>
-                <a href="showcase4.html">Showcase 4</a>
-            </div>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Design Theory</a>
-            <div class="dropdown-content">
-                <a href="ColorThemes.html">Color Themes</a>
-                <a href="ColorTheoryArticle.html">Color Theory Article</a>
-                <a href="ColorTheoryOverview.html">Color Theory Overview</a>
-                <a href="TypographyArticle.html">Typography Article</a>
-                <a href="TypographyOverview.html">Typography Overview</a>
-            </div>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Font Types</a>
-            <div class="dropdown-content">
-                <a href="FontTypesArticle.html">Font Types Article</a>
-                <a href="FontTypesOverview.html">Font Types Overview</a>
-            </div>
-        </li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
-    <div class="banner">
-      <h1>Understanding Color Theory</h1>
-    </div>
-  </header>
-
-  <main>
-    <section class="content-section">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Showcase</a>
+                    <div class="dropdown-content">
+                        <a href="#">Showcase 1</a>
+                        <a href="#">Showcase 2</a>
+                        <a href="#">Showcase 3</a>
+                        <a href="#">Showcase 4</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Design Theory</a>
+                    <div class="dropdown-content">
+                        <a href="#">Color Themes</a>
+                        <a href="#">Typography Overview</a>
+                    </div>
+                </li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <h1>Understanding Color Theory</h1>
+        </div>
+    </header>
+    <main>
         <h2>Introduction to Color Theory</h2>
-        <p>Color theory is a fundamental concept in design, art, and visual communication. It explores the relationship between colors, the psychological impact of color choices, and how colors can be combined to create harmonious designs. Understanding color theory helps designers and artists make informed decisions about color combinations to evoke specific moods, attract attention, and enhance the aesthetics of a composition.</p>
+        <p>Color theory is a fundamental concept in design, art, and visual communication. It explores the relationship between colors, the psychological impact of color choices, and how colors can be combined to create harmonious designs. Understanding color theory helps designers and artists make informed decisions about color combinations to evoke specific moods, attract attention, and enhance the aesthetics of a composition....</p>
 
         <h2>The Color Wheel</h2>
-        <p>The color wheel is a circular diagram used to show the relationships between colors. It is divided into primary, secondary, and tertiary colors:</p>
-        <ul>
-            <li><strong>Primary Colors:</strong> Red, Blue, Yellow – the foundation for all other colors.</li>
-            <li><strong>Secondary Colors:</strong> Orange, Green, Purple – formed by mixing two primary colors.</li>
-            <li><strong>Tertiary Colors:</strong> Yellow-Orange, Red-Orange, Red-Purple, Blue-Purple, Blue-Green, Yellow-Green – made by mixing a primary color with a secondary color.</li>
-        </ul>
-        <p>By understanding the color wheel, you can create color schemes based on color relationships such as complementary, analogous, and triadic colors.</p>
-        
-        <div class="image">
-            <img src="https://github.com/Thelaw818/portfolio/blob/main/images/color%20wheel.jpg?raw=true" alt="Color Wheel Image">
-            <p>Another view of the Color Wheel showing the relationship between different color hues.</p>
+        <p>The color wheel is a circular diagram used to show the relationships between colors. It is divided into primary, secondary, and tertiary colors:
+
+    Primary Colors: Red, Blue, Yellow – the foundation for all other colors.
+    Secondary Colors: Orange, Green, Purple – formed by mixing two primary colors.
+    Tertiary Colors: Yellow-Orange, Red-Orange, Red-Purple, Blue-Purple, Blue-Green, Yellow-Green – made by mixing a primary color with a secondary color.
+
+By understanding the color wheel, you can create color schemes based on color relationships such as complementary, analogous, and triadic colors....</p>
+        <div class="chart-container">
+            <canvas id="colorWheelChart"></canvas>
         </div>
 
         <h2>Complementary Colors</h2>
-        <p>Complementary colors are located opposite each other on the color wheel. When placed together, they create high contrast and can make each color appear more vibrant. Some examples of complementary color pairs include:</p>
-        <ul>
-            <li>Red and Green</li>
-            <li>Blue and Orange</li>
-            <li>Yellow and Purple</li>
-        </ul>
-        <div class="image">
-            <img src="https://github.com/Thelaw818/portfolio/blob/main/images/Complementary%20Colors.jpg?raw=true" alt="Complementary Colors">
-            <p>Complementary colors create high contrast and make each color stand out.</p>
+        <p>Complementary colors are located opposite each other on the color wheel...</p>
+        <div class="chart-container">
+            <canvas id="complementaryColorsChart"></canvas>
         </div>
 
         <h2>Analogous Colors</h2>
-        <p>Analogous colors are next to each other on the color wheel. They usually match well and create serene and comfortable designs. For example, the combination of blue, blue-green, and green is an analogous color scheme.</p>
-        <div class="image">
-            <img src="https://github.com/Thelaw818/portfolio/blob/main/images/Analogous%20Colors.jpg?raw=true" alt="Analogous Colors">
-            <p>Analogous colors create harmony and cohesion in a design.</p>
+        <p>Analogous colors are next to each other on the color wheel.They usually match well and create serene and comfortable designs. For example, the combination of blue, blue-green, and green is an analogous color scheme..</p>
+        <div class="chart-container">
+            <canvas id="analogousColorsChart"></canvas>
         </div>
 
         <h2>RGB Color Wheel</h2>
-        <p>The RGB color model is based on the primary colors Red, Green, and Blue. It is widely used in digital design, as it aligns with how colors are displayed on screens.</p>
-        <div class="image">
-            <img src="https://github.com/Thelaw818/portfolio/blob/main/images/RGB_color_wheel.png?raw=true" alt="RGB Color Wheel">
-            <p>The RGB Color Wheel is used in digital screens and lighting systems.</p>
+        <p>The RGB color model is based on the primary colors Red, Green, and Blue. It is widely used in digital design, as it aligns with how colors are displayed on screens....</p>
+        <div class="chart-container">
+            <canvas id="rgbColorWheelChart"></canvas>
         </div>
 
         <h2>Color Psychology</h2>
-        <p>Colors have a psychological impact on the viewer. Different colors can evoke different emotions and reactions. Here's how some colors are perceived:</p>
-        <ul>
-            <li><strong>Red:</strong> Passion, energy, excitement, love</li>
-            <li><strong>Blue:</strong> Calm, trust, professionalism</li>
-            <li><strong>Yellow:</strong> Happiness, optimism, attention-grabbing</li>
-            <li><strong>Green:</strong> Nature, growth, tranquility</li>
-            <li><strong>Purple:</strong> Luxury, creativity, mystery</li>
-            <li><strong>Black:</strong> Sophistication, elegance, authority</li>
-        </ul>
-        <p>Designers use these psychological associations to influence how people perceive a brand or message. For more on color psychology, check out this <a href="https://www.colorpsychology.org/" target="_blank">comprehensive guide on color psychology</a>.</p>
+        <p>Colors have a psychological impact on the viewer. Different colors can evoke different emotions and reactions. Here's how some colors are perceived:
+
+    Red: Passion, energy, excitement, love
+    Blue: Calm, trust, professionalism
+    Yellow: Happiness, optimism, attention-grabbing
+    Green: Nature, growth, tranquility
+    Purple: Luxury, creativity, mystery
+    Black: Sophistication, elegance, authority
+
+Designers use these psychological associations to influence how people perceive a brand or message. For more on color psychology, check out this comprehensive guide on color psychology...</p>
+        <div class="chart-container">
+            <canvas id="colorPsychologyChart"></canvas>
+        </div>
 
         <h2>Conclusion</h2>
-        <p>Color theory is an essential aspect of design that can greatly affect the mood and effectiveness of a design. By understanding how colors interact with each other and how they influence emotions, designers can create more engaging and meaningful visual experiences. Whether you're designing for a brand, website, or artwork, knowing how to use color effectively is crucial for making impactful and harmonious designs.</p>
-    </section>
-  </main>
+        <p>Color theory is an essential aspect of design that can greatly affect the mood and effectiveness of a design. By understanding how colors interact with each other and how they influence emotions, designers can create more engaging and meaningful visual experiences. Whether you're designing for a brand, website, or artwork, knowing how to use color effectively is crucial for making impactful and harmonious designs....</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Frankie Color Theory Resources</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2024 Frankie Color Theory Resources</p>
-  </footer>
+    <script>
+        // Chart.js charts for visual representation
+
+        // Color Wheel Chart
+        new Chart(document.getElementById('colorWheelChart').getContext('2d'), {
+            type: 'pie',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Orange', 'Purple'],
+                datasets: [{
+                    data: [20, 20, 20, 20, 10, 10],
+                    backgroundColor: ['#FF0000', '#0000FF', '#FFFF00', '#00FF00', '#FFA500', '#800080']
+                }]
+            }
+        });
+
+        // Complementary Colors Chart
+        new Chart(document.getElementById('complementaryColorsChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['Red & Green', 'Blue & Orange', 'Yellow & Purple'],
+                datasets: [{
+                    label: 'Complementary Colors',
+                    data: [50, 50, 50],
+                    backgroundColor: ['#FF0000', '#0000FF', '#FFFF00']
+                }]
+            }
+        });
+
+        // Analogous Colors Chart
+        new Chart(document.getElementById('analogousColorsChart').getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Blue', 'Blue-Green', 'Green'],
+                datasets: [{
+                    data: [30, 40, 30],
+                    backgroundColor: ['#0000FF', '#00FFFF', '#00FF00']
+                }]
+            }
+        });
+
+        // RGB Color Wheel Chart
+        new Chart(document.getElementById('rgbColorWheelChart').getContext('2d'), {
+            type: 'polarArea',
+            data: {
+                labels: ['Red', 'Green', 'Blue'],
+                datasets: [{
+                    data: [100, 100, 100],
+                    backgroundColor: ['#FF0000', '#00FF00', '#0000FF']
+                }]
+            }
+        });
+
+        // Color Psychology Chart
+        new Chart(document.getElementById('colorPsychologyChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['Passion (Red)', 'Calm (Blue)', 'Happiness (Yellow)', 'Nature (Green)', 'Luxury (Purple)'],
+                datasets: [{
+                    label: 'Psychological Impact',
+                    data: [50, 60, 70, 40, 30],
+                    backgroundColor: ['#FF0000', '#0000FF', '#FFFF00', '#00FF00', '#800080']
+                }]
+            }
+        });
+    </script>
 </body>
 </html>
