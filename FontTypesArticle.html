@@ -25,8 +25,8 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
-            display: flex; /* Use flexbox for single-row navigation */
-            justify-content: space-evenly; /* Evenly space out items across the row */
+            display: flex;
+            justify-content: space-evenly;
             align-items: center;
         }
         nav ul li {
@@ -45,7 +45,6 @@
             position: relative;
             display: inline-block;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -53,22 +52,18 @@
             min-width: 160px;
             z-index: 1;
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: white;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
-
         .dropdown-content a:hover {
             background-color: #575757;
         }
-
         .banner {
             margin-top: 10px;
             text-align: center;
@@ -77,7 +72,7 @@
         h1 {
             margin: 0;
             padding: 10px;
-            font-size: 1.2em; /* Reduced font size */
+            font-size: 1.2em;
         }
         main {
             display: flex;
@@ -96,8 +91,10 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         .image-size {
-            width: 5in;
-            height: 5in;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 20px 0;
         }
         footer {
             text-align: center;
@@ -107,28 +104,6 @@
             position: relative;
             bottom: 0;
         }
-
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-
-        /* Font size styles */
-        body.small-font {
-            font-size: 14px;
-        }
-        body.medium-font {
-            font-size: 16px;
-        }
-        body.large-font {
-            font-size: 18px;
-        }
-
-        /* Hover effect for dropdown items */
-        .dropdown-content a:hover {
-            background-color: #444;
-        }
     </style>
 </head>
 <body>
@@ -137,7 +112,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Showcase</a>
+                    <a href="#">Showcase</a>
                     <div class="dropdown-content">
                         <a href="showcase1.html">Showcase 1</a>
                         <a href="showcase2.html">Showcase 2</a>
@@ -146,7 +121,7 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Design Theory</a>
+                    <a href="#">Design Theory</a>
                     <div class="dropdown-content">
                         <a href="ColorThemes.html">Color Themes</a>
                         <a href="ColorTheoryArticle.html">Color Theory Article</a>
@@ -155,19 +130,18 @@
                         <a href="TypographyOverview.html">Typography Overview</a>
                     </div>
                 </li>
-                <!-- New Font Types Dropdown -->
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Font Types</a>
+                    <a href="#">Font Types</a>
                     <div class="dropdown-content">
                         <a href="FontTypesArticle.html">Font Types Article</a>
                     </div>
                 </li>
                 <li><a href="resume.html">Resume</a></li>
-                <!-- Settings Dropdown -->
+                <!-- Theme Menu -->
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Settings</a>
+                    <a href="#">Theme Menu</a>
                     <div class="dropdown-content">
-                        <a href="#" onclick="toggleMode()">Mode: Dark | Light</a>
+                        <a href="#" onclick="toggleMode()">Toggle Dark/Light Mode</a>
                         <a href="#" onclick="changeFontSize('small')">Font Size: Small</a>
                         <a href="#" onclick="changeFontSize('medium')">Font Size: Medium</a>
                         <a href="#" onclick="changeFontSize('large')">Font Size: Large</a>
@@ -188,25 +162,25 @@
             <h3>1. Serif Fonts</h3>
             <p>Serif fonts are characterized by small lines or strokes attached to the end of a larger stroke in a letter. These fonts are traditionally used in printed materials and are considered more formal and readable in large bodies of text.</p>
             <p>Examples of Serif fonts: <em>Times New Roman, Georgia, Garamond</em>.</p>
-            <img alt="Serif Fonts Example" src="https://github.com/Thelaw818/portfolio/blob/main/images/fonts1.png?raw=true" class="image-size">
+            <img src="https://thelaw818.github.io/portfolio/images/fonts1.png" alt="Serif Fonts Example" class="image-size">
             <p>Learn more about Serif fonts: <a href="https://www.myfonts.com/pages/serif-fonts" target="_blank">Serif Fonts Overview</a>.</p>
 
             <h3>2. Sans-Serif Fonts</h3>
             <p>Sans-serif fonts do not have the small lines or strokes attached to their letters. These fonts are often used in modern, digital settings because they appear clean and simple. They are considered easier to read on screens.</p>
             <p>Examples of Sans-Serif fonts: <em>Arial, Helvetica, Open Sans</em>.</p>
-            <img alt="Sans-Serif Fonts Example" src="https://github.com/Thelaw818/portfolio/blob/main/images/fonts.png?raw=true" class="image-size">
+            <img src="https://thelaw818.github.io/portfolio/images/fonts.png" alt="Sans-Serif Fonts Example" class="image-size">
             <p>Learn more about Sans-Serif fonts: <a href="https://en.wikipedia.org/wiki/Sans-serif" target="_blank">Sans-Serif Fonts Overview</a>.</p>
 
             <h3>3. Script Fonts</h3>
             <p>Script fonts mimic the appearance of handwritten text. They are often used for decorative purposes, invitations, and creative projects. While they can be elegant, they are generally harder to read in large blocks of text.</p>
             <p>Examples of Script fonts: <em>Brush Script, Pacifico, Lobster</em>.</p>
-            <img alt="Script Fonts Example" src="https://github.com/Thelaw818/portfolio/blob/main/images/fonts%203.jpg?raw=true" class="image-size">
+            <img src="https://thelaw818.github.io/portfolio/images/fonts3.jpg" alt="Script Fonts Example" class="image-size">
             <p>Learn more about Script fonts: <a href="https://www.kimp.io/script-fonts/" target="_blank">Script Fonts Overview</a>.</p>
 
             <h3>4. Display Fonts</h3>
             <p>Display fonts are designed to attract attention. They are often used for titles, logos, and large headlines. They can be bold, quirky, or artistic, but should not be used in body text due to readability issues.</p>
             <p>Examples of Display fonts: <em>Impact, Bebas Neue, Playbill</em>.</p>
-            <img alt="Display Fonts Example" src="https://din-studio.com/best-fonts/display-fonts/" class="image-size">
+            <img src="https://thelaw818.github.io/portfolio/images/fonts4.jpg" alt="Display Fonts Example" class="image-size">
             <p>Learn more about Display fonts: <a href="https://din-studio.com/best-fonts/display-fonts/" target="_blank">Display Fonts Overview</a>.</p>
 
             <h2>Choosing the Right Font</h2>
