@@ -4,12 +4,61 @@ body.dark-mode {
     color: #e5e5e5; /* High contrast text */
 }
 
-nav ul li a {
-    color: white; /* Ensure links are visible in both modes */
+/* Navigation Bar Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center-align navigation items */
+    background-color: #000; /* Uniform background color */
 }
 
-nav ul li a:hover {
-    background-color: #333; /* Slightly lighter hover */
+nav ul li {
+    position: relative; /* For dropdown positioning */
+    margin: 0;
+}
+
+nav ul li a,
+.dropdown-content a,
+.dropbtn {
+    font-size: 16px; /* Consistent font size */
+    color: white; /* Visible in all modes */
+    text-decoration: none;
+    padding: 10px 20px; /* Consistent padding */
+    display: block; /* Ensure block layout for consistent spacing */
+}
+
+nav ul li a:hover,
+.dropdown-content a:hover,
+.dropbtn:hover {
+    background-color: #333; /* Hover effect */
+    text-decoration: underline;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #333; /* Dropdown background color */
+    min-width: 160px; /* Minimum width for dropdown */
+    z-index: 1; /* Ensure dropdown appears above other elements */
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dark Mode Support */
+body.dark-mode nav ul li a,
+body.dark-mode .dropdown-content a {
+    color: #e5e5e5; /* High contrast for dark mode */
+}
+
+body.dark-mode nav ul li a:hover,
+body.dark-mode .dropdown-content a:hover {
+    background-color: #555; /* Hover effect in dark mode */
 }
 
 /* Font Size Options */
