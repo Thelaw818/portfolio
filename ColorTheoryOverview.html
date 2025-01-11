@@ -13,46 +13,13 @@
             padding: 0;
             background-color: #f0f0f0;
         }
-        h1, h2 {
-            color: #333;
-        }
-        dl {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        dt {
-            font-weight: bold;
-            color: #000; /* Changed from blue to black */
-            margin-top: 10px;
-        }
-        dd {
-            margin: 0 0 10px 20px;
-            color: #555;
-        }
-        .sub-nav {
-            margin-top: 20px;
-        }
-        .sub-nav a {
-            color: #000; /* Changed from blue to black */
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .sub-nav a:hover {
-            text-decoration: underline;
-        }
-        /* Header and navigation styling */
         header {
-            background-color: #000; /* Black background */
-            color: white; /* White text */
-            width: 100%;
+            background-color: #000;
+            color: white;
             padding: 10px 0;
-        }
-        .banner h1 {
-            text-align: center;
-            margin: 0;
-            font-size: 2.2em; /* Adjusted to match the first page header size */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav ul {
             list-style-type: none;
@@ -60,25 +27,18 @@
             margin: 0;
             display: flex;
             justify-content: space-evenly;
-            align-items: center;
         }
         nav ul li {
-            margin: 0;
+            position: relative;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 12px 15px; /* Adjusted padding for better alignment */
-            font-size: 1.1em; /* Same size as in the first page */
+            padding: 12px 15px;
+            font-size: 1.1em;
         }
         nav ul li a:hover {
             text-decoration: underline;
-        }
-
-        /* Dropdown menu styling */
-        .dropdown {
-            position: relative;
-            display: inline-block;
         }
         .dropdown-content {
             display: none;
@@ -95,28 +55,43 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
-            font-size: 1em;  /* Same size as normal nav links */
         }
         .dropdown-content a:hover {
             background-color: #575757;
         }
-
-        /* Active link styling */
-        .active {
-            font-weight: bold;
-            text-decoration: underline;
+        .banner h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 2.2em;
         }
-
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        dl dt {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        dl dd {
+            margin-left: 20px;
+        }
         footer {
             text-align: center;
             padding: 20px;
             background-color: #f1f1f1;
-            width: 100%;
-            position: relative;
-            bottom: 0;
         }
-
-        /* Responsive styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
@@ -131,7 +106,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Showcase</a>
+                    <a href="#">Showcase</a>
                     <div class="dropdown-content">
                         <a href="showcase1.html">Showcase 1</a>
                         <a href="showcase2.html">Showcase 2</a>
@@ -140,7 +115,7 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Design Theory</a>
+                    <a href="#">Design Theory</a>
                     <div class="dropdown-content">
                         <a href="ColorThemes.html">Color Themes</a>
                         <a href="ColorTheoryArticle.html">Color Theory Article</a>
@@ -150,13 +125,22 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Font Types</a>
+                    <a href="#">Font Types</a>
                     <div class="dropdown-content">
                         <a href="FontTypesArticle.html">Font Types Article</a>
                         <a href="FontTypesOverview.html">Font Types Overview</a>
                     </div>
                 </li>
                 <li><a href="resume.html">Resume</a></li>
+                <li class="dropdown">
+                    <a href="#">Theme Menu</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="toggleMode()">Toggle Dark/Light Mode</a>
+                        <a href="#" onclick="changeFontSize('small')">Font Size: Small</a>
+                        <a href="#" onclick="changeFontSize('medium')">Font Size: Medium</a>
+                        <a href="#" onclick="changeFontSize('large')">Font Size: Large</a>
+                    </div>
+                </li>
             </ul>
         </nav>
         <div class="banner">
@@ -167,74 +151,50 @@
     <main>
         <h1>Color Theory Overview</h1>
         <p>Color theory is the study of how colors interact and how they affect human perception and emotion. It is a framework that helps designers, artists, and creators make deliberate and informed choices about colors to achieve desired effects in their work. Understanding the relationships between colors, the psychology of colors, and how colors can be combined is essential for creating visually compelling designs.</p>
-        
+
         <h2>Key Color Theory Terms</h2>
         <dl>
             <dt>Color Wheel</dt>
             <dd>A circular diagram that shows the relationships between colors.</dd>
-            
             <dt>Primary Colors</dt>
             <dd>Red, blue, and yellow; the base colors from which other colors are mixed.</dd>
-            
             <dt>Secondary Colors</dt>
             <dd>Colors formed by mixing two primary colors (e.g., green, orange, and purple).</dd>
-            
             <dt>Tertiary Colors</dt>
             <dd>Colors formed by mixing a primary color with a secondary color (e.g., red-orange, yellow-green).</dd>
-            
             <dt>Complementary Colors</dt>
             <dd>Colors opposite each other on the color wheel, creating high contrast.</dd>
-            
             <dt>Analogous Colors</dt>
             <dd>Colors next to each other on the color wheel that create harmony.</dd>
-            
             <dt>Hue</dt>
             <dd>The pure color without tint, shade, or tone.</dd>
-            
             <dt>Tint</dt>
             <dd>A color mixed with white, making it lighter.</dd>
-            
             <dt>Shade</dt>
             <dd>A color mixed with black, making it darker.</dd>
-            
             <dt>Tone</dt>
             <dd>A color mixed with gray, making it less intense.</dd>
-            
             <dt>Saturation</dt>
             <dd>The intensity or purity of a color.</dd>
-            
             <dt>Brightness</dt>
             <dd>The perceived lightness or darkness of a color.</dd>
-            
             <dt>Warm Colors</dt>
             <dd>Colors such as red, orange, and yellow that evoke warmth.</dd>
-            
             <dt>Cool Colors</dt>
             <dd>Colors such as blue, green, and purple that evoke calmness.</dd>
-            
             <dt>Monochromatic</dt>
             <dd>A color scheme using variations of a single hue.</dd>
-            
             <dt>Triadic Colors</dt>
             <dd>Three colors evenly spaced around the color wheel.</dd>
-            
             <dt>Split-Complementary</dt>
             <dd>A color scheme using a base color and two colors adjacent to its complement.</dd>
-            
             <dt>RGB</dt>
             <dd>A color model using red, green, and blue, commonly used in digital displays.</dd>
-            
             <dt>CMYK</dt>
             <dd>A color model using cyan, magenta, yellow, and black, used in printing.</dd>
-            
             <dt>Color Psychology</dt>
             <dd>The study of how colors affect human emotions and behavior.</dd>
         </dl>
-
-        <div class="sub-nav">
-            <a href="ColorThemes.html">Color Themes</a>
-            <a href="ColorTheoryArticle.html">Color Theory Article</a>
-        </div>
     </main>
 
     <footer>
@@ -242,17 +202,15 @@
     </footer>
 
     <script>
-        const navLinks = document.querySelectorAll('nav ul li a');
-        function activateLink(link) {
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
+        // Toggle dark/light mode
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
         }
-        const currentPath = window.location.pathname;
-        navLinks.forEach(link => {
-            if (link.href.includes(currentPath)) {
-                activateLink(link);
-            }
-        });
+
+        // Change font size
+        function changeFontSize(size) {
+            document.body.style.fontSize = size === 'small' ? '14px' : size === 'medium' ? '16px' : '18px';
+        }
     </script>
 </body>
 </html>
