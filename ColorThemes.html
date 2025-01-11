@@ -9,6 +9,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            font-size: 16px; /* Standardized font size */
             background-color: #f8f9fa;
         }
         header {
@@ -18,8 +19,10 @@
             width: 100%;
         }
         nav {
-            width: 100%;
             background-color: black;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav ul {
             list-style-type: none;
@@ -30,20 +33,16 @@
             align-items: center;
         }
         nav ul li {
-            margin: 0;
+            position: relative;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
-            font-size: 16px;
+            font-size: 16px; /* Standardized font size */
         }
         nav ul li a:hover {
             text-decoration: underline;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
         }
         .dropdown-content {
             display: none;
@@ -60,6 +59,7 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            font-size: 16px; /* Standardized font size */
         }
         .dropdown-content a:hover {
             background-color: #575757;
@@ -71,17 +71,17 @@
         h1 {
             margin: 0;
             padding: 10px;
-            font-size: 1.5em;
+            font-size: 24px; /* Standardized font size */
         }
         main {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: calc(100vh - 200px);
             padding: 20px;
         }
         table {
             width: 100%;
+            max-width: 800px;
             border-collapse: collapse;
             margin: 20px 0;
         }
@@ -113,6 +113,15 @@
         .playful-pastels {
             background: linear-gradient(to right, #ffb6c1, #d0f0c0, #add8e6);
         }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -122,7 +131,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li class="dropdown">
-            <a href="#" class="dropbtn">Showcase</a>
+            <a href="#">Showcase</a>
             <div class="dropdown-content">
                 <a href="showcase1.html">Showcase 1</a>
                 <a href="showcase2.html">Showcase 2</a>
@@ -131,7 +140,7 @@
             </div>
         </li>
         <li class="dropdown">
-            <a href="#" class="dropbtn">Design Theory</a>
+            <a href="#">Design Theory</a>
             <div class="dropdown-content">
                 <a href="ColorThemes.html">Color Themes</a>
                 <a href="ColorTheoryArticle.html">Color Theory Article</a>
@@ -141,7 +150,15 @@
             </div>
         </li>
         <li><a href="FontTypesArticle.html">Font Types Article</a></li>
-        <li><a href="TypographyArticle.html">Typography Article</a></li>
+        <li class="dropdown">
+            <a href="#">Theme Menu</a>
+            <div class="dropdown-content">
+                <a href="#" onclick="toggleMode()">Toggle Dark/Light Mode</a>
+                <a href="#" onclick="changeFontSize('small')">Small Font</a>
+                <a href="#" onclick="changeFontSize('medium')">Medium Font</a>
+                <a href="#" onclick="changeFontSize('large')">Large Font</a>
+            </div>
+        </li>
       </ul>
     </nav>
     <div class="banner">
@@ -150,15 +167,6 @@
   </header>
 
   <main>
-    <section>
-        <h2>Key Changes:</h2>
-        <ul>
-            <li><strong>Color Blocks:</strong> Each theme now utilizes a <code>div</code> element with a class name that corresponds to the color scheme (e.g., <code>.warm-sunset</code>, <code>.cool-ocean</code>). These <code>div</code> elements are styled with gradient backgrounds to match the respective color palettes, creating a visual representation of each theme directly in the table.</li>
-            <li><strong>CSS for Color Themes:</strong> Each color theme is defined through CSS classes (e.g., <code>.warm-sunset</code>, <code>.cool-ocean</code>), where the background is set as a gradient to reflect the specific colors of the theme. This ensures a consistent look and feel for each color scheme.</li>
-            <li>This method allows the color themes to be displayed directly within the table, eliminating the need for external image files. It results in a cleaner, more consistent design and provides greater flexibility for customization.</li>
-        </ul>
-    </section>
-
     <table>
         <thead>
             <tr>
@@ -171,37 +179,27 @@
             <tr>
                 <td>Warm Sunset</td>
                 <td>A blend of warm hues like red, orange, and yellow for vibrant energy.</td>
-                <td>
-                    <div class="color-block warm-sunset"></div>
-                </td>
+                <td><div class="color-block warm-sunset"></div></td>
             </tr>
             <tr>
                 <td>Cool Ocean</td>
                 <td>Soothing cool tones like blue, teal, and seafoam green for tranquility.</td>
-                <td>
-                    <div class="color-block cool-ocean"></div>
-                </td>
+                <td><div class="color-block cool-ocean"></div></td>
             </tr>
             <tr>
                 <td>Nature's Harmony</td>
                 <td>Earthy colors such as green, brown, and beige for a natural feel.</td>
-                <td>
-                    <div class="color-block nature-harmony"></div>
-                </td>
+                <td><div class="color-block nature-harmony"></div></td>
             </tr>
             <tr>
                 <td>Modern Minimalist</td>
                 <td>Neutral shades like gray, black, and white for sleek, clean designs.</td>
-                <td>
-                    <div class="color-block modern-minimalist"></div>
-                </td>
+                <td><div class="color-block modern-minimalist"></div></td>
             </tr>
             <tr>
                 <td>Playful Pastels</td>
                 <td>Soft pastel tones such as pink, lavender, and baby blue for a cheerful vibe.</td>
-                <td>
-                    <div class="color-block playful-pastels"></div>
-                </td>
+                <td><div class="color-block playful-pastels"></div></td>
             </tr>
         </tbody>
     </table>
@@ -210,5 +208,29 @@
   <footer>
     <p>&copy; 2024 Frankie Portfolio</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+      const fontSize = localStorage.getItem('fontSize');
+      if (fontSize) {
+        document.body.classList.add(`${fontSize}-font`);
+      }
+    });
+
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    function changeFontSize(size) {
+      document.body.classList.remove('small-font', 'medium-font', 'large-font');
+      document.body.classList.add(`${size}-font`);
+      localStorage.setItem('fontSize', size);
+    }
+  </script>
 </body>
 </html>
