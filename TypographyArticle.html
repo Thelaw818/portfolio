@@ -1,275 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typography Article</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-    h1, h2, h3 {
-      color: #333;
-    }
-    dl {
-      background-color: #ffffff;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    dt {
-      font-weight: bold;
-      color: #000;
-      margin-top: 10px;
-    }
-    dd {
-      margin: 0 0 10px 20px;
-      color: #555;
-    }
-    .sub-nav {
-      margin-top: 20px;
-    }
-    .sub-nav a {
-      color: #000;
-      text-decoration: none;
-      margin-right: 15px;
-    }
-    .sub-nav a:hover {
-      text-decoration: underline;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography Article</title>
+    <style>
+        /* Navigation Bar Styles */
+        nav {
+            width: 100%;
+            background-color: black; /* Consistent background for all pages */
+        }
 
-    header {
-      background-color: #000;
-      color: white;
-      width: 100%;
-      padding: 10px 0;
-    }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly; /* Ensure even spacing */
+            align-items: center;
+        }
 
-    .banner h1 {
-      text-align: center;
-      margin: 0;
-      font-size: 2.2em;
-    }
+        nav ul li {
+            position: relative; /* For dropdown positioning */
+        }
 
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
+        nav ul li a {
+            color: white; /* Uniform text color */
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            display: block; /* Block display for easy hover */
+        }
 
-    nav ul li {
-      margin: 0;
-    }
+        nav ul li a:hover {
+            background-color: #333; /* Highlight background on hover */
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 12px 15px;
-      font-size: 1.1em;
-    }
+        .dropdown-content {
+            display: none; /* Initially hidden */
+            position: absolute;
+            background-color: #333; /* Dark dropdown background */
+            min-width: 160px;
+            z-index: 1;
+        }
 
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block; /* Ensure clickable area */
+        }
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+        .dropdown-content a:hover {
+            background-color: #444; /* Slightly lighter hover background */
+        }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #333;
-      min-width: 160px;
-      z-index: 1;
-    }
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
 
-    .dropdown-content a {
-      color: white;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      font-size: 1em;
-    }
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
 
-    .dropdown-content a:hover {
-      background-color: #575757;
-    }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
 
-    .active {
-      font-weight: bold;
-      text-decoration: underline;
-    }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f1f1f1;
-      width: 100%;
-      position: relative;
-      bottom: 0;
-    }
+        p {
+            margin-bottom: 15px;
+        }
 
-    .image-size {
-      width: 5in;
-      height: 5in;
-    }
+        ul {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
 
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
 
-      nav ul li a {
-        padding: 10px;
-      }
-    }
-
-    /* Font Size adjustments */
-    h1 {
-      font-size: 2.5em;
-    }
-
-    h2 {
-      font-size: 2em;
-    }
-
-    h3 {
-      font-size: 1.5em;
-    }
-
-    p {
-      font-size: 1.1em;
-    }
-  </style>
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Showcase</a>
-          <div class="dropdown-content">
-            <a href="showcase1.html">Showcase 1</a>
-            <a href="showcase2.html">Showcase 2</a>
-            <a href="showcase3.html">Showcase 3</a>
-            <a href="showcase4.html">Showcase 4</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Design Theory</a>
-          <div class="dropdown-content">
-            <a href="ColorThemes.html">Color Themes</a>
-            <a href="ColorTheoryArticle.html">Color Theory Article</a>
-            <a href="ColorTheoryOverview.html">Color Theory Overview</a>
-            <a href="TypographyArticle.html">Typography Article</a>
-            <a href="TypographyOverview.html">Typography Overview</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Font Types</a>
-          <div class="dropdown-content">
-            <a href="FontTypesArticle.html">Font Types Article</a>
-            <a href="FontTypesOverview.html">Font Types Overview</a>
-          </div>
-        </li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
-    <div class="banner">
-      <h1>Typography Article</h1>
-    </div>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Showcase</a>
+                    <div class="dropdown-content">
+                        <a href="showcase1.html">Showcase 1</a>
+                        <a href="showcase2.html">Showcase 2</a>
+                        <a href="showcase3.html">Showcase 3</a>
+                        <a href="showcase4.html">Showcase 4</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Design Theory</a>
+                    <div class="dropdown-content">
+                        <a href="ColorThemes.html">Color Themes</a>
+                        <a href="ColorTheoryArticle.html">Color Theory Article</a>
+                        <a href="ColorTheoryOverview.html">Color Theory Overview</a>
+                        <a href="TypographyArticle.html">Typography Article</a>
+                        <a href="TypographyOverview.html">Typography Overview</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Font Types</a>
+                    <div class="dropdown-content">
+                        <a href="FontTypesArticle.html">Font Types Article</a>
+                        <a href="FontTypesOverview.html">Font Types Overview</a>
+                    </div>
+                </li>
+                <li><a href="resume.html">Resume</a></li>
+                <li class="dropdown">
+                    <a href="#">Theme Menu</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="toggleMode()">Toggle Dark/Light Mode</a>
+                        <a href="#" onclick="changeFontSize('small')">Font Size: Small</a>
+                        <a href="#" onclick="changeFontSize('medium')">Font Size: Medium</a>
+                        <a href="#" onclick="changeFontSize('large')">Font Size: Large</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <h2>Understanding Typography</h2>
-    <p>Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing. It involves a combination of font choice, size, line spacing, letter spacing, and alignment to create effective communication.</p>
+    <main>
+        <h1>Typography Article</h1>
+        <h2>Understanding Typography</h2>
+        <p>Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing. It involves a combination of font choice, size, line spacing, letter spacing, and alignment to create effective communication.</p>
 
-    <h3>1. The Importance of Typography</h3>
-    <p>Typography plays a crucial role in how people perceive your message. Whether it's a website, print material, or product packaging, good typography enhances the visual appeal and readability, ensuring that your content is both easy to read and aesthetically pleasing.</p>
+        <h3>1. The Importance of Typography</h3>
+        <p>Typography plays a crucial role in how people perceive your message. Whether it's a website, print material, or product packaging, good typography enhances the visual appeal and readability, ensuring that your content is both easy to read and aesthetically pleasing.</p>
 
-    <img alt="Hero Image Example" src="https://github.com/Thelaw818/portfolio/blob/main/images/Hero-Image-1.png?raw=true" class="image-size">
-    <p>This is an example of typography in a branding design, showcasing how typography contributes to a brand's identity.</p>
+        <img src="https://thelaw818.github.io/portfolio/images/Hero-Image-1.png" alt="Hero Image Example">
+        <p>This is an example of typography in a branding design, showcasing how typography contributes to a brand's identity.</p>
 
-    <h3>2. Key Elements of Typography</h3>
-    <p>The essential elements of typography include:</p>
-    <ul>
-      <li><strong>Font Type:</strong> Whether Serif, Sans-serif, Script, or Display, the font type sets the tone of your message.</li>
-      <li><strong>Font Size:</strong> The size of the text affects readability and helps establish a visual hierarchy.</li>
-      <li><strong>Line Spacing (Leading):</strong> The space between lines of text can impact readability. Too little space can make text feel cramped, while too much space can create awkward gaps.</li>
-      <li><strong>Letter Spacing (Tracking):</strong> The spacing between individual characters. Proper tracking helps improve readability and aesthetics.</li>
-    </ul>
+        <h3>2. Key Elements of Typography</h3>
+        <ul>
+            <li><strong>Font Type:</strong> Whether Serif, Sans-serif, Script, or Display, the font type sets the tone of your message.</li>
+            <li><strong>Font Size:</strong> The size of the text affects readability and helps establish a visual hierarchy.</li>
+            <li><strong>Line Spacing (Leading):</strong> The space between lines of text can impact readability. Too little space can make text feel cramped, while too much space can create awkward gaps.</li>
+            <li><strong>Letter Spacing (Tracking):</strong> The spacing between individual characters. Proper tracking helps improve readability and aesthetics.</li>
+        </ul>
 
-    <h3>3. Popular Font Families</h3>
-    <p>Here are some examples of popular font families that are widely used in design:</p>
-    <ul>
-      <li><strong>Serif Fonts:</strong> Times New Roman, Georgia, Garamond</li>
-      <li><strong>Sans-serif Fonts:</strong> Arial, Helvetica, Open Sans</li>
-      <li><strong>Script Fonts:</strong> Pacifico, Lobster, Brush Script</li>
-      <li><strong>Display Fonts:</strong> Impact, Bebas Neue, Playbill</li>
-    </ul>
-    <p>Each font family has its own distinct look and feel, and they can be chosen based on the purpose and audience of the design project.</p>
+        <h3>3. Popular Font Families</h3>
+        <ul>
+            <li><strong>Serif Fonts:</strong> Times New Roman, Georgia, Garamond</li>
+            <li><strong>Sans-serif Fonts:</strong> Arial, Helvetica, Open Sans</li>
+            <li><strong>Script Fonts:</strong> Pacifico, Lobster, Brush Script</li>
+            <li><strong>Display Fonts:</strong> Impact, Bebas Neue, Playbill</li>
+        </ul>
 
-    <h3>4. Choosing the Right Typography for Your Project</h3>
-    <p>When selecting typography for your project, consider the following factors:</p>
-    <ul>
-      <li><strong>Readability:</strong> Ensure that the text is easy to read at various sizes and on different screens or media.</li>
-      <li><strong>Purpose:</strong> The typeface should reflect the mood or message of the project. For example, use a bold font for a strong message and a delicate script for invitations or elegant designs.</li>
-      <li><strong>Audience:</strong> Consider the demographic of the audience. Different age groups and cultures may have different preferences for typography styles.</li>
-    </ul>
+        <h3>4. Choosing the Right Typography for Your Project</h3>
+        <ul>
+            <li><strong>Readability:</strong> Ensure that the text is easy to read at various sizes and on different screens or media.</li>
+            <li><strong>Purpose:</strong> The typeface should reflect the mood or message of the project. For example, use a bold font for a strong message and a delicate script for invitations or elegant designs.</li>
+            <li><strong>Audience:</strong> Consider the demographic of the audience. Different age groups and cultures may have different preferences for typography styles.</li>
+        </ul>
 
-    <h3>5. Resources for Typography</h3>
-    <p>Here are some great resources to explore further into the world of typography:</p>
-    <ul>
-      <li><a href="https://www.typography.com/" target="_blank">Typography.com</a>: A resource for font selection and typography guides.</li>
-      <li><a href="https://www.fonts.com/" target="_blank">Fonts.com</a>: A comprehensive site offering font purchases and resources for designers.</li>
-      <li><a href="https://www.typography.com/blog" target="_blank">Typography Blog</a>: A blog that provides insights and trends in the world of typography.</li>
-    </ul>
+        <h3>5. Resources for Typography</h3>
+        <ul>
+            <li><a href="https://www.typography.com/" target="_blank">Typography.com</a>: A resource for font selection and typography guides.</li>
+            <li><a href="https://www.fonts.com/" target="_blank">Fonts.com</a>: A comprehensive site offering font purchases and resources for designers.</li>
+            <li><a href="https://www.typography.com/blog" target="_blank">Typography Blog</a>: A blog that provides insights and trends in the world of typography.</li>
+        </ul>
 
-    <img alt="Typography for Brand Identity" src="https://github.com/Thelaw818/portfolio/blob/main/images/Typography-for-brand-identity.jpg?raw=true" class="image-size">
-    <p>This image shows how typography is used in brand identity, helping establish visual appeal and consistency across materials.</p>
+        <img src="https://thelaw818.github.io/portfolio/images/Typography-for-brand-identity.jpg" alt="Typography for Brand Identity">
+        <p>This image shows how typography is used in brand identity, helping establish visual appeal and consistency across materials.</p>
 
-    <img alt="Letter Anatomy Typography" src="https://github.com/Thelaw818/portfolio/blob/main/images/62b8cbc813d0fa85129ac5c9_20-typography-faqs-letter-anatomy.png?raw=true" class="image-size">
-    <p>This visual explains the anatomy of letters, helping to understand their structure and how they are used in different fonts.</p>
+        <img src="https://thelaw818.github.io/portfolio/images/62b8cbc813d0fa85129ac5c9_20-typography-faqs-letter-anatomy.png" alt="Letter Anatomy Typography">
+        <p>This visual explains the anatomy of letters, helping to understand their structure and how they are used in different fonts.</p>
 
-    <h2>Conclusion</h2>
-    <p>Typography is much more than choosing a pretty font. It is a powerful tool in design that helps convey meaning and emotion. By understanding the fundamentals of typography, you can create designs that are both beautiful and functional, ensuring that your message is communicated clearly and effectively.</p>
+        <h2>Conclusion</h2>
+        <p>Typography is much more than choosing a pretty font. It is a powerful tool in design that helps convey meaning and emotion. By understanding the fundamentals of typography, you can create designs that are both beautiful and functional, ensuring that your message is communicated clearly and effectively.</p>
 
-    <p>To learn more about typography and its impact on design, check out <a href="https://www.typography.com/" target="_blank">Typography.com</a>.</p>
-  </main>
+        <p>To learn more about typography and its impact on design, check out <a href="https://www.typography.com/" target="_blank">Typography.com</a>.</p>
+    </main>
 
-  <footer>
-    <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const navLinks = document.querySelectorAll('nav ul li a');
-    function activateLink(link) {
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-    }
-    const currentPath = window.location.pathname;
-    navLinks.forEach(link => {
-      if (link.href.includes(currentPath)) {
-        activateLink(link);
-      }
-    });
-  </script>
+    <footer>
+        <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
+    </footer>
 </body>
 </html>
