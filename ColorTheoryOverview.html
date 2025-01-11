@@ -21,12 +21,17 @@
             top: 0;
             z-index: 1000;
         }
+        nav {
+            width: 100%;
+            background-color: black;
+        }
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
             display: flex;
             justify-content: space-evenly;
+            align-items: center;
         }
         nav ul li {
             position: relative;
@@ -36,9 +41,11 @@
             text-decoration: none;
             padding: 12px 15px;
             font-size: 1.1em;
+            display: block;
         }
         nav ul li a:hover {
             text-decoration: underline;
+            background-color: #333;
         }
         .dropdown-content {
             display: none;
@@ -57,7 +64,7 @@
             display: block;
         }
         .dropdown-content a:hover {
-            background-color: #575757;
+            background-color: #444;
         }
         .banner h1 {
             text-align: center;
@@ -202,12 +209,10 @@
     </footer>
 
     <script>
-        // Toggle dark/light mode
         function toggleMode() {
             document.body.classList.toggle('dark-mode');
         }
 
-        // Change font size
         function changeFontSize(size) {
             document.body.style.fontSize = size === 'small' ? '14px' : size === 'medium' ? '16px' : '18px';
         }
