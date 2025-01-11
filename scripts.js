@@ -56,7 +56,9 @@
       }
   });
 
-  function toggleMode() {
+  // Dark mode toggle button handler
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  darkModeToggle?.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       document.querySelector('nav').classList.toggle('dark-mode');
       document.querySelectorAll('.showcase-item').forEach((item) => {
@@ -65,11 +67,16 @@
 
       const isDark = document.body.classList.contains('dark-mode');
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  }
+  });
 
-  function changeFontSize(size) {
-      document.body.classList.remove('small-font', 'medium-font', 'large-font');
-      document.body.classList.add(`${size}-font`);
-      localStorage.setItem('fontSize', size);
-  }
+  // Font size adjustment handler
+  const fontSizeOptions = document.querySelectorAll('.font-size-option');
+  fontSizeOptions.forEach(option => {
+      option.addEventListener('click', () => {
+          const size = option.dataset.size;
+          document.body.classList.remove('small-font', 'medium-font', 'large-font');
+          document.body.classList.add(`${size}-font`);
+          localStorage.setItem('fontSize', size);
+      });
+  });
 </script>
