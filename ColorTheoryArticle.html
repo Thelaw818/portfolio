@@ -88,6 +88,10 @@
             padding: 20px;
             background: #f1f1f1;
         }
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -112,6 +116,15 @@
                     </div>
                 </li>
                 <li><a href="#">Resume</a></li>
+                <li class="dropdown">
+                    <a href="#">Theme Menu</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="toggleMode()">Toggle Dark/Light Mode</a>
+                        <a href="#" onclick="changeFontSize('small')">Small Font</a>
+                        <a href="#" onclick="changeFontSize('medium')">Medium Font</a>
+                        <a href="#" onclick="changeFontSize('large')">Large Font</a>
+                    </div>
+                </li>
             </ul>
         </nav>
         <div class="banner">
@@ -120,16 +133,10 @@
     </header>
     <main>
         <h2>Introduction to Color Theory</h2>
-        <p>Color theory is a fundamental concept in design, art, and visual communication. It explores the relationship between colors, the psychological impact of color choices, and how colors can be combined to create harmonious designs. Understanding color theory helps designers and artists make informed decisions about color combinations to evoke specific moods, attract attention, and enhance the aesthetics of a composition....</p>
+        <p>Color theory is a fundamental concept in design, art, and visual communication...</p>
 
         <h2>The Color Wheel</h2>
-        <p>The color wheel is a circular diagram used to show the relationships between colors. It is divided into primary, secondary, and tertiary colors:
-
-    Primary Colors: Red, Blue, Yellow – the foundation for all other colors.
-    Secondary Colors: Orange, Green, Purple – formed by mixing two primary colors.
-    Tertiary Colors: Yellow-Orange, Red-Orange, Red-Purple, Blue-Purple, Blue-Green, Yellow-Green – made by mixing a primary color with a secondary color.
-
-By understanding the color wheel, you can create color schemes based on color relationships such as complementary, analogous, and triadic colors....</p>
+        <p>The color wheel is a circular diagram used to show the relationships between colors...</p>
         <div class="chart-container">
             <canvas id="colorWheelChart"></canvas>
         </div>
@@ -141,40 +148,53 @@ By understanding the color wheel, you can create color schemes based on color re
         </div>
 
         <h2>Analogous Colors</h2>
-        <p>Analogous colors are next to each other on the color wheel.They usually match well and create serene and comfortable designs. For example, the combination of blue, blue-green, and green is an analogous color scheme..</p>
+        <p>Analogous colors are next to each other on the color wheel...</p>
         <div class="chart-container">
             <canvas id="analogousColorsChart"></canvas>
         </div>
 
         <h2>RGB Color Wheel</h2>
-        <p>The RGB color model is based on the primary colors Red, Green, and Blue. It is widely used in digital design, as it aligns with how colors are displayed on screens....</p>
+        <p>The RGB color model is based on the primary colors Red, Green, and Blue...</p>
         <div class="chart-container">
             <canvas id="rgbColorWheelChart"></canvas>
         </div>
 
         <h2>Color Psychology</h2>
-        <p>Colors have a psychological impact on the viewer. Different colors can evoke different emotions and reactions. Here's how some colors are perceived:
-
-    Red: Passion, energy, excitement, love
-    Blue: Calm, trust, professionalism
-    Yellow: Happiness, optimism, attention-grabbing
-    Green: Nature, growth, tranquility
-    Purple: Luxury, creativity, mystery
-    Black: Sophistication, elegance, authority
-
-Designers use these psychological associations to influence how people perceive a brand or message. For more on color psychology, check out this comprehensive guide on color psychology...</p>
+        <p>Colors have a psychological impact on the viewer...</p>
         <div class="chart-container">
             <canvas id="colorPsychologyChart"></canvas>
         </div>
 
         <h2>Conclusion</h2>
-        <p>Color theory is an essential aspect of design that can greatly affect the mood and effectiveness of a design. By understanding how colors interact with each other and how they influence emotions, designers can create more engaging and meaningful visual experiences. Whether you're designing for a brand, website, or artwork, knowing how to use color effectively is crucial for making impactful and harmonious designs....</p>
+        <p>Color theory is an essential aspect of design that can greatly affect the mood...</p>
     </main>
     <footer>
         <p>&copy; 2024 Frankie Color Theory Resources</p>
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+            const fontSize = localStorage.getItem('fontSize');
+            if (fontSize) {
+                document.body.classList.add(`${fontSize}-font`);
+            }
+        });
+
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        function changeFontSize(size) {
+            document.body.classList.remove('small-font', 'medium-font', 'large-font');
+            document.body.classList.add(`${size}-font`);
+            localStorage.setItem('fontSize', size);
+        }
+
         // Chart.js charts for visual representation
 
         // Color Wheel Chart
