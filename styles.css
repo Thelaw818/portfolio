@@ -1,89 +1,90 @@
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212; /* Dark background */
-    color: #e5e5e5; /* High contrast text */
-}
+<style>
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #e5e5e5;
+  }
 
-/* Navigation Bar Styles */
-nav ul {
+  /* Dark Mode Support for Navigation */
+  body.dark-mode nav ul li a,
+  body.dark-mode .dropdown-content a {
+    color: #e5e5e5; /* High contrast for dark mode */
+  }
+
+  body.dark-mode nav ul li a:hover,
+  body.dark-mode .dropdown-content a:hover {
+    background-color: #555; /* Hover effect in dark mode */
+  }
+
+  /* Navigation Bar Styles */
+  nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center; /* Center-align navigation items */
     background-color: #000; /* Uniform background color */
-}
+  }
 
-nav ul li {
+  nav ul li {
     position: relative; /* For dropdown positioning */
     margin: 0;
-}
+  }
 
-nav ul li a,
-.dropdown-content a,
-.dropbtn {
+  nav ul li a,
+  .dropdown-content a,
+  .dropbtn {
     font-size: 16px; /* Consistent font size */
     color: white; /* Visible in all modes */
     text-decoration: none;
     padding: 10px 20px; /* Consistent padding */
     display: block; /* Ensure block layout for consistent spacing */
-}
+  }
 
-nav ul li a:hover,
-.dropdown-content a:hover,
-.dropbtn:hover {
+  nav ul li a:hover,
+  .dropdown-content a:hover,
+  .dropbtn:hover {
     background-color: #333; /* Hover effect */
     text-decoration: underline;
-}
+  }
 
-/* Dropdown Menu Styles */
-.dropdown-content {
+  /* Dropdown Menu Styles */
+  .dropdown-content {
     display: none; /* Initially hidden */
     position: absolute;
     background-color: #333; /* Dropdown background color */
     min-width: 160px; /* Minimum width for dropdown */
     z-index: 1; /* Ensure dropdown appears above other elements */
     border-radius: 4px;
-}
+  }
 
-.dropdown:hover .dropdown-content {
+  .dropdown:hover .dropdown-content {
     display: block;
-}
+  }
 
-/* Dark Mode Support */
-body.dark-mode nav ul li a,
-body.dark-mode .dropdown-content a {
-    color: #e5e5e5; /* High contrast for dark mode */
-}
-
-body.dark-mode nav ul li a:hover,
-body.dark-mode .dropdown-content a:hover {
-    background-color: #555; /* Hover effect in dark mode */
-}
-
-/* Font Size Options */
-body.small-font {
+  /* Font Size Options */
+  body.small-font {
     font-size: 14px;
-}
+  }
 
-body.medium-font {
+  body.medium-font {
     font-size: 16px;
-}
+  }
 
-body.large-font {
+  body.large-font {
     font-size: 18px;
-}
+  }
 
-/* Showcase and Main Content */
-.showcase-container {
+  /* Showcase and Main Content */
+  .showcase-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 200px); /* Leaves space for header and footer */
     padding: 20px;
-}
+  }
 
-.showcase-item {
+  .showcase-item {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -91,51 +92,52 @@ body.large-font {
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
+  }
 
-.showcase-item h2 {
+  .showcase-item h2 {
     font-size: 2.5em;
     margin-bottom: 15px;
     text-align: center;
-}
+  }
 
-.showcase-item p {
+  .showcase-item p {
     font-size: 1em;
     color: #333;
     line-height: 1.8; /* Improved readability for paragraphs */
-}
+  }
 
-/* Additional Showcase Styles */
-.showcase-banner {
+  /* Additional Showcase Styles */
+  .showcase-banner {
     text-align: center;
     margin: 30px 0;
-}
+  }
 
-.showcase-banner img {
+  .showcase-banner img {
     max-width: 100%; /* Ensure responsive images */
     height: auto;
-}
+  }
 
-/* Footer and Banner */
-footer {
+  /* Footer and Banner */
+  footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
-}
+  }
 
-h1 {
+  h1 {
     text-align: center;
     margin: 20px 0;
-}
+  }
 
-h2 {
+  h2 {
     font-size: 3em;
     margin-bottom: 20px;
     text-align: center;
-}
+  }
 
-.project-description {
+  .project-description {
     text-align: justify;
     line-height: 1.8; /* Improved readability */
-}
+  }
+</style>
