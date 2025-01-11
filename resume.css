@@ -14,6 +14,54 @@ body {
     padding: 20px;
 }
 
+/* Navigation Bar */
+nav {
+    background-color: #222;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative; /* For dropdown positioning */
+}
+
+nav ul li a,
+nav ul li .dropdown-content a,
+nav ul li .dropbtn {
+    font-size: 16px; /* Consistent font size for navigation and dropdown */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block; /* Ensure block layout for spacing */
+}
+
+nav ul li a:hover,
+nav ul li .dropdown-content a:hover,
+nav ul li .dropbtn:hover {
+    background-color: #444; /* Highlight on hover */
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #333; /* Dropdown background color */
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for dropdown */
+}
+
+nav ul li:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
 /* Resume Container */
 .resume-container {
     background-color: white;
