@@ -49,6 +49,20 @@
   }
 
   /* Dropdown Menu Styles */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.4em;
+    border: none;
+    cursor: pointer;
+  }
+
   .dropdown-content {
     display: none; /* Initially hidden */
     position: absolute;
@@ -141,3 +155,4 @@
     line-height: 1.8; /* Improved readability */
   }
 </style>
+
