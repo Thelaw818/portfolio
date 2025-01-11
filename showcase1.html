@@ -16,12 +16,16 @@
             background-color: black;
             color: white;
             width: 100%;
-            padding: 10px 0;
         }
 
         nav {
-            width: 100%;
+            display: flex;
+            justify-content: center;
             background-color: black;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav ul {
@@ -30,27 +34,24 @@
             margin: 0;
             display: flex;
             justify-content: space-evenly;
-            align-items: center;
+            width: 100%;
+            max-width: 1200px;
         }
 
         nav ul li {
-            margin: 0;
+            position: relative;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 12px 15px; /* Adjust padding for better alignment */
-            font-size: 1.1em;  /* Same size as in index.html */
+            padding: 10px 20px;
+            font-size: 1em;
+            display: block;
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
+            background-color: #333;
         }
 
         .dropdown-content {
@@ -61,20 +62,19 @@
             z-index: 1;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
         .dropdown-content a {
             color: white;
-            padding: 12px 16px;
+            padding: 10px 15px;
             text-decoration: none;
             display: block;
-            font-size: 1em;  /* Same size as normal nav links */
         }
 
         .dropdown-content a:hover {
-            background-color: #575757;
+            background-color: #444;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
         .banner {
@@ -87,7 +87,7 @@
 
         .banner h1 {
             margin: 0;
-            font-size: 2.2em; /* Adjust font size to match header size from index.html */
+            font-size: 2.2em;
         }
 
         main {
@@ -140,8 +140,6 @@
             padding: 20px;
             background-color: #f1f1f1;
             width: 100%;
-            position: relative;
-            bottom: 0;
         }
 
         /* Dark mode styles */
@@ -181,11 +179,6 @@
                 max-width: 100%;
             }
         }
-
-        /* Hover effect for dropdown items */
-        .dropdown-content a:hover {
-            background-color: #444;
-        }
     </style>
 </head>
 <body>
@@ -194,7 +187,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Showcase</a>
+                    <a href="#">Showcase</a>
                     <div class="dropdown-content">
                         <a href="showcase1.html">Showcase 1</a>
                         <a href="showcase2.html">Showcase 2</a>
@@ -203,7 +196,7 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Design Theory</a>
+                    <a href="#">Design Theory</a>
                     <div class="dropdown-content">
                         <a href="ColorThemes.html">Color Themes</a>
                         <a href="ColorTheoryArticle.html">Color Theory Article</a>
@@ -213,12 +206,21 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Font Types</a>
+                    <a href="#">Font Types</a>
                     <div class="dropdown-content">
                         <a href="FontTypesArticle.html">Font Types Article</a>
                     </div>
                 </li>
                 <li><a href="resume.html">Resume</a></li>
+                <li class="dropdown">
+                    <a href="#">Theme Menu</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="toggleMode()">Mode: Dark | Light</a>
+                        <a href="#" onclick="changeFontSize('small')">Font Size: Small</a>
+                        <a href="#" onclick="changeFontSize('medium')">Font Size: Medium</a>
+                        <a href="#" onclick="changeFontSize('large')">Font Size: Large</a>
+                    </div>
+                </li>
             </ul>
         </nav>
         <div class="banner">
@@ -259,17 +261,29 @@
     </footer>
 
     <script>
-        const navLinks = document.querySelectorAll('nav ul li a');
-        function activateLink(link) {
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        }
-        const currentPath = window.location.pathname;
-        navLinks.forEach(link => {
-            if (link.href.includes(currentPath)) {
-                activateLink(link);
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+            const fontSize = localStorage.getItem('fontSize');
+            if (fontSize) {
+                document.body.classList.add(`${fontSize}-font`);
             }
         });
+
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        function changeFontSize(size) {
+            document.body.classList.remove('small-font', 'medium-font', 'large-font');
+            document.body.classList.add(`${size}-font`);
+            localStorage.setItem('fontSize', size);
+        }
     </script>
 </body>
 </html>
+
+       
