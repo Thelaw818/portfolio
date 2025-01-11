@@ -35,14 +35,48 @@ nav ul {
     padding: 0;
 }
 
-nav ul li a {
+nav ul li {
+    position: relative; /* For dropdown positioning */
+}
+
+/* Navigation Links */
+nav ul li a,
+nav ul li .dropdown-content a,
+nav ul li .dropbtn {
+    font-size: 16px; /* Consistent font size for navigation and dropdown */
     color: white;
     text-decoration: none;
     padding: 10px 15px;
+    display: block; /* Ensures block layout for spacing */
 }
 
-nav ul li a:hover {
-    background-color: #444;
+nav ul li a:hover,
+nav ul li .dropdown-content a:hover,
+nav ul li .dropbtn:hover {
+    background-color: #444; /* Highlight on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #333; /* Dropdown background color */
+    min-width: 160px; /* Minimum width for dropdown */
+    z-index: 1; /* Ensures dropdown is above other content */
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for dropdown */
+}
+
+.dropdown-content a {
+    font-size: 16px; /* Match navigation font size */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block; /* Display dropdown on hover */
 }
 
 /* Footer */
