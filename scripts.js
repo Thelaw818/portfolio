@@ -1,5 +1,5 @@
 <script>
-  // Smooth Scroll for anchor links
+  // Smooth Scroll for Anchor Links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -34,7 +34,7 @@
   const mobileMenuButton = document.querySelector('.mobile-menu');
   const mobileNav = document.querySelector('nav ul');
 
-  mobileMenuButton.addEventListener('click', () => {
+  mobileMenuButton?.addEventListener('click', () => {
       mobileNav.classList.toggle('active');
   });
 
@@ -44,7 +44,7 @@
       if (localStorage.getItem('theme') === 'dark') {
           document.body.classList.add('dark-mode');
           document.querySelector('nav').classList.add('dark-mode');
-          document.querySelectorAll('.showcase-item').forEach((item) => {
+          document.querySelectorAll('.showcase-item').forEach(item => {
               item.classList.add('dark-mode');
           });
       }
@@ -56,12 +56,12 @@
       }
   });
 
-  // Dark mode toggle button handler
+  // Dark Mode Toggle Handler
   const darkModeToggle = document.getElementById('dark-mode-toggle');
   darkModeToggle?.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       document.querySelector('nav').classList.toggle('dark-mode');
-      document.querySelectorAll('.showcase-item').forEach((item) => {
+      document.querySelectorAll('.showcase-item').forEach(item => {
           item.classList.toggle('dark-mode');
       });
 
@@ -69,7 +69,7 @@
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 
-  // Font size adjustment handler
+  // Font Size Adjustment Handler
   const fontSizeOptions = document.querySelectorAll('.font-size-option');
   fontSizeOptions.forEach(option => {
       option.addEventListener('click', () => {
