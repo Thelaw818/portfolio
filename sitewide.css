@@ -15,15 +15,28 @@
     --body-text-color: #333;
     --footer-bg-color: #333;
     --footer-text-color: white;
+    --link-color: #007bff; /* Bright link color */
+    --link-hover-color: #0056b3; /* Darker link on hover */
     --shadow-light: rgba(0, 0, 0, 0.1);
     --transition-speed: 0.3s;
 }
 
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: var(--body-bg-color);
     color: var(--body-text-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--link-hover-color);
 }
 
 /* Header Styles */
@@ -58,19 +71,19 @@ nav ul li {
 nav ul li a,
 nav ul li .dropdown-content a,
 nav ul li .dropbtn {
-    font-size: 16px; /* Uniform font size */
+    font-size: var(--font-size-base); /* Uniform font size */
     color: white;
     text-decoration: none;
     padding: 10px 15px;
     display: block; /* Ensures block layout for spacing */
+    transition: background-color var(--transition-speed);
 }
 
 nav ul li a:hover,
 nav ul li .dropdown-content a:hover,
 nav ul li .dropbtn:hover {
-    background-color: #444; /* Highlight on hover */
+    background-color: var(--nav-hover-bg-color); /* Highlight on hover */
 }
-
 
 /* Dropdown Menu Styles */
 .dropdown-content {
@@ -117,6 +130,8 @@ body.dark-mode {
     --body-text-color: #e0e0e0;
     --footer-bg-color: #1c1c1c;
     --footer-text-color: #e0e0e0;
+    --link-color: #4FC3F7;
+    --link-hover-color: #81D4FA;
 }
 
 /* Responsive Design */
