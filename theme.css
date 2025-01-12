@@ -4,12 +4,14 @@ body.dark-mode {
     color: #e5e5e5; /* High contrast text */
 }
 
-nav.dark-mode ul li a {
-    color: #e5e5e5; /* High contrast for navigation links */
+nav.dark-mode ul li a,
+body.dark-mode nav ul li .dropdown-content a {
+    color: #e5e5e5; /* High contrast for links and dropdown items */
 }
 
-nav.dark-mode ul li a:hover {
-    background-color: #333; /* Highlight background */
+nav.dark-mode ul li a:hover,
+body.dark-mode nav ul li .dropdown-content a:hover {
+    background-color: #333; /* Highlight background on hover */
 }
 
 .showcase-item.dark-mode {
@@ -23,21 +25,83 @@ body.small-font { font-size: 14px; }
 body.medium-font { font-size: 16px; }
 body.large-font { font-size: 18px; }
 
-/* Dropdown Menu Styles */
+/* NAVIGATION BAR STYLES */
+nav {
+    width: 100%;
+    background-color: #000; /* Uniform navbar background */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center navigation items */
+    align-items: center; /* Vertically align items */
+}
+
+nav ul li {
+    position: relative; /* For dropdown positioning */
+    margin: 0;
+}
+
+nav ul li a, nav ul li .dropbtn {
+    font-size: 1rem; /* Uniform font size */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 15px 20px; /* Consistent padding for size alignment */
+    display: block; /* Ensure consistent dimensions */
+    text-align: center; /* Center text */
+    background-color: #000; /* Ensure uniform background */
+    border: none; /* Remove button borders */
+    cursor: pointer; /* Pointer cursor for interactive elements */
+}
+
+nav ul li a:hover, nav ul li .dropbtn:hover {
+    background-color: #333; /* Slightly lighter hover effect */
+    text-decoration: underline; /* Optional underline on hover */
+}
+
+/* DROPDOWN MENU STYLES */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 4px;
+    display: none; /* Hidden by default */
+    position: absolute; /* Position dropdown below parent */
+    background-color: #333; /* Dropdown background */
+    min-width: 200px; /* Uniform dropdown width */
+    z-index: 1; /* Ensure dropdown appears above other elements */
+    border-radius: 4px; /* Rounded corners */
+    text-align: center; /* Center text in dropdown */
 }
 
+.dropdown-content a {
+    font-size: 1rem; /* Match top-level font size */
+    color: white; /* Match top-level text color */
+    padding: 15px 20px; /* Match top-level padding */
+    display: block; /* Full-width clickable area */
+    text-decoration: none; /* Remove underlines */
+}
+
+.dropdown-content a:hover {
+    background-color: #444; /* Slightly lighter hover effect for dropdown items */
+}
+
+/* SHOW DROPDOWN ON HOVER */
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* Show dropdown when parent is hovered */
 }
 
-body.dark-mode nav ul li a,
-body.dark-mode nav ul li .dropdown-content a {
-    color: #e5e5e5;
+/* RESPONSIVE NAVIGATION */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav ul li {
+        width: 100%; /* Full-width links for smaller screens */
+    }
+
+    .dropdown-content {
+        position: static; /* Align dropdowns with flow of page */
+    }
 }
