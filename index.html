@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="theme.css">
     <style>
-        /* Keep existing styles and fix navigation issues */
+        /* General Body Background Design */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffffff, #e8f5ff); /* Light gradient */
+            color: #333;
+            background-attachment: fixed; /* Fixed background */
+        }
+
+        /* Navigation Styles */
         nav {
             width: 100%;
             background-color: black; /* Consistent background for all pages */
@@ -39,6 +48,7 @@
             background-color: #333; /* Highlight background on hover */
         }
 
+        /* Dropdown Content */
         .dropdown-content {
             display: none; /* Initially hidden */
             position: absolute;
@@ -62,50 +72,94 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        /* Banner Section */
+        .banner {
+            text-align: center;
+            background: url('pigeon-background.jpg') no-repeat center center/cover; /* Replace with your image */
+            color: white;
+            padding: 40px 0;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+        }
+
+        .banner h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        /* Showcase Section */
+        .showcase-container {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .showcase-item h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .project-description {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Showcase</a>
-            <div class="dropdown-content">
-                <a href="showcase1.html">Showcase 1</a>
-                <a href="showcase2.html">Showcase 2</a>
-                <a href="showcase3.html">Showcase 3</a>
-                <a href="showcase4.html">Showcase 4</a>
-            </div>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Design Theory</a>
-            <div class="dropdown-content">
-                <a href="ColorThemes.html">Color Themes</a>
-                <a href="ColorTheoryArticle.html">Color Theory Article</a>
-                <a href="ColorTheoryOverview.html">Color Theory Overview</a>
-                <a href="TypographyArticle.html">Typography Article</a>
-                <a href="TypographyOverview.html">Typography Overview</a>
-            </div>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Font Types</a>
-            <div class="dropdown-content">
-                <a href="FontTypesArticle.html">Font Types Article</a>
-            </div>
-        </li>
-        <li><a href="resume.html">Resume</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Theme Menu</a>
-            <div class="dropdown-content">
-                <button onclick="toggleMode()">Toggle Dark Mode</button>
-                <button onclick="changeFontSize('small')">Font Size: Small</button>
-                <button onclick="changeFontSize('medium')">Font Size: Medium</button>
-                <button onclick="changeFontSize('large')">Font Size: Large</button>
-            </div>
-        </li>
-    </ul>
-</nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Showcase</a>
+                    <div class="dropdown-content">
+                        <a href="showcase1.html">Showcase 1</a>
+                        <a href="showcase2.html">Showcase 2</a>
+                        <a href="showcase3.html">Showcase 3</a>
+                        <a href="showcase4.html">Showcase 4</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Design Theory</a>
+                    <div class="dropdown-content">
+                        <a href="ColorThemes.html">Color Themes</a>
+                        <a href="ColorTheoryArticle.html">Color Theory Article</a>
+                        <a href="ColorTheoryOverview.html">Color Theory Overview</a>
+                        <a href="TypographyArticle.html">Typography Article</a>
+                        <a href="TypographyOverview.html">Typography Overview</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Font Types</a>
+                    <div class="dropdown-content">
+                        <a href="FontTypesArticle.html">Font Types Article</a>
+                    </div>
+                </li>
+                <li><a href="resume.html">Resume</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Theme Menu</a>
+                    <div class="dropdown-content">
+                        <button onclick="toggleMode()">Toggle Dark Mode</button>
+                        <button onclick="changeFontSize('small')">Font Size: Small</button>
+                        <button onclick="changeFontSize('medium')">Font Size: Medium</button>
+                        <button onclick="changeFontSize('large')">Font Size: Large</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
         <div class="banner">
             <h1>Showcase Gallery</h1>
         </div>
@@ -125,29 +179,6 @@
     <footer>
         <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
     </footer>
-<script src="scripts.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-mode');
-            }
-            const fontSize = localStorage.getItem('fontSize');
-            if (fontSize) {
-                document.body.classList.add(`${fontSize}-font`);
-            }
-        });
-
-        function toggleMode() {
-            document.body.classList.toggle('dark-mode');
-            const isDark = document.body.classList.contains('dark-mode');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        }
-
-        function changeFontSize(size) {
-            document.body.classList.remove('small-font', 'medium-font', 'large-font');
-            document.body.classList.add(`${size}-font`);
-            localStorage.setItem('fontSize', size);
-        }
-    </script>
+    <script src="scripts.js" defer></script>
 </body>
 </html>
