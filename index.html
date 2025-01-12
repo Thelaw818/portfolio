@@ -1,73 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the world of pigeon racing through our showcase gallery and learn about our vibrant community in Fernandol Valley.">
-    <title>Pigeon Racing - Showcase</title>
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigeon Racing - Showcase</title>
+    <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+    <style>
+        /* General Body Background Design */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffffff, #e8f5ff); /* Light gradient */
+            color: #333;
+            background-attachment: fixed; /* Fixed background */
+        }
+
+        /* Navigation Styles */
+        nav {
+            width: 100%;
+            background-color: black; /* Consistent background for all pages */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly; /* Ensure even spacing */
+            align-items: center;
+        }
+
+        nav ul li {
+            position: relative; /* For dropdown positioning */
+        }
+
+        nav ul li a {
+            color: white; /* Uniform text color */
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            display: block; /* Block display for easy hover */
+        }
+
+        nav ul li a:hover {
+            background-color: #333; /* Highlight background on hover */
+        }
+
+        /* Dropdown Content */
+        .dropdown-content {
+            display: none; /* Initially hidden */
+            position: absolute;
+            background-color: #333; /* Dark dropdown background */
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block; /* Ensure clickable area */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444; /* Slightly lighter hover background */
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Banner Section */
+        .banner {
+            text-align: center;
+            background: url('pigeon-background.jpg') no-repeat center center/cover; /* Replace with your image */
+            color: white;
+            padding: 40px 0;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+        }
+
+        .banner h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        /* Showcase Section */
+        .showcase-container {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .showcase-item h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .project-description {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Showcase</a>
-                    <ul class="dropdown-content">
-                        <li><a href="showcase1.html">Showcase 1</a></li>
-                        <li><a href="showcase2.html">Showcase 2</a></li>
-                        <li><a href="showcase3.html">Showcase 3</a></li>
-                        <li><a href="showcase4.html">Showcase 4</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Design Theory</a>
-                    <ul class="dropdown-content">
-                        <li><a href="ColorThemes.html">Color Themes</a></li>
-                        <li><a href="ColorTheoryArticle.html">Color Theory Article</a></li>
-                        <li><a href="TypographyArticle.html">Typography Article</a></li>
-                    </ul>
-                </li>
-                <li><a href="resume.html" class="nav-link">Resume</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Theme Menu</a>
-                    <ul class="dropdown-content">
-                        <li><button onclick="toggleMode()">Toggle Dark Mode</button></li>
-                        <li><button onclick="changeFontSize('small')">Font Size: Small</button></li>
-                        <li><button onclick="changeFontSize('medium')">Font Size: Medium</button></li>
-                        <li><button onclick="changeFontSize('large')">Font Size: Large</button></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <!-- Banner Section -->
-        <div class="banner">
-            <h1>Showcase Gallery</h1>
-        </div>
-    </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Showcase</a>
+                    <div class="dropdown-content">
+                        <a href="showcase1.html">Showcase 1</a>
+                        <a href="showcase2.html">Showcase 2</a>
+                        <a href="showcase3.html">Showcase 3</a>
+                        <a href="showcase4.html">Showcase 4</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Design Theory</a>
+                    <div class="dropdown-content">
+                        <a href="ColorThemes.html">Color Themes</a>
+                        <a href="ColorTheoryArticle.html">Color Theory Article</a>
+                        <a href="ColorTheoryOverview.html">Color Theory Overview</a>
+                        <a href="TypographyArticle.html">Typography Article</a>
+                        <a href="TypographyOverview.html">Typography Overview</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Font Types</a>
+                    <div class="dropdown-content">
+                        <a href="FontTypesArticle.html">Font Types Article</a>
+                    </div>
+                </li>
+                <li><a href="resume.html">Resume</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Theme Menu</a>
+                    <div class="dropdown-content">
+                        <button onclick="toggleMode()">Toggle Dark Mode</button>
+                        <button onclick="changeFontSize('small')">Font Size: Small</button>
+                        <button onclick="changeFontSize('medium')">Font Size: Medium</button>
+                        <button onclick="changeFontSize('large')">Font Size: Large</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <h1>Showcase Gallery</h1>
+        </div>
+    </header>
+    <main class="showcase-container">
+        <section class="showcase-item">
+            <h2>Frankie's Project</h2>
+            <div class="project-description">
+                <p>The Fernandol Valley Pigeon Club is a dedicated organization that brings together enthusiasts of pigeon racing and breeding. Nestled in the picturesque Fernandol Valley, the club has established itself as a vibrant hub for hobbyists and professionals who share a passion for these remarkable birds.</p>
 
-    <!-- Main Content -->
-    <main class="showcase-container">
-        <section class="showcase-item">
-            <h2>Frankie's Project</h2>
-            <div class="project-description">
-                <p>The Fernandol Valley Pigeon Club is a dedicated organization that brings together enthusiasts of pigeon racing and breeding. Nestled in the picturesque Fernandol Valley, the club has established itself as a vibrant hub for hobbyists and professionals who share a passion for these remarkable birds.</p>
-                <p>The club focuses on fostering camaraderie among its members, promoting ethical breeding practices, and advancing the sport of pigeon racing through organized competitions and events. With a rich history and a commitment to excellence, the Fernandol Valley Pigeon Club serves as a beacon of community spirit, celebrating the skill, strategy, and dedication involved in racing pigeons.</p>
-                <p>Through educational workshops, mentorship programs, and collaborative initiatives, the club aims to inspire the next generation of pigeon enthusiasts while preserving the timeless tradition of the sport. Its scenic location and welcoming atmosphere make it a cherished institution for bird lovers in the region.</p>
-            </div>
-        </section>
-    </main>
+                <p>The club focuses on fostering camaraderie among its members, promoting ethical breeding practices, and advancing the sport of pigeon racing through organized competitions and events. With a rich history and a commitment to excellence, the Fernandol Valley Pigeon Club serves as a beacon of community spirit, celebrating the skill, strategy, and dedication involved in racing pigeons.</p>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
-    </footer>
-
-    <!-- External JavaScript -->
-    <script src="scripts.js" defer></script>
+                <p>Through educational workshops, mentorship programs, and collaborative initiatives, the club aims to inspire the next generation of pigeon enthusiasts while preserving the timeless tradition of the sport. Its scenic location and welcoming atmosphere make it a cherished institution for bird lovers in the region.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js" defer></script>
 </body>
 </html>
