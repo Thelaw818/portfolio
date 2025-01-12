@@ -58,19 +58,19 @@ nav ul li {
 nav ul li a,
 nav ul li .dropdown-content a,
 nav ul li .dropbtn {
-    font-size: var(--font-size-base);
+    font-size: 16px; /* Uniform font size */
     color: white;
     text-decoration: none;
     padding: 10px 15px;
     display: block; /* Ensures block layout for spacing */
-    transition: background-color var(--transition-speed); /* Smooth hover effect */
 }
 
 nav ul li a:hover,
 nav ul li .dropdown-content a:hover,
 nav ul li .dropbtn:hover {
-    background-color: var(--nav-hover-bg-color);
+    background-color: #444; /* Highlight on hover */
 }
+
 
 /* Dropdown Menu Styles */
 .dropdown-content {
