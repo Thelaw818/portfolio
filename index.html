@@ -1,225 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pigeon Racing - Showcase</title>
-    <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="theme.css">
-    <style>
-        /* General Body Background Design */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffffff, #e8f5ff); /* Light gradient */
-            color: #333;
-            background-attachment: fixed; /* Fixed background */
-        }
-
-        /* Navigation Styles */
-        /* NAVIGATION BAR */
-nav {
-    width: 100%;
-    background-color: black; /* Uniform background for the navbar */
-}
-
-.nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center the navigation links */
-    align-items: center; /* Align items vertically */
-}
-
-.nav-menu li {
-    position: relative; /* For dropdown positioning */
-    margin: 0;
-}
-
-.nav-link, .dropbtn {
-    font-size: 1rem; /* Uniform font size */
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underlines */
-    padding: 15px 20px; /* Consistent padding */
-    display: block; /* Ensure links occupy the same space */
-    text-align: center;
-    background-color: black; /* Ensure uniform background color */
-    border: none; /* Remove button borders */
-    cursor: pointer; /* Indicate clickable links */
-}
-
-.nav-link:hover, .dropbtn:hover {
-    background-color: #333; /* Slightly lighter hover effect */
-    text-decoration: underline; /* Optional underline on hover */
-}
-
-/* DROPDOWN MENU */
-.dropdown-content {
-    display: none; /* Hidden by default */
-    position: absolute; /* Dropdown position relative to parent */
-    top: 100%; /* Place directly below the parent link */
-    left: 0;
-    background-color: #333; /* Dropdown background */
-    min-width: 200px; /* Minimum width for dropdown items */
-    z-index: 1000; /* Ensure dropdown is above other elements */
-    border-radius: 4px; /* Optional rounded corners */
-}
-
-.dropdown-content li {
-    width: 100%; /* Dropdown items match full width */
-}
-
-.dropdown-content a {
-    padding: 12px 16px; /* Consistent padding */
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underlines */
-    display: block; /* Full-width clickable area */
-    text-align: left; /* Align dropdown text to the left */
-}
-
-.dropdown-content a:hover {
-    background-color: #444; /* Lighter hover effect for dropdown items */
-}
-
-/* SHOW DROPDOWN ON HOVER */
-.dropdown:hover .dropdown-content {
-    display: block; /* Show dropdown when parent is hovered */
-}
-
-/* RESPONSIVE NAVIGATION */
-@media (max-width: 768px) {
-    .nav-menu {
-        flex-direction: column; /* Stack links vertically */
-        align-items: flex-start; /* Align to the left */
-    }
-
-    .nav-menu li {
-        width: 100%; /* Full-width links */
-    }
-
-    .dropdown-content {
-        position: static; /* Align dropdowns with the flow of the page */
-    }
-}
-
-
-        .dropdown-content a:hover {
-            background-color: #444; /* Slightly lighter hover background */
-        }
-
-        /* Show dropdown on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Banner Section */
-        .banner {
-            text-align: center;
-            background: url('pigeon-background.jpg') no-repeat center center/cover; /* Replace with your image */
-            color: white;
-            padding: 40px 0;
-            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
-        }
-
-        .banner h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-
-        /* Showcase Section */
-        .showcase-container {
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-            margin: 20px auto;
-            max-width: 800px;
-        }
-
-        .showcase-item h2 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .project-description {
-            font-size: 1.2em;
-            line-height: 1.8;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Pigeon Racing</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Showcase</a>
-                    <div class="dropdown-content">
-                        <a href="showcase1.html">Showcase 1</a>
-                        <a href="showcase2.html">Showcase 2</a>
-                        <a href="showcase3.html">Showcase 3</a>
-                        <a href="showcase4.html">Showcase 4</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Design Theory</a>
-                    <div class="dropdown-content">
-                        <a href="ColorThemes.html">Color Themes</a>
-                        <a href="ColorTheoryArticle.html">Color Theory Article</a>
-                        <a href="ColorTheoryOverview.html">Color Theory Overview</a>
-                        <a href="TypographyArticle.html">Typography Article</a>
-                        <a href="TypographyOverview.html">Typography Overview</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Font Types</a>
-                    <div class="dropdown-content">
-                        <a href="FontTypesArticle.html">Font Types Article</a>
-                    </div>
-                </li>
-                <li><a href="resume.html">Resume</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Theme Menu</a>
-                    <div class="dropdown-content">
-                        <button onclick="toggleMode()">Toggle Dark Mode</button>
-                        <button onclick="changeFontSize('small')">Font Size: Small</button>
-                        <button onclick="changeFontSize('medium')">Font Size: Medium</button>
-                        <button onclick="changeFontSize('large')">Font Size: Large</button>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <div class="banner">
-            <h1>Showcase Gallery</h1>
-        </div>
-    </header>
-    <main class="showcase-container">
-    <section class="showcase-item">
-        <h2>Frankie's Project</h2>
-        <div class="project-description">
-            <p>The Fernandol Valley Pigeon Club is a dedicated organization that brings together enthusiasts of pigeon racing and breeding. Nestled in the picturesque Fernandol Valley, the club has established itself as a vibrant hub for hobbyists and professionals who share a passion for these remarkable birds.</p>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Showcase</a>
+                    <ul class="dropdown-content">
+                        <li><a href="showcase1.html" class="nav-link">Showcase 1</a></li>
+                        <li><a href="showcase2.html" class="nav-link">Showcase 2</a></li>
+                        <li><a href="showcase3.html" class="nav-link">Showcase 3</a></li>
+                        <li><a href="showcase4.html" class="nav-link">Showcase 4</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Design Theory</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ColorThemes.html" class="nav-link">Color Themes</a></li>
+                        <li><a href="ColorTheoryArticle.html" class="nav-link">Color Theory Article</a></li>
+                        <li><a href="ColorTheoryOverview.html" class="nav-link">Color Theory Overview</a></li>
+                        <li><a href="TypographyArticle.html" class="nav-link">Typography Article</a></li>
+                        <li><a href="TypographyOverview.html" class="nav-link">Typography Overview</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Font Types</a>
+                    <ul class="dropdown-content">
+                        <li><a href="FontTypesArticle.html" class="nav-link">Font Types Article</a></li>
+                    </ul>
+                </li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Theme Menu</a>
+                    <ul class="dropdown-content">
+                        <li><button onclick="toggleMode()" class="nav-link">Toggle Dark Mode</button></li>
+                        <li><button onclick="changeFontSize('small')" class="nav-link">Font Size: Small</button></li>
+                        <li><button onclick="changeFontSize('medium')" class="nav-link">Font Size: Medium</button></li>
+                        <li><button onclick="changeFontSize('large')" class="nav-link">Font Size: Large</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-            <p>The club focuses on fostering camaraderie among its members, promoting ethical breeding practices, and advancing the sport of pigeon racing through organized competitions and events. With a rich history and a commitment to excellence, the Fernandol Valley Pigeon Club serves as a beacon of community spirit, celebrating the skill, strategy, and dedication involved in racing pigeons.</p>
+    <!-- Main Content -->
+    <main class="showcase-container">
+        <section class="showcase-item">
+            <h2>Frankie's Project</h2>
+            <div class="project-description">
+                <p>The Fernandol Valley Pigeon Club is a dedicated organization that brings together enthusiasts of pigeon racing and breeding. Nestled in the picturesque Fernandol Valley, the club has established itself as a vibrant hub for hobbyists and professionals who share a passion for these remarkable birds.</p>
 
-            <p>Through educational workshops, mentorship programs, and collaborative initiatives, the club aims to inspire the next generation of pigeon enthusiasts while preserving the timeless tradition of the sport. Its scenic location and welcoming atmosphere make it a cherished institution for bird lovers in the region.</p>
-        </div>
-    </section>
-</main>
-    <footer>
-        <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
-    </footer>
-    <script src="scripts.js" defer></script>
+                <p>The club focuses on fostering camaraderie among its members, promoting ethical breeding practices, and advancing the sport of pigeon racing through organized competitions and events. With a rich history and a commitment to excellence, the Fernandol Valley Pigeon Club serves as a beacon of community spirit, celebrating the skill, strategy, and dedication involved in racing pigeons.</p>
+
+                <p>Through educational workshops, mentorship programs, and collaborative initiatives, the club aims to inspire the next generation of pigeon enthusiasts while preserving the timeless tradition of the sport. Its scenic location and welcoming atmosphere make it a cherished institution for bird lovers in the region.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js" defer></script>
 </body>
 </html>
