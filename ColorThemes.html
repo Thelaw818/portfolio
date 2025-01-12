@@ -127,40 +127,46 @@
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html">Resume</a></li>
+    <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
         <li class="dropdown">
-            <a href="#">Showcase</a>
-            <div class="dropdown-content">
-                <a href="showcase1.html">Showcase 1</a>
-                <a href="showcase2.html">Showcase 2</a>
-                <a href="showcase3.html">Showcase 3</a>
-                <a href="showcase4.html">Showcase 4</a>
-            </div>
+            <a href="#" class="dropbtn">Showcase</a>
+            <ul class="dropdown-content">
+                <li><a href="showcase1.html" class="nav-link">Showcase 1</a></li>
+                <li><a href="showcase2.html" class="nav-link">Showcase 2</a></li>
+                <li><a href="showcase3.html" class="nav-link">Showcase 3</a></li>
+                <li><a href="showcase4.html" class="nav-link">Showcase 4</a></li>
+            </ul>
         </li>
         <li class="dropdown">
-            <a href="#">Design Theory</a>
-            <div class="dropdown-content">
-                <a href="ColorThemes.html">Color Themes</a>
-                <a href="ColorTheoryArticle.html">Color Theory Article</a>
-                <a href="ColorTheoryOverview.html">Color Theory Overview</a>
-                <a href="TypographyArticle.html">Typography Article</a>
-                <a href="TypographyOverview.html">Typography Overview</a>
-            </div>
+            <a href="#" class="dropbtn">Design Theory</a>
+            <ul class="dropdown-content">
+                <li><a href="ColorThemes.html" class="nav-link">Color Themes</a></li>
+                <li><a href="ColorTheoryArticle.html" class="nav-link">Color Theory Article</a></li>
+                <li><a href="ColorTheoryOverview.html" class="nav-link">Color Theory Overview</a></li>
+                <li><a href="TypographyArticle.html" class="nav-link">Typography Article</a></li>
+                <li><a href="TypographyOverview.html" class="nav-link">Typography Overview</a></li>
+            </ul>
         </li>
-        <li><a href="FontTypesArticle.html">Font Types Article</a></li>
         <li class="dropdown">
-            <a href="#">Theme Menu</a>
-            <div class="dropdown-content">
-                <button onclick="toggleMode()">Toggle Dark Mode</button>
-                <button onclick="changeFontSize('small')">Font Size: Small</button>
-                <button onclick="changeFontSize('medium')">Font Size: Medium</button>
-                <button onclick="changeFontSize('large')">Font Size: Large</button>
-            </div>
+            <a href="#" class="dropbtn">Font Types</a>
+            <ul class="dropdown-content">
+                <li><a href="FontTypesArticle.html" class="nav-link">Font Types Article</a></li>
+            </ul>
         </li>
-      </ul>
-    </nav>
+        <li><a href="resume.html" class="nav-link">Resume</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Theme Menu</a>
+            <ul class="dropdown-content">
+                <li><button onclick="toggleMode()" class="nav-link">Toggle Dark Mode</button></li>
+                <li><button onclick="changeFontSize('small')" class="nav-link">Font Size: Small</button></li>
+                <li><button onclick="changeFontSize('medium')" class="nav-link">Font Size: Medium</button></li>
+                <li><button onclick="changeFontSize('large')" class="nav-link">Font Size: Large</button></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
     <div class="banner">
         <h1>Color Themes</h1>
     </div>
