@@ -1,157 +1,163 @@
-<style>
-  /* Dark Mode Styles */
-  body.dark-mode {
+/* DARK MODE */
+body.dark-mode {
     background-color: #121212;
     color: #e5e5e5;
-  }
+}
 
-  /* Dark Mode Support for Navigation */
-  body.dark-mode nav ul li a,
-  body.dark-mode .dropdown-content a {
+body.dark-mode nav ul li a,
+body.dark-mode .dropdown-content a {
     color: #e5e5e5; /* High contrast for dark mode */
-  }
+}
 
-  body.dark-mode nav ul li a:hover,
-  body.dark-mode .dropdown-content a:hover {
+body.dark-mode nav ul li a:hover,
+body.dark-mode .dropdown-content a:hover {
     background-color: #555; /* Hover effect in dark mode */
-  }
+}
 
-  /* Navigation Bar Styles */
-  nav ul {
+/* NAVIGATION STYLES */
+nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center; /* Center-align navigation items */
     background-color: #000; /* Uniform background color */
-  }
+}
 
-  nav ul li {
+nav ul li {
     position: relative; /* For dropdown positioning */
     margin: 0;
-  }
+}
 
-  nav ul li a,
-  .dropdown-content a,
-  .dropbtn {
-    font-size: 16px; /* Consistent font size */
+.nav-link, .dropdown-content a, .dropbtn {
+    font-size: 1rem; /* Consistent font size */
     color: white; /* Visible in all modes */
     text-decoration: none;
-    padding: 10px 20px; /* Consistent padding */
+    padding: 0.625rem 1.25rem; /* Consistent padding */
     display: block; /* Ensure block layout for consistent spacing */
-  }
+}
 
-  nav ul li a:hover,
-  .dropdown-content a:hover,
-  .dropbtn:hover {
+.nav-link:hover,
+.dropdown-content a:hover,
+.dropbtn:hover {
     background-color: #333; /* Hover effect */
     text-decoration: underline;
-  }
+}
 
-  /* Dropdown Menu Styles */
-  .dropdown {
+/* DROPDOWN MENU */
+.dropdown {
     position: relative;
     display: inline-block;
-  }
+}
 
-  .dropbtn {
+.dropbtn {
     background-color: black;
     color: white;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem; /* 10px 15px */
     font-size: 1.4em;
     border: none;
     cursor: pointer;
-  }
+}
 
-  .dropdown-content {
+.dropdown-content {
     display: none; /* Initially hidden */
     position: absolute;
     background-color: #333; /* Dropdown background color */
-    min-width: 160px; /* Minimum width for dropdown */
+    min-width: 10rem; /* 160px */
     z-index: 1; /* Ensure dropdown appears above other elements */
-    border-radius: 4px;
-  }
+    border-radius: 0.25rem; /* 4px */
+}
 
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
-  /* Font Size Options */
-  body.small-font {
-    font-size: 14px;
-  }
+/* FONT SIZE OPTIONS */
+body.small-font {
+    font-size: 0.875rem; /* 14px */
+}
 
-  body.medium-font {
-    font-size: 16px;
-  }
+body.medium-font {
+    font-size: 1rem; /* 16px */
+}
 
-  body.large-font {
-    font-size: 18px;
-  }
+body.large-font {
+    font-size: 1.125rem; /* 18px */
+}
 
-  /* Showcase and Main Content */
-  .showcase-container {
+/* SHOWCASE SECTION */
+.showcase-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 200px); /* Leaves space for header and footer */
-    padding: 20px;
-  }
+    padding: 1.25rem; /* 20px */
+}
 
-  .showcase-item {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+.showcase-item {
+    max-width: 50rem; /* 800px */
+    margin: 1.25rem auto; /* 20px */
+    padding: 1.25rem;
     background-color: #fff; /* Light background for showcase */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
+    border: 0.0625rem solid #ccc; /* 1px */
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
-  .showcase-item h2 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
+.showcase-item h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.9375rem; /* 15px */
     text-align: center;
-  }
+}
 
-  .showcase-item p {
-    font-size: 1em;
+.showcase-item p {
+    font-size: 1rem;
     color: #333;
     line-height: 1.8; /* Improved readability for paragraphs */
-  }
+}
 
-  /* Additional Showcase Styles */
-  .showcase-banner {
+.showcase-banner {
     text-align: center;
-    margin: 30px 0;
-  }
+    margin: 1.875rem 0; /* 30px */
+}
 
-  .showcase-banner img {
+.showcase-banner img {
     max-width: 100%; /* Ensure responsive images */
     height: auto;
-  }
+}
 
-  /* Footer and Banner */
-  footer {
+/* FOOTER */
+footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-  }
+    padding: 0.625rem 0; /* 10px */
+}
 
-  h1 {
+/* HEADINGS */
+h1 {
     text-align: center;
-    margin: 20px 0;
-  }
+    margin: 1.25rem 0; /* 20px */
+}
 
-  h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
+h2 {
+    font-size: 3rem;
+    margin-bottom: 1.25rem; /* 20px */
     text-align: center;
-  }
+}
 
-  .project-description {
+.project-description {
     text-align: justify;
     line-height: 1.8; /* Improved readability */
-  }
-</style>
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        text-align: center;
+    }
+}
