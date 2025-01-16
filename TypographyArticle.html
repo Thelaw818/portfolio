@@ -4,108 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typography Article</title>
-    <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="theme.css">
-    <link rel="stylesheet" href="showcase.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        /* Navigation Bar Styles */
-        nav {
-            width: 100%;
-            background-color: black; /* Consistent background for all pages */
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-evenly; /* Ensure even spacing */
-            align-items: center;
-        }
-
-        nav ul li {
-            position: relative; /* For dropdown positioning */
-        }
-
-        nav ul li a {
-            color: white; /* Uniform text color */
-            text-decoration: none;
-            padding: 10px 15px;
-            font-size: 1em;
-            display: block; /* Block display for easy hover */
-        }
-
-        nav ul li a:hover {
-            background-color: #333; /* Highlight background on hover */
-        }
-
-        .dropdown-content {
-            display: none; /* Initially hidden */
-            position: absolute;
-            background-color: #333; /* Dark dropdown background */
-            min-width: 160px;
-            z-index: 1;
-        }
-
-        .dropdown-content a {
+        .dark-mode {
+            background-color: #121212;
             color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block; /* Ensure clickable area */
-        }
-
-        .dropdown-content a:hover {
-            background-color: #444; /* Slightly lighter hover background */
-        }
-
-        /* Show dropdown on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            font-family: Arial, sans-serif;
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-
-        h1 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        h3 {
-            font-size: 1.5em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        ul {
-            margin-left: 20px;
-            list-style-type: disc;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f1f1f1;
         }
 
         img {
@@ -116,51 +20,50 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-    <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Showcase</a>
-            <ul class="dropdown-content">
-                <li><a href="showcase1.html" class="nav-link">Showcase 1</a></li>
-                <li><a href="showcase2.html" class="nav-link">Showcase 2</a></li>
-                <li><a href="showcase3.html" class="nav-link">Showcase 3</a></li>
-                <li><a href="showcase4.html" class="nav-link">Showcase 4</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Design Theory</a>
-            <ul class="dropdown-content">
-                <li><a href="ColorThemes.html" class="nav-link">Color Themes</a></li>
-                <li><a href="ColorTheoryArticle.html" class="nav-link">Color Theory Article</a></li>
-                <li><a href="ColorTheoryOverview.html" class="nav-link">Color Theory Overview</a></li>
-                <li><a href="TypographyArticle.html" class="nav-link">Typography Article</a></li>
-                <li><a href="TypographyOverview.html" class="nav-link">Typography Overview</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Font Types</a>
-            <ul class="dropdown-content">
-                <li><a href="FontTypesArticle.html" class="nav-link">Font Types Article</a></li>
-            </ul>
-        </li>
-        <li><a href="resume.html" class="nav-link">Resume</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Theme Menu</a>
-            <ul class="dropdown-content">
-                <li><button onclick="toggleMode()" class="nav-link">Toggle Dark Mode</button></li>
-                <li><button onclick="changeFontSize('small')" class="nav-link">Font Size: Small</button></li>
-                <li><button onclick="changeFontSize('medium')" class="nav-link">Font Size: Medium</button></li>
-                <li><button onclick="changeFontSize('large')" class="nav-link">Font Size: Large</button></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
-
+    <header class="bg-dark text-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Typography</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="showcaseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Showcase</a>
+                            <ul class="dropdown-menu" aria-labelledby="showcaseDropdown">
+                                <li><a class="dropdown-item" href="showcase1.html">Showcase 1</a></li>
+                                <li><a class="dropdown-item" href="showcase2.html">Showcase 2</a></li>
+                                <li><a class="dropdown-item" href="showcase3.html">Showcase 3</a></li>
+                                <li><a class="dropdown-item" href="showcase4.html">Showcase 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="designDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Design Theory</a>
+                            <ul class="dropdown-menu" aria-labelledby="designDropdown">
+                                <li><a class="dropdown-item" href="ColorThemes.html">Color Themes</a></li>
+                                <li><a class="dropdown-item" href="ColorTheoryArticle.html">Color Theory Article</a></li>
+                                <li><a class="dropdown-item" href="ColorTheoryOverview.html">Color Theory Overview</a></li>
+                                <li><a class="dropdown-item" href="TypographyArticle.html">Typography Article</a></li>
+                                <li><a class="dropdown-item" href="TypographyOverview.html">Typography Overview</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="fontDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Font Types</a>
+                            <ul class="dropdown-menu" aria-labelledby="fontDropdown">
+                                <li><a class="dropdown-item" href="FontTypesArticle.html">Font Types Article</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                        <li class="nav-item"><button class="btn btn-outline-light" onclick="toggleMode()">Toggle Dark Mode</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main>
+    <main class="container my-4">
         <h1>Typography Article</h1>
         <h2>Understanding Typography</h2>
         <p>Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing. It involves a combination of font choice, size, line spacing, letter spacing, and alignment to create effective communication.</p>
@@ -213,8 +116,14 @@
         <p>To learn more about typography and its impact on design, check out <a href="https://www.typography.com/" target="_blank">Typography.com</a>.</p>
     </main>
 
-    <footer>
+    <footer class="text-center py-3 bg-dark text-white">
         <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
