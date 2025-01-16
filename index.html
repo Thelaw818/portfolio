@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Pigeon Racing</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="sitewide.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="theme.css">
@@ -12,68 +14,87 @@
 <body>
     <!-- Header Section -->
     <header>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Showcase</a>
-                    <ul class="dropdown-content">
-                        <li><a href="showcase1.html" class="nav-link">Showcase 1</a></li>
-                        <li><a href="showcase2.html" class="nav-link">Showcase 2</a></li>
-                        <li><a href="showcase3.html" class="nav-link">Showcase 3</a></li>
-                        <li><a href="showcase4.html" class="nav-link">Showcase 4</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Pigeon Racing</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="showcaseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Showcase
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="showcaseDropdown">
+                                <li><a class="dropdown-item" href="showcase1.html">Showcase 1</a></li>
+                                <li><a class="dropdown-item" href="showcase2.html">Showcase 2</a></li>
+                                <li><a class="dropdown-item" href="showcase3.html">Showcase 3</a></li>
+                                <li><a class="dropdown-item" href="showcase4.html">Showcase 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="designTheoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Design Theory
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="designTheoryDropdown">
+                                <li><a class="dropdown-item" href="ColorThemes.html">Color Themes</a></li>
+                                <li><a class="dropdown-item" href="ColorTheoryArticle.html">Color Theory Article</a></li>
+                                <li><a class="dropdown-item" href="ColorTheoryOverview.html">Color Theory Overview</a></li>
+                                <li><a class="dropdown-item" href="TypographyArticle.html">Typography Article</a></li>
+                                <li><a class="dropdown-item" href="TypographyOverview.html">Typography Overview</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="fontTypesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Font Types
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="fontTypesDropdown">
+                                <li><a class="dropdown-item" href="FontTypesArticle.html">Font Types Article</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resume.html">Resume</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="themeMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Theme Menu
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="themeMenuDropdown">
+                                <li><button class="dropdown-item" onclick="toggleMode()">Toggle Dark Mode</button></li>
+                                <li><button class="dropdown-item" onclick="changeFontSize('small')">Font Size: Small</button></li>
+                                <li><button class="dropdown-item" onclick="changeFontSize('medium')">Font Size: Medium</button></li>
+                                <li><button class="dropdown-item" onclick="changeFontSize('large')">Font Size: Large</button></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Design Theory</a>
-                    <ul class="dropdown-content">
-                        <li><a href="ColorThemes.html" class="nav-link">Color Themes</a></li>
-                        <li><a href="ColorTheoryArticle.html" class="nav-link">Color Theory Article</a></li>
-                        <li><a href="ColorTheoryOverview.html" class="nav-link">Color Theory Overview</a></li>
-                        <li><a href="TypographyArticle.html" class="nav-link">Typography Article</a></li>
-                        <li><a href="TypographyOverview.html" class="nav-link">Typography Overview</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Font Types</a>
-                    <ul class="dropdown-content">
-                        <li><a href="FontTypesArticle.html" class="nav-link">Font Types Article</a></li>
-                    </ul>
-                </li>
-                <li><a href="resume.html" class="nav-link">Resume</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Theme Menu</a>
-                    <ul class="dropdown-content">
-                        <li><button onclick="toggleMode()" class="nav-link">Toggle Dark Mode</button></li>
-                        <li><button onclick="changeFontSize('small')" class="nav-link">Font Size: Small</button></li>
-                        <li><button onclick="changeFontSize('medium')" class="nav-link">Font Size: Medium</button></li>
-                        <li><button onclick="changeFontSize('large')" class="nav-link">Font Size: Large</button></li>
-                    </ul>
-                </li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- Main Content -->
-    <main class="showcase-container">
-        <section class="showcase-item">
-            <h2>Frankie's Project</h2>
-            <div class="project-description">
+    <main class="container mt-5">
+        <section class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-center mb-4">Frankie's Project</h2>
                 <p>The Fernandol Valley Pigeon Club is a dedicated organization that brings together enthusiasts of pigeon racing and breeding. Nestled in the picturesque Fernandol Valley, the club has established itself as a vibrant hub for hobbyists and professionals who share a passion for these remarkable birds.</p>
-
                 <p>The club focuses on fostering camaraderie among its members, promoting ethical breeding practices, and advancing the sport of pigeon racing through organized competitions and events. With a rich history and a commitment to excellence, the Fernandol Valley Pigeon Club serves as a beacon of community spirit, celebrating the skill, strategy, and dedication involved in racing pigeons.</p>
-
                 <p>Through educational workshops, mentorship programs, and collaborative initiatives, the club aims to inspire the next generation of pigeon enthusiasts while preserving the timeless tradition of the sport. Its scenic location and welcoming atmosphere make it a cherished institution for bird lovers in the region.</p>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-light text-center py-3 mt-5">
         <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts.js" defer></script>
 </body>
 </html>
