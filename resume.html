@@ -64,11 +64,11 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="resumeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resume Sections</a>
               <ul class="dropdown-menu" aria-labelledby="resumeDropdown">
-                <li><a class="dropdown-item" href="#professional-summary">Professional Summary</a></li>
-                <li><a class="dropdown-item" href="#work-experience">Work Experience</a></li>
-                <li><a class="dropdown-item" href="#education">Education</a></li>
-                <li><a class="dropdown-item" href="#certifications">Certifications</a></li>
-                <li><a class="dropdown-item" href="#projects">Projects</a></li>
+                <li><a class="dropdown-item" href="#professional-summary" onclick="openAndScrollTo('professional-summary')">Professional Summary</a></li>
+                <li><a class="dropdown-item" href="#work-experience" onclick="openAndScrollTo('work-experience')">Work Experience</a></li>
+                <li><a class="dropdown-item" href="#education" onclick="openAndScrollTo('education')">Education</a></li>
+                <li><a class="dropdown-item" href="#certifications" onclick="openAndScrollTo('certifications')">Certifications</a></li>
+                <li><a class="dropdown-item" href="#projects" onclick="openAndScrollTo('projects')">Projects</a></li>
               </ul>
             </li>
             <li class="nav-item"><button class="btn btn-outline-light" onclick="toggleMode()">Toggle Dark Mode</button></li>
@@ -174,6 +174,16 @@
         sectionContent.style.display = 'none';
         icon.textContent = '+';
       }
+    }
+
+    function openAndScrollTo(sectionId) {
+      const sectionHeader = document.getElementById(sectionId);
+      const sectionContent = document.getElementById(sectionId + '-content');
+      const icon = sectionHeader.querySelector('.toggle-icon');
+
+      sectionContent.style.display = 'block';
+      icon.textContent = '-';
+      sectionHeader.scrollIntoView({ behavior: 'smooth' });
     }
 
     function toggleMode() {
