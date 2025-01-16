@@ -4,251 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typography Overview</title>
-    <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="theme.css">
-    <link rel="stylesheet" href="showcase.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        /* Navigation Bar Styles */
-        nav {
-            width: 100%;
-            background-color: black; /* Consistent background for all pages */
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-evenly; /* Ensure even spacing */
-            align-items: center;
-        }
-
-        nav ul li {
-            position: relative; /* For dropdown positioning */
-        }
-
-        nav ul li a {
-            color: white; /* Uniform text color */
-            text-decoration: none;
-            padding: 10px 15px;
-            font-size: 1em;
-            display: block; /* Block display for easy hover */
-        }
-
-        nav ul li a:hover {
-            background-color: #333; /* Highlight background on hover */
-        }
-
-        .dropdown-content {
-            display: none; /* Initially hidden */
-            position: absolute;
-            background-color: #333; /* Dark dropdown background */
-            min-width: 160px;
-            z-index: 1;
-        }
-
-        .dropdown-content a {
+        .dark-mode {
+            background-color: #121212;
             color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block; /* Ensure clickable area */
-        }
-
-        .dropdown-content a:hover {
-            background-color: #444; /* Slightly lighter hover background */
-        }
-
-        /* Show dropdown on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: black; /* Set font color to black */
-        }
-
-        h1, h2 {
-            color: black; /* Set header font color to black */
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5em;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75em;
-        }
-
-        p {
-            color: black; /* Set paragraph font color to black */
-            font-size: 1.1rem;
-            margin: 10px 0;
-        }
-
-        dl {
-            margin-top: 20px;
-        }
-
-        dl dt {
-            font-weight: bold;
-        }
-
-        dl dd {
-            margin-left: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 2rem 0;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .content-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-    <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Showcase</a>
-            <ul class="dropdown-content">
-                <li><a href="showcase1.html" class="nav-link">Showcase 1</a></li>
-                <li><a href="showcase2.html" class="nav-link">Showcase 2</a></li>
-                <li><a href="showcase3.html" class="nav-link">Showcase 3</a></li>
-                <li><a href="showcase4.html" class="nav-link">Showcase 4</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Design Theory</a>
-            <ul class="dropdown-content">
-                <li><a href="ColorThemes.html" class="nav-link">Color Themes</a></li>
-                <li><a href="ColorTheoryArticle.html" class="nav-link">Color Theory Article</a></li>
-                <li><a href="ColorTheoryOverview.html" class="nav-link">Color Theory Overview</a></li>
-                <li><a href="TypographyArticle.html" class="nav-link">Typography Article</a></li>
-                <li><a href="TypographyOverview.html" class="nav-link">Typography Overview</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Font Types</a>
-            <ul class="dropdown-content">
-                <li><a href="FontTypesArticle.html" class="nav-link">Font Types Article</a></li>
-            </ul>
-        </li>
-        <li><a href="resume.html" class="nav-link">Resume</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Theme Menu</a>
-            <ul class="dropdown-content">
-                <li><button onclick="toggleMode()" class="nav-link">Toggle Dark Mode</button></li>
-                <li><button onclick="changeFontSize('small')" class="nav-link">Font Size: Small</button></li>
-                <li><button onclick="changeFontSize('medium')" class="nav-link">Font Size: Medium</button></li>
-                <li><button onclick="changeFontSize('large')" class="nav-link">Font Size: Large</button></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
-
+    <header class="bg-dark text-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Typography Overview</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="showcaseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Showcase</a>
+                            <ul class="dropdown-menu" aria-labelledby="showcaseDropdown">
+                                <li><a class="dropdown-item" href="showcase1.html">Showcase 1</a></li>
+                                <li><a class="dropdown-item" href="showcase2.html">Showcase 2</a></li>
+                                <li><a class="dropdown-item" href="showcase3.html">Showcase 3</a></li>
+                                <li><a class="dropdown-item" href="showcase4.html">Showcase 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="designDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Design Theory</a>
+                            <ul class="dropdown-menu" aria-labelledby="designDropdown">
+                                <li><a class="dropdown-item" href="ColorThemes.html">Color Themes</a></li>
+                                <li><a class="dropdown-item" href="ColorTheoryArticle.html">Color Theory Article</a></li>
+                                <li><a class="dropdown-item" href="ColorTheoryOverview.html">Color Theory Overview</a></li>
+                                <li><a class="dropdown-item" href="TypographyArticle.html">Typography Article</a></li>
+                                <li><a class="dropdown-item" href="TypographyOverview.html">Typography Overview</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="fontDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Font Types</a>
+                            <ul class="dropdown-menu" aria-labelledby="fontDropdown">
+                                <li><a class="dropdown-item" href="FontTypesArticle.html">Font Types Article</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                        <li class="nav-item"><button class="btn btn-outline-light" onclick="toggleMode()">Toggle Dark Mode</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="container">
-        <div class="content-wrapper">
-            <section>
-                <h1>Typography Overview</h1>
+    <main class="container my-4">
+        <h1>Typography Overview</h1>
+        <section>
+            <h2>Introduction to Typography</h2>
+            <p>Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing. Typography is central to design because it helps convey a message through both form and function. Good typography ensures that the content is easy to read and visually engaging.</p>
+        </section>
 
-                <section>
-                    <h2>Introduction to Typography</h2>
-                    <p>Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing. Typography is central to design because it helps convey a message through both form and function. Good typography ensures that the content is easy to read and visually engaging.</p>
-                </section>
+        <section>
+            <h2>Key Typography Terms</h2>
+            <p>The following is a list of essential typography terms and their definitions:</p>
+            <dl class="row">
+                <dt class="col-sm-3">Typeface</dt>
+                <dd class="col-sm-9">A set of characters that share a common design, such as Arial, Times New Roman, or Helvetica.</dd>
 
-                <section>
-                    <h2>Key Typography Terms</h2>
-                    <p>The following is a list of essential typography terms and their definitions:</p>
-                    <dl>
-                        <dt>Typeface</dt>
-                        <dd>A set of characters that share a common design, such as Arial, Times New Roman, or Helvetica.</dd>
+                <dt class="col-sm-3">Font</dt>
+                <dd class="col-sm-9">A specific style and size of a typeface. For example, Arial Bold 12pt.</dd>
 
-                        <dt>Font</dt>
-                        <dd>A specific style and size of a typeface. For example, Arial Bold 12pt.</dd>
+                <dt class="col-sm-3">Serif</dt>
+                <dd class="col-sm-9">The small lines or strokes regularly attached to the end of a larger stroke in a letter or symbol.</dd>
 
-                        <dt>Serif</dt>
-                        <dd>The small lines or strokes regularly attached to the end of a larger stroke in a letter or symbol.</dd>
+                <dt class="col-sm-3">Sans-Serif</dt>
+                <dd class="col-sm-9">A typeface that does not have the small projecting features (serifs) at the ends of strokes. Examples include Arial and Helvetica.</dd>
 
-                        <dt>Sans-Serif</dt>
-                        <dd>A typeface that does not have the small projecting features (serifs) at the ends of strokes. Examples include Arial and Helvetica.</dd>
+                <dt class="col-sm-3">Leading</dt>
+                <dd class="col-sm-9">The vertical space between lines of text, typically measured from baseline to baseline.</dd>
 
-                        <dt>Leading</dt>
-                        <dd>The vertical space between lines of text, typically measured from baseline to baseline.</dd>
+                <dt class="col-sm-3">Kerning</dt>
+                <dd class="col-sm-9">The adjustment of space between two specific characters to improve visual appearance and readability.</dd>
 
-                        <dt>Kerning</dt>
-                        <dd>The adjustment of space between two specific characters to improve visual appearance and readability.</dd>
+                <dt class="col-sm-3">Tracking</dt>
+                <dd class="col-sm-9">The uniform adjustment of spacing across a range of characters in a block of text.</dd>
 
-                        <dt>Tracking</dt>
-                        <dd>The uniform adjustment of spacing across a range of characters in a block of text.</dd>
+                <dt class="col-sm-3">Baseline</dt>
+                <dd class="col-sm-9">The invisible line upon which characters in a typeface sit. The descenders (such as the tail of a "y") fall below the baseline.</dd>
 
-                        <dt>Baseline</dt>
-                        <dd>The invisible line upon which characters in a typeface sit. The descenders (such as the tail of a "y") fall below the baseline.</dd>
+                <dt class="col-sm-3">Ascender</dt>
+                <dd class="col-sm-9">The part of a letter that extends above the height of lowercase letters such as "h" or "b".</dd>
 
-                        <dt>Ascender</dt>
-                        <dd>The part of a letter that extends above the height of lowercase letters such as "h" or "b".</dd>
-
-                        <dt>Descender</dt>
-                        <dd>The part of a letter that extends below the baseline, as in "y" or "g".</dd>
-                    </dl>
-                </section>
-            </section>
-        </div>
+                <dt class="col-sm-3">Descender</dt>
+                <dd class="col-sm-9">The part of a letter that extends below the baseline, as in "y" or "g".</dd>
+            </dl>
+        </section>
     </main>
 
-    <footer>
+    <footer class="text-center py-3 bg-dark text-white">
         <p>&copy; 2024 Frankie Rosario Typography Resources</p>
     </footer>
 
     <script>
-        // Dark/Light Mode Toggle
         function toggleMode() {
             document.body.classList.toggle('dark-mode');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
         }
-
-        // Font Size Change
-        function changeFontSize(size) {
-            document.body.style.fontSize = size === 'small' ? '14px' : size === 'medium' ? '16px' : '18px';
-            localStorage.setItem('fontSize', size);
-        }
-
-        // Load Preferences on Page Load
-        document.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-mode');
-            }
-            const savedFontSize = localStorage.getItem('fontSize');
-            if (savedFontSize) {
-                document.body.style.fontSize = savedFontSize === 'small' ? '14px' : savedFontSize === 'medium' ? '16px' : '18px';
-            }
-        });
     </script>
 </body>
 </html>
