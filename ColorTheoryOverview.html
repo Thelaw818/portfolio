@@ -4,221 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Theory Overview</title>
-    <link rel="stylesheet" href="css/color-and-type.css">
-    <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="theme.css">
-    <link rel="stylesheet" href="showcase.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #000;
-            color: white;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav {
-            width: 100%;
-            background-color: black;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        nav ul li {
-            position: relative;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 12px 15px;
-            font-size: 1.1em;
-            display: block;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-            background-color: #333;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            min-width: 160px;
-            z-index: 1;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #444;
-        }
-        .banner h1 {
-            text-align: center;
-            margin: 0;
-            font-size: 2.2em;
-        }
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
-        dl dt {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        dl dd {
-            margin-left: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f1f1f1;
-        }
-        body.dark-mode {
+        .dark-mode {
             background-color: #121212;
             color: white;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-    <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Showcase</a>
-            <ul class="dropdown-content">
-                <li><a href="showcase1.html" class="nav-link">Showcase 1</a></li>
-                <li><a href="showcase2.html" class="nav-link">Showcase 2</a></li>
-                <li><a href="showcase3.html" class="nav-link">Showcase 3</a></li>
-                <li><a href="showcase4.html" class="nav-link">Showcase 4</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Design Theory</a>
-            <ul class="dropdown-content">
-                <li><a href="ColorThemes.html" class="nav-link">Color Themes</a></li>
-                <li><a href="ColorTheoryArticle.html" class="nav-link">Color Theory Article</a></li>
-                <li><a href="ColorTheoryOverview.html" class="nav-link">Color Theory Overview</a></li>
-                <li><a href="TypographyArticle.html" class="nav-link">Typography Article</a></li>
-                <li><a href="TypographyOverview.html" class="nav-link">Typography Overview</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Font Types</a>
-            <ul class="dropdown-content">
-                <li><a href="FontTypesArticle.html" class="nav-link">Font Types Article</a></li>
-            </ul>
-        </li>
-        <li><a href="resume.html" class="nav-link">Resume</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Theme Menu</a>
-            <ul class="dropdown-content">
-                <li><button onclick="toggleMode()" class="nav-link">Toggle Dark Mode</button></li>
-                <li><button onclick="changeFontSize('small')" class="nav-link">Font Size: Small</button></li>
-                <li><button onclick="changeFontSize('medium')" class="nav-link">Font Size: Medium</button></li>
-                <li><button onclick="changeFontSize('large')" class="nav-link">Font Size: Large</button></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
-
-        <div class="banner">
-            <h1>Color Theory Overview</h1>
-        </div>
+    <header class="bg-dark text-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Color Theory</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="showcaseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Showcase</a>
+                            <ul class="dropdown-menu" aria-labelledby="showcaseDropdown">
+                                <li><a class="dropdown-item" href="showcase1.html">Showcase 1</a></li>
+                                <li><a class="dropdown-item" href="showcase2.html">Showcase 2</a></li>
+                                <li><a class="dropdown-item" href="showcase3.html">Showcase 3</a></li>
+                                <li><a class="dropdown-item" href="showcase4.html">Showcase 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="designDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Design Theory</a>
+                            <ul class="dropdown-menu" aria-labelledby="designDropdown">
+                                <li><a class="dropdown-item" href="ColorThemes.html">Color Themes</a></li>
+                                <li><a class="dropdown-item" href="ColorTheoryArticle.html">Color Theory Article</a></li>
+                                <li><a class="dropdown-item" href="ColorTheoryOverview.html">Color Theory Overview</a></li>
+                                <li><a class="dropdown-item" href="TypographyArticle.html">Typography Article</a></li>
+                                <li><a class="dropdown-item" href="TypographyOverview.html">Typography Overview</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="fontDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Font Types</a>
+                            <ul class="dropdown-menu" aria-labelledby="fontDropdown">
+                                <li><a class="dropdown-item" href="FontTypesArticle.html">Font Types Article</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                        <li class="nav-item"><button class="btn btn-outline-light" onclick="toggleMode()">Toggle Dark Mode</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-
-    <main>
+    <main class="container my-4">
         <h1>Color Theory Overview</h1>
         <p>Color theory is the study of how colors interact and how they affect human perception and emotion. It is a framework that helps designers, artists, and creators make deliberate and informed choices about colors to achieve desired effects in their work. Understanding the relationships between colors, the psychology of colors, and how colors can be combined is essential for creating visually compelling designs.</p>
 
         <h2>Key Color Theory Terms</h2>
-        <dl>
-            <dt>Color Wheel</dt>
-            <dd>A circular diagram that shows the relationships between colors.</dd>
-            <dt>Primary Colors</dt>
-            <dd>Red, blue, and yellow; the base colors from which other colors are mixed.</dd>
-            <dt>Secondary Colors</dt>
-            <dd>Colors formed by mixing two primary colors (e.g., green, orange, and purple).</dd>
-            <dt>Tertiary Colors</dt>
-            <dd>Colors formed by mixing a primary color with a secondary color (e.g., red-orange, yellow-green).</dd>
-            <dt>Complementary Colors</dt>
-            <dd>Colors opposite each other on the color wheel, creating high contrast.</dd>
-            <dt>Analogous Colors</dt>
-            <dd>Colors next to each other on the color wheel that create harmony.</dd>
-            <dt>Hue</dt>
-            <dd>The pure color without tint, shade, or tone.</dd>
-            <dt>Tint</dt>
-            <dd>A color mixed with white, making it lighter.</dd>
-            <dt>Shade</dt>
-            <dd>A color mixed with black, making it darker.</dd>
-            <dt>Tone</dt>
-            <dd>A color mixed with gray, making it less intense.</dd>
-            <dt>Saturation</dt>
-            <dd>The intensity or purity of a color.</dd>
-            <dt>Brightness</dt>
-            <dd>The perceived lightness or darkness of a color.</dd>
-            <dt>Warm Colors</dt>
-            <dd>Colors such as red, orange, and yellow that evoke warmth.</dd>
-            <dt>Cool Colors</dt>
-            <dd>Colors such as blue, green, and purple that evoke calmness.</dd>
-            <dt>Monochromatic</dt>
-            <dd>A color scheme using variations of a single hue.</dd>
-            <dt>Triadic Colors</dt>
-            <dd>Three colors evenly spaced around the color wheel.</dd>
-            <dt>Split-Complementary</dt>
-            <dd>A color scheme using a base color and two colors adjacent to its complement.</dd>
-            <dt>RGB</dt>
-            <dd>A color model using red, green, and blue, commonly used in digital displays.</dd>
-            <dt>CMYK</dt>
-            <dd>A color model using cyan, magenta, yellow, and black, used in printing.</dd>
-            <dt>Color Psychology</dt>
-            <dd>The study of how colors affect human emotions and behavior.</dd>
+        <dl class="row">
+            <dt class="col-sm-3">Color Wheel</dt>
+            <dd class="col-sm-9">A circular diagram that shows the relationships between colors.</dd>
+
+            <dt class="col-sm-3">Primary Colors</dt>
+            <dd class="col-sm-9">Red, blue, and yellow; the base colors from which other colors are mixed.</dd>
+
+            <dt class="col-sm-3">Secondary Colors</dt>
+            <dd class="col-sm-9">Colors formed by mixing two primary colors (e.g., green, orange, and purple).</dd>
+
+            <dt class="col-sm-3">Tertiary Colors</dt>
+            <dd class="col-sm-9">Colors formed by mixing a primary color with a secondary color (e.g., red-orange, yellow-green).</dd>
+
+            <dt class="col-sm-3">Complementary Colors</dt>
+            <dd class="col-sm-9">Colors opposite each other on the color wheel, creating high contrast.</dd>
+
+            <dt class="col-sm-3">Analogous Colors</dt>
+            <dd class="col-sm-9">Colors next to each other on the color wheel that create harmony.</dd>
+
+            <dt class="col-sm-3">Hue</dt>
+            <dd class="col-sm-9">The pure color without tint, shade, or tone.</dd>
+
+            <dt class="col-sm-3">Tint</dt>
+            <dd class="col-sm-9">A color mixed with white, making it lighter.</dd>
+
+            <dt class="col-sm-3">Shade</dt>
+            <dd class="col-sm-9">A color mixed with black, making it darker.</dd>
+
+            <dt class="col-sm-3">Tone</dt>
+            <dd class="col-sm-9">A color mixed with gray, making it less intense.</dd>
         </dl>
     </main>
-
-    <footer>
+    <footer class="text-center py-3 bg-dark text-white">
         <p>&copy; 2024 Frankie Color Theory Resources</p>
     </footer>
 
     <script>
         function toggleMode() {
             document.body.classList.toggle('dark-mode');
-        }
-
-        function changeFontSize(size) {
-            document.body.style.fontSize = size === 'small' ? '14px' : size === 'medium' ? '16px' : '18px';
         }
     </script>
 </body>
