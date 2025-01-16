@@ -4,93 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Font Types Article</title>
-    <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="theme.css">
-    <link rel="stylesheet" href="showcase.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: black;
+        .dark-mode {
+            background-color: #121212;
             color: white;
-            padding: 10px 0;
-            width: 100%;
-        }
-        nav {
-            width: 100%;
-            background-color: black;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        nav ul li {
-            margin: 0;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            font-size: 1em;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            min-width: 160px;
-            z-index: 1;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #575757;
-        }
-        .banner {
-            margin-top: 10px;
-            text-align: center;
-            width: 100%;
-        }
-        h1 {
-            margin: 0;
-            padding: 10px;
-            font-size: 1.2em;
-        }
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 200px);
-            padding: 20px;
-        }
-        .article-container {
-            max-width: 800px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         .image-size {
             width: 100%;
@@ -98,114 +17,91 @@
             height: auto;
             margin: 20px 0;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f1f1f1;
-            width: 100%;
-            position: relative;
-            bottom: 0;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Showcase</a>
-                    <div class="dropdown-content">
-                        <a href="showcase1.html">Showcase 1</a>
-                        <a href="showcase2.html">Showcase 2</a>
-                        <a href="showcase3.html">Showcase 3</a>
-                        <a href="showcase4.html">Showcase 4</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Design Theory</a>
-                    <div class="dropdown-content">
-                        <a href="ColorThemes.html">Color Themes</a>
-                        <a href="ColorTheoryArticle.html">Color Theory Article</a>
-                        <a href="ColorTheoryOverview.html">Color Theory Overview</a>
-                        <a href="TypographyArticle.html">Typography Article</a>
-                        <a href="TypographyOverview.html">Typography Overview</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Font Types</a>
-                    <div class="dropdown-content">
-                        <a href="FontTypesArticle.html">Font Types Article</a>
-                    </div>
-                </li>
-                <li><a href="resume.html">Resume</a></li>
-                <!-- Theme Menu -->
-                <li class="dropdown">
-                    <a href="#">Theme Menu</a>
-                    <div class="dropdown-content">
-                        <button onclick="toggleMode()">Toggle Dark Mode</button>
-                <button onclick="changeFontSize('small')">Font Size: Small</button>
-                <button onclick="changeFontSize('medium')">Font Size: Medium</button>
-                <button onclick="changeFontSize('large')">Font Size: Large</button>
-                    </div>
-                </li>
-            </ul>
+    <header class="bg-dark text-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Font Types</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="showcaseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Showcase</a>
+                            <ul class="dropdown-menu" aria-labelledby="showcaseDropdown">
+                                <li><a class="dropdown-item" href="showcase1.html">Showcase 1</a></li>
+                                <li><a class="dropdown-item" href="showcase2.html">Showcase 2</a></li>
+                                <li><a class="dropdown-item" href="showcase3.html">Showcase 3</a></li>
+                                <li><a class="dropdown-item" href="showcase4.html">Showcase 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="designDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Design Theory</a>
+                            <ul class="dropdown-menu" aria-labelledby="designDropdown">
+                                <li><a class="dropdown-item" href="ColorThemes.html">Color Themes</a></li>
+                                <li><a class="dropdown-item" href="ColorTheoryArticle.html">Color Theory Article</a></li>
+                                <li><a class="dropdown-item" href="ColorTheoryOverview.html">Color Theory Overview</a></li>
+                                <li><a class="dropdown-item" href="TypographyArticle.html">Typography Article</a></li>
+                                <li><a class="dropdown-item" href="TypographyOverview.html">Typography Overview</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="fontDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Font Types</a>
+                            <ul class="dropdown-menu" aria-labelledby="fontDropdown">
+                                <li><a class="dropdown-item" href="FontTypesArticle.html">Font Types Article</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                        <li class="nav-item"><button class="btn btn-outline-light" onclick="toggleMode()">Toggle Dark Mode</button></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <div class="banner">
-            <h1>Font Types Article</h1>
-        </div>
     </header>
 
-    <main>
-        <div class="article-container">
-            <h2>Understanding Different Font Types</h2>
-            <p>Fonts are an essential part of design and communication. They convey personality, tone, and clarity in the text. In this article, we explore the most common font types used in design: Serif, Sans-Serif, Script, and Display fonts.</p>
+    <main class="container my-4">
+        <div class="card shadow">
+            <div class="card-body">
+                <h2 class="card-title">Understanding Different Font Types</h2>
+                <p class="card-text">Fonts are an essential part of design and communication. They convey personality, tone, and clarity in the text. In this article, we explore the most common font types used in design: Serif, Sans-Serif, Script, and Display fonts.</p>
 
-            <h3>1. Serif Fonts</h3>
-            <p>Serif fonts are characterized by small lines or strokes attached to the end of a larger stroke in a letter. These fonts are traditionally used in printed materials and are considered more formal and readable in large bodies of text.</p>
-            <p>Examples of Serif fonts: <em>Times New Roman, Georgia, Garamond</em>.</p>
-            <img src="https://thelaw818.github.io/portfolio/images/fonts1.png" alt="Serif Fonts Example" class="image-size">
-            <p>Learn more about Serif fonts: <a href="https://www.myfonts.com/pages/serif-fonts" target="_blank">Serif Fonts Overview</a>.</p>
+                <h3>1. Serif Fonts</h3>
+                <p>Serif fonts are characterized by small lines or strokes attached to the end of a larger stroke in a letter. These fonts are traditionally used in printed materials and are considered more formal and readable in large bodies of text.</p>
+                <p>Examples of Serif fonts: <em>Times New Roman, Georgia, Garamond</em>.</p>
+                <img src="https://thelaw818.github.io/portfolio/images/fonts1.png" alt="Serif Fonts Example" class="image-size">
 
-            <h3>2. Sans-Serif Fonts</h3>
-            <p>Sans-serif fonts do not have the small lines or strokes attached to their letters. These fonts are often used in modern, digital settings because they appear clean and simple. They are considered easier to read on screens.</p>
-            <p>Examples of Sans-Serif fonts: <em>Arial, Helvetica, Open Sans</em>.</p>
-            <img src="https://thelaw818.github.io/portfolio/images/fonts.png" alt="Sans-Serif Fonts Example" class="image-size">
-            <p>Learn more about Sans-Serif fonts: <a href="https://en.wikipedia.org/wiki/Sans-serif" target="_blank">Sans-Serif Fonts Overview</a>.</p>
+                <h3>2. Sans-Serif Fonts</h3>
+                <p>Sans-serif fonts do not have the small lines or strokes attached to their letters. These fonts are often used in modern, digital settings because they appear clean and simple. They are considered easier to read on screens.</p>
+                <p>Examples of Sans-Serif fonts: <em>Arial, Helvetica, Open Sans</em>.</p>
+                <img src="https://thelaw818.github.io/portfolio/images/fonts.png" alt="Sans-Serif Fonts Example" class="image-size">
 
-            <h3>3. Script Fonts</h3>
-            <p>Script fonts mimic the appearance of handwritten text. They are often used for decorative purposes, invitations, and creative projects. While they can be elegant, they are generally harder to read in large blocks of text.</p>
-            <p>Examples of Script fonts: <em>Brush Script, Pacifico, Lobster</em>.</p>
-            <img src="https://thelaw818.github.io/portfolio/images/fonts3.jpg" alt="Script Fonts Example" class="image-size">
-            <p>Learn more about Script fonts: <a href="https://www.kimp.io/script-fonts/" target="_blank">Script Fonts Overview</a>.</p>
+                <h3>3. Script Fonts</h3>
+                <p>Script fonts mimic the appearance of handwritten text. They are often used for decorative purposes, invitations, and creative projects. While they can be elegant, they are generally harder to read in large blocks of text.</p>
+                <p>Examples of Script fonts: <em>Brush Script, Pacifico, Lobster</em>.</p>
+                <img src="https://thelaw818.github.io/portfolio/images/fonts3.jpg" alt="Script Fonts Example" class="image-size">
 
-            <h3>4. Display Fonts</h3>
-            <p>Display fonts are designed to attract attention. They are often used for titles, logos, and large headlines. They can be bold, quirky, or artistic, but should not be used in body text due to readability issues.</p>
-            <p>Examples of Display fonts: <em>Impact, Bebas Neue, Playbill</em>.</p>
-            <img src="https://thelaw818.github.io/portfolio/images/fonts4.jpg" alt="Display Fonts Example" class="image-size">
-            <p>Learn more about Display fonts: <a href="https://din-studio.com/best-fonts/display-fonts/" target="_blank">Display Fonts Overview</a>.</p>
+                <h3>4. Display Fonts</h3>
+                <p>Display fonts are designed to attract attention. They are often used for titles, logos, and large headlines. They can be bold, quirky, or artistic, but should not be used in body text due to readability issues.</p>
+                <p>Examples of Display fonts: <em>Impact, Bebas Neue, Playbill</em>.</p>
+                <img src="https://thelaw818.github.io/portfolio/images/fonts4.jpg" alt="Display Fonts Example" class="image-size">
 
-            <h2>Choosing the Right Font</h2>
-            <p>When selecting a font, it’s important to consider the purpose and audience of your project. Serif fonts work well in traditional print designs, while sans-serif fonts are ideal for digital screens. Script fonts can add personality, but should be used sparingly. Display fonts are best suited for bold statements or headings.</p>
-
-            <p>For more information about font selection and typography, visit the <a href="https://typography.com/" target="_blank">Typography.com</a> website.</p>
+                <h2>Choosing the Right Font</h2>
+                <p>When selecting a font, it’s important to consider the purpose and audience of your project. Serif fonts work well in traditional print designs, while sans-serif fonts are ideal for digital screens. Script fonts can add personality, but should be used sparingly. Display fonts are best suited for bold statements or headings.</p>
+            </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="text-center py-3 bg-dark text-white">
         <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
     </footer>
 
     <script>
-        // Toggle Dark Mode and Light Mode
         function toggleMode() {
             document.body.classList.toggle('dark-mode');
-        }
-
-        // Change font size
-        function changeFontSize(size) {
-            document.body.classList.remove('small-font', 'medium-font', 'large-font');
-            document.body.classList.add(`${size}-font`);
         }
     </script>
 </body>
