@@ -4,119 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jane Smith's Resume</title>
- <link rel="stylesheet" href="resume.css">
-<link rel="stylesheet" href="sitewide.css">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="theme.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <style>
-    /* General body styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Header and navigation styles */
-    header {
-      background-color: black;
+    .dark-mode {
+      background-color: #121212;
       color: white;
-      padding: 10px 0;
-      width: 100%;
     }
 
-    nav {
-      width: 100%;
-      background-color: black;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
-
-    nav ul li {
-      margin: 0;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 15px;
-      font-size: 1.4em; /* Increased font size to match Showcase 1 */
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    /* Dropdown styling */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropbtn {
-      background-color: black;
-      color: white;
-      padding: 10px 15px;
-      font-size: 1.4em;
-      border: none;
-      cursor: pointer;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #333;
-      min-width: 160px;
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: white;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown:hover .dropbtn {
-      background-color: #ddd;
-      color: black;
-    }
-
-    /* Banner styles */
-    .banner {
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-      padding: 10px;
-      font-size: 2.6em; /* Increased font size to match Showcase 1 */
-    }
-
-    /* Resume section styles */
     .section-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #f0f0f0;
+      background-color: #f8f9fa;
       padding: 10px;
-      cursor: pointer;
       border: 1px solid #ddd;
+      cursor: pointer;
     }
 
     .section-content {
@@ -128,93 +31,60 @@
 
     .toggle-icon {
       font-weight: bold;
-      font-size: 1.2em; /* Increased font size for the toggle icon */
+      font-size: 1.2em;
     }
 
     .toggle-icon.active {
       transform: rotate(45deg);
     }
 
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
+    .resume-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f8f9fa;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-
-    <!-- Showcase Dropdown -->
-    <li class="dropdown">
-      <a href="#" class="dropbtn">Showcase</a>
-      <div class="dropdown-content">
-        <a href="showcase1.html">Showcase 1</a>
-        <a href="showcase2.html">Showcase 2</a>
-        <a href="showcase3.html">Showcase 3</a>
-        <a href="showcase4.html">Showcase 4</a>
+  <header class="bg-dark text-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Jane Smith's Resume</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="resumeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resume Sections</a>
+              <ul class="dropdown-menu" aria-labelledby="resumeDropdown">
+                <li><a class="dropdown-item" href="#professional-summary">Professional Summary</a></li>
+                <li><a class="dropdown-item" href="#work-experience">Work Experience</a></li>
+                <li><a class="dropdown-item" href="#education">Education</a></li>
+                <li><a class="dropdown-item" href="#certifications">Certifications</a></li>
+                <li><a class="dropdown-item" href="#projects">Projects</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><button class="btn btn-outline-light" onclick="toggleMode()">Toggle Dark Mode</button></li>
+          </ul>
+        </div>
       </div>
-    </li>
-
-    <!-- Design Theory Dropdown -->
-    <li class="dropdown">
-      <a href="#" class="dropbtn">Design Theory</a>
-      <div class="dropdown-content">
-        <a href="ColorThemes.html">Color Themes</a>
-        <a href="ColorTheoryArticle.html">Color Theory Article</a>
-        <a href="ColorTheoryOverview.html">Color Theory Overview</a>
-        <a href="TypographyOverview.html">Typography Overview</a>
-        <a href="TypographyArticle.html">Typography Article</a>
-      </div>
-    </li>
-
-    <!-- Font Types Dropdown -->
-    <li class="dropdown">
-      <a href="#" class="dropbtn">Font Types</a>
-      <div class="dropdown-content">
-        <a href="FontTypesArticle.html">Font Types Article</a>
-      </div>
-    </li>
-
-    <!-- Resume Sections Dropdown -->
-    <li class="dropdown">
-      <a href="#" class="dropbtn">Resume Sections</a>
-      <div class="dropdown-content">
-        <a href="#professional-summary" onclick="openSection('professional-summary')">Professional Summary</a>
-        <a href="#work-experience" onclick="openSection('work-experience')">Work Experience</a>
-        <a href="#education" onclick="openSection('education')">Education</a>
-        <a href="#certifications" onclick="openSection('certifications')">Certifications</a>
-        <a href="#projects" onclick="openSection('projects')">Projects</a>
-      </div>
-    </li>
-
-    <!-- Theme Menu Dropdown -->
-      <li class="dropdown">
-  <a href="#" class="dropbtn">Theme Menu</a>
-  <div class="dropdown-content">
-    <button onclick="toggleMode()">Toggle Dark Mode</button>
-                <button onclick="changeFontSize('small')">Font Size: Small</button>
-                <button onclick="changeFontSize('medium')">Font Size: Medium</button>
-                <button onclick="changeFontSize('large')">Font Size: Large</button>
-  </div>
-</li>
-  </ul>
-</nav>
-
-    <div class="banner">
-      <h1>Jane Smith's Resume</h1>
-    </div>
+    </nav>
   </header>
 
-  <main>
+  <main class="container my-4">
     <div class="resume-container">
       <h2>Jane Smith's Resume</h2>
-      <p>San Francisco, CA | (555) 123-4567 | jane.smith@email.com | <a href="https://linkedin.com/in/janesmith">linkedin.com/in/janesmith</a></p>
+      <p>San Francisco, CA | (555) 123-4567 | jane.smith@email.com | <a href="https://linkedin.com/in/janesmith" target="_blank">linkedin.com/in/janesmith</a></p>
 
       <!-- Professional Summary -->
-      <div id="professional-summary" class="section-header" onclick="toggleSection('professional-summary')">
+      <div id="professional-summary" class="section-header">
         <h3>Professional Summary</h3>
         <span class="toggle-icon">+</span>
       </div>
@@ -223,7 +93,7 @@
       </div>
 
       <!-- Work Experience -->
-      <div id="work-experience" class="section-header" onclick="toggleSection('work-experience')">
+      <div id="work-experience" class="section-header">
         <h3>Work Experience</h3>
         <span class="toggle-icon">+</span>
       </div>
@@ -243,7 +113,7 @@
       </div>
 
       <!-- Education -->
-      <div id="education" class="section-header" onclick="toggleSection('education')">
+      <div id="education" class="section-header">
         <h3>Education</h3>
         <span class="toggle-icon">+</span>
       </div>
@@ -257,7 +127,7 @@
       </div>
 
       <!-- Certifications -->
-      <div id="certifications" class="section-header" onclick="toggleSection('certifications')">
+      <div id="certifications" class="section-header">
         <h3>Certifications</h3>
         <span class="toggle-icon">+</span>
       </div>
@@ -270,7 +140,7 @@
       </div>
 
       <!-- Projects -->
-      <div id="projects" class="section-header" onclick="toggleSection('projects')">
+      <div id="projects" class="section-header">
         <h3>Projects</h3>
         <span class="toggle-icon">+</span>
       </div>
@@ -291,13 +161,12 @@
   <footer>
     <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
   </footer>
-<script src="scripts.js" defer></script>
+
   <script>
     function toggleSection(sectionId) {
       const sectionContent = document.getElementById(sectionId + '-content');
       const icon = sectionContent.previousElementSibling.querySelector('.toggle-icon');
 
-      // Toggle display of the section content
       if (sectionContent.style.display === 'none' || sectionContent.style.display === '') {
         sectionContent.style.display = 'block';
         icon.textContent = '-';
@@ -307,16 +176,8 @@
       }
     }
 
-    // Function to automatically open the section when navigation link is clicked
-    function openSection(sectionId) {
-      const sectionContent = document.getElementById(sectionId + '-content');
-      const icon = sectionContent.previousElementSibling.querySelector('.toggle-icon');
-
-      // Open the section if it is not already open
-      if (sectionContent.style.display === 'none' || sectionContent.style.display === '') {
-        sectionContent.style.display = 'block';
-        icon.textContent = '-';
-      }
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
     }
   </script>
 </body>
