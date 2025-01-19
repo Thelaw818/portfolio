@@ -7,6 +7,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <style>
+    /* General Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    }
+
     /* Dark Mode Styling */
     .dark-mode {
       background-color: #121212;
@@ -21,46 +27,67 @@
       color: #81D4FA;
     }
 
+    /* Resume Container */
+    .resume-container {
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Section Styling */
     .section-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #f8f9fa;
-      padding: 10px;
-      border: 1px solid #ddd;
+      padding: 15px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
       cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .section-header:hover {
+      background-color: #e0f7fa;
     }
 
     .section-content {
       display: none;
-      padding: 10px;
-      border: 1px solid #ddd;
+      padding: 15px;
+      border: 2px solid #ddd;
       border-top: none;
+      border-radius: 0 0 8px 8px;
     }
 
     .toggle-icon {
       font-weight: bold;
-      font-size: 1.2em;
+      font-size: 1.5em;
+      color: #00796b;
     }
 
-    .resume-container h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #00ffc6;
-      text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
-    }
-
+    /* Typography */
+    .resume-container h2,
     .resume-container h3 {
-      color: #00ffc6;
+      color: #00796b;
       text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
     }
 
+    .resume-container p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    /* Footer Styling */
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #f8f9fa;
+      background-color: #00796b;
+      color: white;
     }
 
+    /* Responsive Design */
     @media (max-width: 768px) {
       .section-header {
         flex-direction: column;
@@ -68,7 +95,6 @@
       }
 
       footer {
-        text-align: center;
         padding: 15px;
       }
 
