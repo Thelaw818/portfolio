@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Understanding Color Theory</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -19,6 +20,9 @@
         canvas {
             max-width: 800px;
             margin: auto;
+        }
+        h2 {
+            color: #343a40;
         }
     </style>
 </head>
@@ -130,61 +134,55 @@
         }
 
         // Chart.js charts for visual representation
-        new Chart(document.getElementById('colorWheelChart').getContext('2d'), {
-            type: 'pie',
-            data: {
+        const chartConfigs = [
+            {
+                element: 'colorWheelChart',
+                type: 'pie',
                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Orange', 'Purple'],
-                datasets: [{
-                    data: [20, 20, 20, 20, 10, 10],
-                    backgroundColor: ['#FF0000', '#0000FF', '#FFFF00', '#00FF00', '#FFA500', '#800080']
-                }]
-            }
-        });
-
-        new Chart(document.getElementById('complementaryColorsChart').getContext('2d'), {
-            type: 'bar',
-            data: {
+                data: [20, 20, 20, 20, 10, 10],
+                colors: ['#FF0000', '#0000FF', '#FFFF00', '#00FF00', '#FFA500', '#800080']
+            },
+            {
+                element: 'complementaryColorsChart',
+                type: 'bar',
                 labels: ['Red & Green', 'Blue & Orange', 'Yellow & Purple'],
-                datasets: [{
-                    label: 'Complementary Colors',
-                    data: [50, 50, 50],
-                    backgroundColor: ['#FF0000', '#0000FF', '#FFFF00']
-                }]
-            }
-        });
-
-        new Chart(document.getElementById('analogousColorsChart').getContext('2d'), {
-            type: 'doughnut',
-            data: {
+                data: [50, 50, 50],
+                colors: ['#FF0000', '#00FF00', '#FFFF00']
+            },
+            {
+                element: 'analogousColorsChart',
+                type: 'doughnut',
                 labels: ['Blue', 'Blue-Green', 'Green'],
-                datasets: [{
-                    data: [30, 40, 30],
-                    backgroundColor: ['#0000FF', '#00FFFF', '#00FF00']
-                }]
-            }
-        });
-
-        new Chart(document.getElementById('rgbColorWheelChart').getContext('2d'), {
-            type: 'polarArea',
-            data: {
+                data: [30, 40, 30],
+                colors: ['#0000FF', '#00FFFF', '#00FF00']
+            },
+            {
+                element: 'rgbColorWheelChart',
+                type: 'polarArea',
                 labels: ['Red', 'Green', 'Blue'],
-                datasets: [{
-                    data: [100, 100, 100],
-                    backgroundColor: ['#FF0000', '#00FF00', '#0000FF']
-                }]
-            }
-        });
-
-        new Chart(document.getElementById('colorPsychologyChart').getContext('2d'), {
-            type: 'bar',
-            data: {
+                data: [100, 100, 100],
+                colors: ['#FF0000', '#00FF00', '#0000FF']
+            },
+            {
+                element: 'colorPsychologyChart',
+                type: 'bar',
                 labels: ['Passion (Red)', 'Calm (Blue)', 'Happiness (Yellow)', 'Nature (Green)', 'Luxury (Purple)'],
-                datasets: [{
-                    label: 'Psychological Impact',
-                    data: [50, 60, 70, 40, 30],
-                    backgroundColor: ['#FF0000', '#0000FF', '#FFFF00', '#00FF00', '#800080']
-                }]
+                data: [50, 60, 70, 40, 30],
+                colors: ['#FF0000', '#0000FF', '#FFFF00', '#00FF00', '#800080']
             }
+        ];
+
+        chartConfigs.forEach(config => {
+            new Chart(document.getElementById(config.element).getContext('2d'), {
+                type: config.type,
+                data: {
+                    labels: config.labels,
+                    datasets: [{
+                        data: config.data,
+                        backgroundColor: config.colors
+                    }]
+                }
+            });
         });
     </script>
 </body>
