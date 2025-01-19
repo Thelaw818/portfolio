@@ -8,32 +8,95 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        .dark-mode {
-            background-color: #121212;
-            color: white;
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
         }
 
+        h2, h3 {
+            color: #00ffc6;
+            text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+        }
+
+        p, .card-text {
+            line-height: 1.8;
+        }
+
+        /* Image Styling */
         .image-size {
             width: 100%;
             max-width: 600px;
             height: auto;
             margin: 20px auto;
             display: block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 198, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .image-size:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 198, 0.8);
         }
 
-        .card-text {
-            font-size: 1.2rem;
-            line-height: 1.6;
+        /* Card Styling */
+        .card {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        h3 {
-            margin-top: 30px;
-            font-size: 1.8rem;
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: #e5e5e5;
+        }
+
+        .dark-mode h2, .dark-mode h3 {
+            color: #00ffc6;
+            text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+        }
+
+        .dark-mode .card {
+            background-color: #1e1e2f;
+            color: #e5e5e5;
+            box-shadow: 0 0 10px rgba(255, 167, 38, 0.5);
+        }
+
+        .dark-mode .image-size {
+            box-shadow: 0 0 10px rgba(255, 167, 38, 0.5);
+        }
+
+        .dark-mode .image-size:hover {
+            box-shadow: 0 0 20px rgba(255, 167, 38, 0.8);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #343a40;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .card-text {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
@@ -57,22 +120,6 @@
                                 <li><a class="dropdown-item" href="showcase4.html">Showcase 4</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="designDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Design Theory</a>
-                            <ul class="dropdown-menu" aria-labelledby="designDropdown">
-                                <li><a class="dropdown-item" href="ColorThemes.html">Color Themes</a></li>
-                                <li><a class="dropdown-item" href="ColorTheoryArticle.html">Color Theory Article</a></li>
-                                <li><a class="dropdown-item" href="ColorTheoryOverview.html">Color Theory Overview</a></li>
-                                <li><a class="dropdown-item" href="TypographyArticle.html">Typography Article</a></li>
-                                <li><a class="dropdown-item" href="TypographyOverview.html">Typography Overview</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="fontDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Font Types</a>
-                            <ul class="dropdown-menu" aria-labelledby="fontDropdown">
-                                <li><a class="dropdown-item" href="FontTypesArticle.html">Font Types Article</a></li>
-                            </ul>
-                        </li>
                         <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
                         <li class="nav-item"><button class="btn btn-outline-light" onclick="toggleMode()">Toggle Dark Mode</button></li>
                     </ul>
@@ -84,31 +131,27 @@
     <main class="container my-4">
         <div class="card shadow p-4">
             <div class="card-body">
-                <h2 class="card-title">Understanding Different Font Types</h2>
-                <p class="card-text">Fonts are an essential part of design and communication. They convey personality, tone, and clarity in the text. In this article, we explore the most common font types used in design: Serif, Sans-Serif, Script, and Display fonts.</p>
+                <h2 class="card-title text-center">Understanding Different Font Types</h2>
+                <p class="card-text">Fonts are an essential part of design and communication...</p>
 
                 <h3>1. Serif Fonts</h3>
-                <p>Serif fonts are characterized by small lines or strokes attached to the end of a larger stroke in a letter. These fonts are traditionally used in printed materials and are considered more formal and readable in large bodies of text.</p>
-                <p>Examples of Serif fonts: <em>Times New Roman, Georgia, Garamond</em>.</p>
+                <p>Serif fonts are characterized by small lines or strokes attached...</p>
                 <img src="https://thelaw818.github.io/portfolio/images/fonts1.png" alt="Serif Fonts Example" class="image-size">
 
                 <h3>2. Sans-Serif Fonts</h3>
-                <p>Sans-serif fonts do not have the small lines or strokes attached to their letters. These fonts are often used in modern, digital settings because they appear clean and simple. They are considered easier to read on screens.</p>
-                <p>Examples of Sans-Serif fonts: <em>Arial, Helvetica, Open Sans</em>.</p>
+                <p>Sans-serif fonts do not have the small lines or strokes attached...</p>
                 <img src="https://thelaw818.github.io/portfolio/images/fonts.png" alt="Sans-Serif Fonts Example" class="image-size">
 
                 <h3>3. Script Fonts</h3>
-                <p>Script fonts mimic the appearance of handwritten text. They are often used for decorative purposes, invitations, and creative projects. While they can be elegant, they are generally harder to read in large blocks of text.</p>
-                <p>Examples of Script fonts: <em>Brush Script, Pacifico, Lobster</em>.</p>
+                <p>Script fonts mimic the appearance of handwritten text...</p>
                 <img src="https://thelaw818.github.io/portfolio/images/fonts3.jpg" alt="Script Fonts Example" class="image-size">
 
                 <h3>4. Display Fonts</h3>
-                <p>Display fonts are designed to attract attention. They are often used for titles, logos, and large headlines. They can be bold, quirky, or artistic, but should not be used in body text due to readability issues.</p>
-                <p>Examples of Display fonts: <em>Impact, Bebas Neue, Playbill</em>.</p>
+                <p>Display fonts are designed to attract attention...</p>
                 <img src="https://thelaw818.github.io/portfolio/images/fonts4.jpg" alt="Display Fonts Example" class="image-size">
 
-                <h2>Choosing the Right Font</h2>
-                <p>When selecting a font, it’s important to consider the purpose and audience of your project. Serif fonts work well in traditional print designs, while sans-serif fonts are ideal for digital screens. Script fonts can add personality, but should be used sparingly. Display fonts are best suited for bold statements or headings.</p>
+                <h2 class="text-center mt-4">Choosing the Right Font</h2>
+                <p>When selecting a font, it’s important to consider the purpose...</p>
             </div>
         </div>
     </main>
