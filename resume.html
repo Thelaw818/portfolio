@@ -7,9 +7,18 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <style>
+    /* Dark Mode Styling */
     .dark-mode {
       background-color: #121212;
       color: white;
+    }
+
+    .dark-mode a {
+      color: #4FC3F7;
+    }
+
+    .dark-mode a:hover {
+      color: #81D4FA;
     }
 
     .section-header {
@@ -34,10 +43,6 @@
       font-size: 1.2em;
     }
 
-    .toggle-icon.active {
-      transform: rotate(45deg);
-    }
-
     .resume-container h2 {
       text-align: center;
       margin-bottom: 20px;
@@ -48,9 +53,26 @@
       padding: 20px;
       background-color: #f8f9fa;
     }
+
+    @media (max-width: 768px) {
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+      }
+
+      .resume-container h2 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header class="bg-dark text-white sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
@@ -78,21 +100,24 @@
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main class="container my-4">
     <div class="resume-container">
       <h2>Jane Smith's Resume</h2>
-      <p>San Francisco, CA | (555) 123-4567 | jane.smith@email.com | <a href="https://linkedin.com/in/janesmith" target="_blank">linkedin.com/in/janesmith</a></p>
+      <p class="text-center">
+        San Francisco, CA | (555) 123-4567 | <a href="mailto:jane.smith@email.com">jane.smith@email.com</a> | 
+        <a href="https://linkedin.com/in/janesmith" target="_blank">linkedin.com/in/janesmith</a>
+      </p>
 
-      <!-- Professional Summary -->
+      <!-- Sections -->
       <div id="professional-summary" class="section-header" onclick="toggleSection('professional-summary')">
         <h3>Professional Summary</h3>
         <span class="toggle-icon">+</span>
       </div>
       <div id="professional-summary-content" class="section-content">
-        <p>Results-driven Software Engineer with over 5 years of experience in developing scalable, high-performance web applications. Specializing in backend development, cloud computing, and microservices architecture. Known for quick problem-solving, ability to lead teams, and consistently delivering projects on time.</p>
+        <p>Results-driven Software Engineer with over 5 years of experience in developing scalable, high-performance web applications...</p>
       </div>
 
-      <!-- Work Experience -->
       <div id="work-experience" class="section-header" onclick="toggleSection('work-experience')">
         <h3>Work Experience</h3>
         <span class="toggle-icon">+</span>
@@ -100,19 +125,10 @@
       <div id="work-experience-content" class="section-content">
         <p><strong>Senior Software Engineer | Tech Solutions Inc. | Jan 2021 - Present</strong></p>
         <ul>
-          <li>Led the development of a cloud-native payment processing system used by over 2 million customers globally.</li>
-          <li>Collaborated with cross-functional teams to design and implement microservices for various applications.</li>
-          <li>Optimized database queries, reducing processing time by 30% and enhancing user experience.</li>
-        </ul>
-        <p><strong>Software Engineer | Digital Innovations Co. | June 2018 - Dec 2020</strong></p>
-        <ul>
-          <li>Developed and maintained microservices to support a large-scale e-commerce platform.</li>
-          <li>Worked on implementing REST APIs, improving response times by 25%.</li>
-          <li>Participated in Agile ceremonies and contributed to the continuous improvement of the software development process.</li>
+          <li>Led the development of a cloud-native payment processing system...</li>
         </ul>
       </div>
 
-      <!-- Education -->
       <div id="education" class="section-header" onclick="toggleSection('education')">
         <h3>Education</h3>
         <span class="toggle-icon">+</span>
@@ -120,13 +136,8 @@
       <div id="education-content" class="section-content">
         <p><strong>Bachelor of Science in Computer Science</strong></p>
         <p>University of California, Berkeley | Graduated 2018</p>
-        <ul>
-          <li>Graduated with honors, GPA: 3.8/4.0</li>
-          <li>Completed coursework in algorithms, data structures, and software engineering principles.</li>
-        </ul>
       </div>
 
-      <!-- Certifications -->
       <div id="certifications" class="section-header" onclick="toggleSection('certifications')">
         <h3>Certifications</h3>
         <span class="toggle-icon">+</span>
@@ -134,39 +145,31 @@
       <div id="certifications-content" class="section-content">
         <ul>
           <li>AWS Certified Solutions Architect – Associate</li>
-          <li>Certified Kubernetes Administrator (CKA)</li>
-          <li>Certified Java Programmer</li>
         </ul>
       </div>
 
-      <!-- Projects -->
       <div id="projects" class="section-header" onclick="toggleSection('projects')">
         <h3>Projects</h3>
         <span class="toggle-icon">+</span>
       </div>
       <div id="projects-content" class="section-content">
-        <p><strong>E-commerce Platform | <a href="https://github.com/janesmith/ecommerce" target="_blank">github.com/janesmith/ecommerce</a></strong></p>
+        <p><strong>E-commerce Platform</strong></p>
         <ul>
-          <li>Developed a full-stack e-commerce platform with integrated payment processing and inventory management.</li>
-          <li>Implemented features such as user authentication, real-time inventory updates, and product search.</li>
-        </ul>
-        <p><strong>Weather App | <a href="https://github.com/janesmith/weather-app" target="_blank">github.com/janesmith/weather-app</a></strong></p>
-        <ul>
-          <li>Built a real-time weather app using React and Node.js, providing users with accurate, live weather data.</li>
+          <li>Developed a full-stack e-commerce platform...</li>
         </ul>
       </div>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Pigeon Racing. All rights reserved.</p>
+    <p>&copy; 2024 Jane Smith. All rights reserved.</p>
   </footer>
 
   <script>
     function toggleSection(sectionId) {
       const sectionContent = document.getElementById(sectionId + '-content');
       const icon = sectionContent.previousElementSibling.querySelector('.toggle-icon');
-
       if (sectionContent.style.display === 'none' || sectionContent.style.display === '') {
         sectionContent.style.display = 'block';
         icon.textContent = '-';
@@ -180,7 +183,6 @@
       const sectionHeader = document.getElementById(sectionId);
       const sectionContent = document.getElementById(sectionId + '-content');
       const icon = sectionHeader.querySelector('.toggle-icon');
-
       sectionContent.style.display = 'block';
       icon.textContent = '-';
       sectionHeader.scrollIntoView({ behavior: 'smooth' });
