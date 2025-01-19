@@ -8,24 +8,34 @@
 /* Variables */
 :root {
     --transition-speed: 0.3s;
+    --font-family: Arial, sans-serif;
+    --primary-color: #007bff;
+    --primary-color-hover: #0056b3;
+    --background-color-light: #fafafa;
+    --text-color-light: #333;
+    --background-color-dark: #121212;
+    --text-color-dark: #e0e0e0;
+    --accent-color-dark: #4FC3F7;
+    --accent-color-dark-hover: #81D4FA;
 }
 
 /* Base Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     line-height: 1.6;
-    background-color: #fafafa;
-    color: #333;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
 }
 
+/* Consistency: Centralized Variables */
 a {
-    color: #007bff;
+    color: var(--primary-color);
     text-decoration: none;
     transition: color var(--transition-speed);
 }
 
 a:hover {
-    color: #0056b3;
+    color: var(--primary-color-hover);
 }
 
 /* Header */
@@ -88,23 +98,23 @@ footer {
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
 }
 
 body.dark-mode a {
-    color: #4FC3F7;
+    color: var(--accent-color-dark);
 }
 
 body.dark-mode a:hover {
-    color: #81D4FA;
+    color: var(--accent-color-dark-hover);
 }
 
 body.dark-mode footer {
     background-color: #1c1c1c;
 }
 
-/* Responsive Design */
+/* Responsiveness: Layout Adjustments */
 @media (max-width: 768px) {
     .navbar-nav {
         flex-direction: column;
@@ -116,4 +126,85 @@ body.dark-mode footer {
         transform: none;
         opacity: 1;
     }
+}
+
+/* Interactivity: Buttons */
+button, .btn {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+button:hover, .btn:hover {
+    background-color: var(--primary-color-hover);
+    transform: scale(1.05);
+}
+
+button:active, .btn:active {
+    background-color: #004080;
+    transform: scale(0.95);
+}
+
+/* Responsiveness: Cards */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsiveness: Forms */
+input, textarea, select {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+body.dark-mode input, body.dark-mode textarea, body.dark-mode select {
+    background-color: #1c1c1c;
+    color: var(--text-color-dark);
+    border-color: #333;
+}
+
+/* Consistency and Polished Design */
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .card-title, body.dark-mode .card-text {
+    color: var(--text-color-dark);
 }
